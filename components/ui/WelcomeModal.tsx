@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
 import { ArrowRight, UserPlus, LogIn } from "lucide-react";
 
 const STORAGE_KEY = "pestpro-welcome-seen";
@@ -61,7 +60,7 @@ export function WelcomeModal() {
             <div className="mb-6 text-sm uppercase tracking-[0.32em] text-slate-400">Quick access</div>
             <button
               type="button"
-              onClick={() => signIn("google", { callbackUrl: "/user/dashboard" })}
+              onClick={() => { window.location.href = "/contact"; }}
               className="inline-flex w-full items-center justify-center gap-3 rounded-2xl border border-slate-700 bg-slate-900 px-4 py-4 text-sm font-semibold text-white transition hover:border-emerald-400 hover:bg-slate-800"
             >
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-amber-300 text-slate-950 text-[0.65rem] font-semibold">G</span> Continue with Google
