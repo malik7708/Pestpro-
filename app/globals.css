@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html {
+    background-color: #f7f9f7;
+  }
+
+  body {
+    @apply antialiased;
+    background-color: #f7f9f7;
+    background-image: url("/termite.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: lighten;
+    color: #22313d;
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white text-brand-navy font-semibold px-6 py-3 rounded-xl border border-slate-200 hover:bg-brand-green-50 hover:border-brand-green/30 transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-brand-green/40 text-brand-green hover:bg-brand-green hover:text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:-translate-y-0.5;
+  }
+
+  .section-padding {
+    @apply py-16 lg:py-20;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 text-brand-green font-semibold text-sm uppercase tracking-widest mb-4;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-navy leading-tight;
+  }
+
+  .dark .section-heading {
+    @apply text-white;
+  }
+
+  .card-base {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-slate-100;
+  }
+
+  .dark .card-base {
+    @apply bg-gray-900 border border-gray-800;
+  }
+
+  .gradient-green {
+    @apply bg-gradient-to-br from-brand-green-dark via-brand-green to-brand-green-light;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-navy to-brand-green-dark bg-clip-text text-transparent;
+  }
+
+  .font-display {
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef2ee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b8a67;
+  border-radius: 10px;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #d1d5db;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  width: 24px;
+  background: #2f6b4f;
+}
+
+.whatsapp-btn {
+  animation: whatsappPulse 2s ease-in-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.nav-glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
