@@ -139,19 +139,15 @@ export default function AboutPage() {
 
       {/* Story */}
       <section
-        className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative overflow-hidden"
+        className="relative overflow-hidden bg-brand-navy bg-cover bg-center bg-no-repeat bg-scroll pt-16 pb-12 sm:pt-20 sm:pb-14 lg:bg-fixed lg:pt-32 lg:pb-16"
         style={{
           backgroundImage: "url('/hero2.png')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
           backgroundColor: "rgba(13, 31, 60, 0.82)",
         }}
       >
         <div className="absolute inset-0 bg-brand-navy/80" />
         <div className="container-max relative z-10 text-white">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <div className="section-tag bg-lime-200/200 text-lime-200 mb-6">
                 <span className="w-8 h-0.5 bg-lime-200" />
@@ -161,7 +157,7 @@ export default function AboutPage() {
                 Built on Trust,<br />
                 <span className="text-lime-200">Driven by Results</span>
               </h2>
-              <div className="space-y-4 text-white/85 leading-relaxed">
+              <div className="space-y-4 text-sm leading-8 text-white/85 sm:text-base">
                 <p>
                   IC PestControl was founded in 2005 by Muhummad Abuzar, a certified pesticide applicator with a simple but powerful mission: 
                   to provide honest, effective, and family-safe pest control services to Illinois homeowners.
@@ -177,22 +173,22 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-6 mt-10">
+              <div className="mt-10 grid grid-cols-1 gap-4 min-[480px]:grid-cols-3 sm:gap-6">
                 {[
                   { n: "20,000+", l: "Homes Protected" },
                   { n: "50+", l: "Expert Staff" },
                   { n: "4.9★", l: "Average Rating" },
                 ].map(({ n, l }) => (
-                  <div key={l} className="text-center p-4 bg-brand-green-50 dark:bg-gray-900 rounded-2xl">
-                    <div className="font-display text-3xl font-bold text-brand-green">{n}</div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm mt-1">{l}</div>
+                  <div key={l} className="rounded-2xl bg-brand-green-50 p-5 text-center dark:bg-gray-900">
+                    <div className="font-display text-2xl font-bold text-brand-green sm:text-3xl">{n}</div>
+                    <div className="mt-1 text-sm leading-snug text-gray-600 dark:text-gray-400">{l}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Achievements & Statistics */}
-            <div className="space-y-6 bg-white/10 backdrop-blur-sm rounded-[32px] p-8 border border-white/15">
+            <div className="space-y-6 rounded-[32px] border border-white/15 bg-white/10 p-5 backdrop-blur-sm sm:p-8">
               <h3 className="font-display font-bold text-white text-2xl mb-8">Our Achievements</h3>
               
               {/* Achievement Cards */}
@@ -205,16 +201,16 @@ export default function AboutPage() {
                   { Icon: CheckCircle2, stat: "100%", label: "Guaranteed Results", desc: "Safe treatments with long-term prevention" },
                   { Icon: Leaf, stat: "IPM", label: "Certified Methods", desc: "Integrated Pest Management approach" },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-4 rounded-3xl bg-white/5 p-5 hover:bg-white/10 transition-all">
+                  <div key={idx} className="flex gap-4 rounded-3xl bg-white/5 p-5 transition-all hover:bg-white/10">
                     <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-brand-green/20">
                       <item.Icon size={28} className="text-[#c8e87d]" />
                     </div>
-                    <div className="flex-grow">
-                      <div className="flex items-baseline gap-2 mb-1">
+                    <div className="min-w-0 flex-grow">
+                      <div className="mb-1 flex flex-wrap items-baseline gap-x-2 gap-y-1">
                         <span className="font-display text-2xl font-bold text-[#c8e87d]">{item.stat}</span>
-                        <span className="text-white/85 font-semibold text-lg">{item.label}</span>
+                        <span className="text-base font-semibold text-white/85 sm:text-lg">{item.label}</span>
                       </div>
-                      <p className="text-white/70 text-sm">{item.desc}</p>
+                      <p className="text-sm leading-relaxed text-white/70">{item.desc}</p>
                     </div>
                   </div>
                 ))}
