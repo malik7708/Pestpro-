@@ -1,8 +1,8 @@
-# PestPro Backend API Documentation
+# IC PestControl Backend API Documentation
 
 ## Overview
 
-Complete backend API system for PestPro - Pest Control Management Website with:
+Complete backend API system for IC PestControl - Pest Control Management Website with:
 
 - User authentication (JWT-based)
 - Admin dashboard with user and message management
@@ -42,7 +42,7 @@ Login with admin credentials.
 
 ```json
 {
-  "email": "admin@pestpro.com",
+  "email": "islamabadpestcontrolservices9@gmail.com",
   "password": "securepassword"
 }
 ```
@@ -53,7 +53,7 @@ Login with admin credentials.
 {
   "user": {
     "id": 1,
-    "email": "admin@pestpro.com",
+    "email": "islamabadpestcontrolservices9@gmail.com",
     "role": "admin"
   }
 }
@@ -69,7 +69,7 @@ Login with admin credentials.
 ```bash
 curl -X POST http://localhost:3000/api/login \
   -H "Content-Type: application/json" \
-  -d '{"email": "admin@pestpro.com", "password": "password123"}'
+  -d '{"email": "islamabadpestcontrolservices9@gmail.com", "password": "password123"}'
 ```
 
 ---
@@ -119,7 +119,7 @@ curl -X GET "http://localhost:3000/api/admin/users?page=1&limit=10" \
   "users": [
     {
       "id": 1,
-      "email": "admin@pestpro.com",
+      "email": "islamabadpestcontrolservices9@gmail.com",
       "role": "admin",
       "createdAt": "2026-04-19T05:00:00Z"
     }
@@ -361,7 +361,7 @@ model ContactMessage {
 1. **Import Collection:**
    - Open Postman
    - Click "Import" → "Upload Files"
-   - Select `scripts/PestPro-API-Collection.postman_collection.json`
+   - Select `scripts/IC-PestControl-API-Collection.postman_collection.json`
 
 2. **Set Base URL:**
    - In the collection, set variable `BASE_URL` to your server URL
@@ -377,7 +377,7 @@ model ContactMessage {
 # 1. Login
 curl -i -X POST http://localhost:3000/api/login \
   -H "Content-Type: application/json" \
-  -d '{"email": "admin@pestpro.com", "password": "admin786"}'
+  -d '{"email": "islamabadpestcontrolservices9@gmail.com", "password": "admin786"}'
 
 # 2. Extract token from Set-Cookie header
 # Use it in subsequent requests:
@@ -450,7 +450,7 @@ SMTP_HOST="smtp.gmail.com"
 SMTP_PORT="587"
 EMAIL_FROM="your-email@gmail.com"
 EMAIL_PASSWORD="your-app-password"
-EMAIL_TO="admin@pestpro.com"
+EMAIL_TO="islamabadpestcontrolservices9@gmail.com"
 
 # Site
 NEXT_PUBLIC_SITE_URL="http://localhost:3000"
@@ -565,7 +565,7 @@ pm2 start npm --name "pestpro" -- start
 ## Support & Documentation
 
 - **API Tests:** `scripts/test-apis.sh`
-- **Postman Collection:** `scripts/PestPro-API-Collection.postman_collection.json`
+- **Postman Collection:** `scripts/IC-PestControl-API-Collection.postman_collection.json`
 - **Admin Script:** `scripts/create-admin.js`
 - **Auth Library:** `lib/auth-client.ts`
 - **Auth Hook:** `hooks/useAuth.ts`

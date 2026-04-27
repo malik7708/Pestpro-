@@ -3,55 +3,55 @@ import { Shield, Award, Clock, Leaf, Users, Building2, CheckCircle2 } from "luci
 const reasons = [
   {
     icon: Shield,
-    title: "Structured Treatment Plans",
-    description: "Every service begins with inspection findings, site conditions, and a practical treatment scope.",
+    title: "Eco-friendly & Safe Treatments",
+    description: "We use safe, industry-approved chemicals and eco-friendly products for your family and the environment.",
     stat: "100%",
-    statLabel: "Inspection-led",
+    statLabel: "Safe methods",
   },
   {
     icon: Award,
-    title: "Experienced Pest Team",
-    description: "Our team handles recurring pest issues across residential, retail, office, and warehouse properties.",
-    stat: "8+",
-    statLabel: "Years active",
+    title: "Affordable Pricing",
+    description: "Professional pest control with guaranteed results at prices that fit your budget.",
+    stat: "✓",
+    statLabel: "Guaranteed",
   },
   {
     icon: Clock,
-    title: "Fast Scheduling",
-    description: "Same-day or priority scheduling is available for urgent infestations in major service areas.",
+    title: "Fast & Reliable Service",
+    description: "Quick response times and reliable service you can depend on. Available 24/7 for urgent needs.",
     stat: "24/7",
-    statLabel: "Support line",
+    statLabel: "Support",
   },
   {
     icon: Leaf,
-    title: "Safer Application Methods",
-    description: "Low-odor and site-sensitive treatment options help reduce disruption for families and teams.",
-    stat: "Low",
-    statLabel: "Disruption",
+    title: "Modern Techniques",
+    description: "Advanced equipment and modern techniques following Integrated Pest Management (IPM) principles.",
+    stat: "IPM",
+    statLabel: "Certified",
   },
   {
     icon: Users,
-    title: "Clear Communication",
-    description: "Clients receive practical guidance on preparation, treatment stages, and prevention after service.",
-    stat: "1:1",
-    statLabel: "Client support",
+    title: "Experienced Technicians",
+    description: "Our trained and certified team has years of experience in pest control and termite treatment.",
+    stat: "Expert",
+    statLabel: "Team",
   },
   {
     icon: Building2,
-    title: "Commercial Pest Planning",
-    description: "We support offices, restaurants, warehouses, and managed properties with recurring pest control plans.",
-    stat: "B2B",
-    statLabel: "Service ready",
+    title: "Long-term Prevention",
+    description: "We don't just remove pests — we prevent them from coming back with lasting protection.",
+    stat: "Long",
+    statLabel: "Lasting",
   },
 ];
 
 const strengths = [
-  "Residential pest control",
-  "Commercial pest management",
-  "Termite inspection support",
-  "Warehouse and office treatment planning",
-  "Restaurant and food-site pest control",
-  "Follow-up and maintenance visits",
+  "Termite inspection and treatment",
+  "General pest control (ants, flies, insects)",
+  "Cockroach extermination",
+  "Rodent control (rats & mice removal)",
+  "Professional fumigation services",
+  "Dengue spray and mosquito control",
 ];
 
 export function WhyChooseUsSection() {
@@ -62,29 +62,25 @@ export function WhyChooseUsSection() {
           <div>
             <div className="section-tag">
               <span className="w-8 h-0.5 bg-brand-green" />
-              Why Choose PestPro
+              Why Choose IC Pest Control
             </div>
             <h2 className="section-heading mb-6">
-              Professional Pest Control for
+              The best pest control
               <br />
-              <span className="text-gradient">Homes, Companies, and Managed Properties</span>
+              <span className="text-gradient">near you in Islamabad & Rawalpindi</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-8 mb-6">
-              PestPro works as a practical pest control company for homeowners, businesses,
-              facilities teams, and property managers who need reliable inspection, treatment,
-              documentation, and follow-up without unnecessary complexity.
+              Looking for the best pest control near you? Here&apos;s why customers trust IC Pest Control for their pest management needs.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-8 mb-8">
-              For businesses searching for commercial pest control in Pakistan, termite treatment
-              for offices, or recurring pest management for warehouses and restaurants, our focus
-              stays on safe application, site suitability, and long-term prevention.
+              We provide eco-friendly and safe treatments with affordable pricing and guaranteed results. Our experienced and trained technicians offer fast response times and reliable service using advanced equipment and modern techniques.
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-10">
               {[
-                { n: "5,000+", label: "Properties Served", sub: "Residential and commercial" },
+                { n: "5,000+", label: "Properties Protected", sub: "Residential & commercial" },
                 { n: "4.9", label: "Client Rating", sub: "Service satisfaction" },
-                { n: "30", label: "Day Follow-Up", sub: "Support window" },
+                { n: "100%", label: "Safe Methods", sub: "Eco-friendly products" },
               ].map(({ n, label, sub }) => (
                 <div key={label} className="text-center p-4 bg-brand-green-50 dark:bg-gray-900 rounded-2xl border border-brand-green/10">
                   <div className="font-display text-3xl font-bold text-brand-green">{n}</div>
@@ -97,7 +93,7 @@ export function WhyChooseUsSection() {
             <div>
               <h3 className="font-semibold text-brand-navy dark:text-white mb-4 flex items-center gap-2">
                 <CheckCircle2 size={18} className="text-brand-green" />
-                Core Service Strengths
+                Our Pest Control Services
               </h3>
               <div className="flex flex-wrap gap-2">
                 {strengths.map((item) => (
@@ -114,7 +110,7 @@ export function WhyChooseUsSection() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-            {reasons.map(({ icon: Icon, title, description, stat, statLabel }, index) => (
+            {reasons.map(({ icon: Icon, title, description, stat, statLabel }) => (
               <div
                 key={title}
                 className="card-base p-4 sm:p-6 group hover:border-brand-green/30 border border-transparent"

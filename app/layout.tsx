@@ -14,8 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "PestPro | #1 Pest Control Services â€“ Termite, Rodent & Cockroach Treatment",
-    template: "%s | PestPro Pest Control",
+    default: "IC PestControl | #1 Pest Control Services – Termite, Rodent & Cockroach Treatment",
+    template: "%s | IC PestControl - Islamabad Pest Control",
   },
   description:
     "Professional pest control services including termite treatment, rodent control, cockroach removal & bed bug elimination. Licensed, certified & available 24/7. Get a FREE inspection today!",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    siteName: "PestPro Pest Control",
-    title: "PestPro | Professional Pest Control Services",
+    siteName: "IC PestControl - Islamabad Pest Control",
+    title: "IC PestControl | Professional Pest Control Services",
     description: "Licensed pest control experts. Free inspection. 24/7 emergency service.",
   },
   robots: { index: true, follow: true },
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "PestControlBusiness",
-  name: "PestPro Pest Control",
-  url: "https://pestpro.com",
-  telephone: "+1-800-PESTPRO",
+  name: "IC PestControl - Islamabad Pest Control",
+  url: "https://icpestcontrol.com",
+  telephone: "+92-306-923-5099",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",

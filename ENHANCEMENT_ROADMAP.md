@@ -1,4 +1,4 @@
-# PestPro Admin System - Enhancement Roadmap
+# IC PestControl Admin System - Enhancement Roadmap
 
 ## Current Features (v1.0)
 

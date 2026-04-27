@@ -30,7 +30,7 @@ export function ParallaxServicesSection() {
             Professional Pest Control Services
           </h2>
           <p className="text-lg sm:text-xl leading-8 mb-8 text-white/90">
-            Our expert team provides comprehensive pest management solutions for homes and businesses across Pakistan. From termite treatment to disinfection services, we ensure your property is safe and pest-free.
+            Our expert team provides comprehensive pest management solutions for homes and businesses across Rawalpindi/Islamabad and nearby areas. From termite treatment to disinfection services, we ensure your property is safe and pest-free.
           </p>
           <Link
             href="/services"

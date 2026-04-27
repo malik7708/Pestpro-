@@ -43,13 +43,13 @@ export function ProcessSection() {
       <div className="relative z-10">
         <div className="container-max">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="section-tag justify-center">
-              <span className="w-8 h-0.5 bg-brand-green" />
+            <div className="section-tag justify-center bg-lime-200/200 text-lime-200 mb-4">
+              <span className="w-8 h-0.5 bg-lime-200" />
               How It Works
-              <span className="w-8 h-0.5 bg-brand-green" />
+              <span className="w-8 h-0.5 bg-lime-200" />
             </div>
             <h2 className="section-heading mb-4 text-white">
-              A Clear Process for <span className="text-gradient">Professional Pest Control</span>
+              A Clear Process for <span className="text-lime-200">Professional Pest Control</span>
             </h2>
             <p className="text-white/90 text-lg leading-8">
               Our process is designed to keep treatment straightforward for homeowners,
@@ -90,7 +90,7 @@ export function ProcessSection() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-stretch">
-                <a href="tel:+923069235099" className="btn-primary text-base justify-center">
+              <a href="tel:+923229162746" className="btn-primary text-base justify-center">
                   <Phone size={20} /> Call for Free Quote
                 </a>
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/18 border border-white/20 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300">

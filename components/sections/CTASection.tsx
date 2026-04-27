@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Phone, ArrowRight, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -137,13 +137,13 @@ export function CTASection() {
             </div>
 
             <h2 className="font-display text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-6">
-              Ready for a Pest-Free
+              Worried about termites
               <br />
-              <span className="text-brand-green-100">Home or Business?</span>
+              <span className="text-brand-green-100">or pest infestation?</span>
             </h2>
 
             <p className="text-white/80 text-xl max-w-2xl mb-8">
-              Protect your property with fast, professional pest control from a trusted local team. Book a free inspection with no obligation and discover a cleaner, safer environment.
+              Get professional help before it&apos;s too late. Contact IC Pest Control today for fast, effective, and affordable pest control services in Islamabad and Rawalpindi. Your safety and satisfaction are our top priorities.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
@@ -161,9 +161,9 @@ export function CTASection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="tel:+923069235099" className="btn-primary inline-flex items-center justify-center gap-3 text-base px-8 py-4 text-lg">
+              <a href="tel:+923229162746" className="btn-primary inline-flex items-center justify-center gap-3 text-base px-8 py-4 text-lg">
                 <Phone size={20} />
-                Call +92 306 9235099
+                Call +92 322 9162746
               </a>
               <Link
                 href="/contact"

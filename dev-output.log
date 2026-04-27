@@ -1,0 +1,13 @@
+
+> ic-pestcontrol@0.1.0 dev
+> next dev --hostname 0.0.0.0
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+- Environments: .env.local, .env
+✓ Ready in 460ms
+
+ GET /services/pest-control 200 in 1837ms (next.js: 1318ms, application-code: 519ms)
+ GET /services/pest-control 200 in 115ms (next.js: 5ms, application-code: 110ms)
+^C

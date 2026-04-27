@@ -26,37 +26,37 @@ const slides: Array<{
 }> = [
   {
     id: "home",
-    eyebrow: "Pest Control Pakistan",
-    title: "Professional pest control for homes and businesses",
+    eyebrow: "Trusted Pest & Termite Control",
+    title: "Expert pest control for homes and businesses",
     description:
-      "Pest control, termite treatment, fumigation, and disinfection services in Pakistan.",
+      "IC Pest Control is a trusted pest and termite control company serving Rawalpindi, Islamabad, Taxila, and Murree. We provide reliable, safe, and effective solutions with guaranteed results.",
     image: heroImage,
     cta: "Book free inspection",
   },
   {
     id: "termite",
-    eyebrow: "Termite Proofing",
+    eyebrow: "Termite Treatment & Prevention",
     title: "Protect your property from hidden termite damage",
     description:
-      "Termite inspection and proofing for homes, offices, and commercial properties.",
+      "Best and expert termite inspection and treatment using modern techniques and eco-friendly products. Prevent future infestations with expert care.",
     image: termiteImage,
     cta: "Get termite inspection",
   },
   {
-    id: "sanitization",
-    eyebrow: "Disinfection Support",
-    title: "Cleaner environments for managed properties",
+    id: "fumigation",
+    eyebrow: "Fumigation & Pest Solutions",
+    title: "Complete pest management for peace of mind",
     description:
-      "Disinfection support for offices, schools, clinics, restaurants, and managed buildings.",
+      "From dengue spray and mosquito control to rodent removal and cockroach extermination. All services designed for long-lasting protection.",
     image: disinfectionImage,
     cta: "Request service details",
   },
 ];
 
 const companyPoints = [
-  "Treatment planning for homes, offices, restaurants, and warehouses",
-  "Pakistan-focused service coverage with practical follow-up support",
-  "Clear communication and site-based recommendations",
+  "Pest control, termite treatment, fumigation, and dengue spray services",
+  "Coverage across Rawalpindi, Islamabad, Taxila, and Murree",
+  "Modern techniques with eco-friendly, safe products for your family",
 ];
 
 export function HeroSection() {
@@ -106,8 +106,8 @@ export function HeroSection() {
                   <div className="relative z-10">
                     <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/14 bg-white/8 px-3 py-1.5 sm:px-4 sm:py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/82 backdrop-blur-sm">
                       <ShieldCheck size={12} className="sm:w-4 sm:h-4" />
-                      <span className="hidden sm:inline">PestPro Pakistan</span>
-                      <span className="sm:hidden">PestPro</span>
+                      <span className="hidden sm:inline">Islamabad PestControl</span>
+                      <span className="sm:hidden">Islamabad PestControl</span>
                     </div>
 
                   <div className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#d5ee94]">
@@ -124,12 +124,12 @@ export function HeroSection() {
 
                   <div className="mt-4 sm:mt-5 flex items-start gap-2 sm:gap-3 rounded-[16px] sm:rounded-[20px] border border-white/10 bg-white/6 px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm text-white/78 backdrop-blur-[2px]">
                     <MapPin size={16} className="mt-0.5 flex-shrink-0 text-[#d5ee94]" />
-                    <span className="leading-5">Serving Islamabad, Rawalpindi, Faisalabad, Sargodha, Peshawar, Lahore, and Karachi.</span>
+                    <span className="leading-5">Serving Islamabad / Rawalpindi & Nearby Areas</span>
                   </div>
 
                   <div className="mt-4 sm:mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
                     <a
-                      href="tel:+923069235099"
+                  href="tel:+923229162746"
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d8f06b] px-5 py-3 sm:px-7 sm:py-4 text-xs sm:text-sm font-semibold text-[#173225] transition-colors hover:bg-[#cae45a]"
                     >
                       <Phone size={16} className="sm:w-5 sm:h-5" />
@@ -187,7 +187,7 @@ export function HeroSection() {
                     <div className="absolute left-3 right-3 top-3 sm:left-4 sm:right-4 sm:top-4 lg:left-6 lg:right-6 lg:top-6">
                       <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/14 px-3 py-1.5 sm:px-4 sm:py-2 text-xs font-medium text-white backdrop-blur-sm">
                         <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-[#d8f06b]" />
-                        <span className="hidden sm:inline">Professional pest management for Pakistani properties</span>
+                        <span className="hidden sm:inline">Professional pest management for Rawalpndi/Islamabad properties</span>
                         <span className="sm:hidden">Professional pest management</span>
                       </div>
                     </div>
@@ -201,7 +201,7 @@ export function HeroSection() {
                           Pest control designed around your property
                         </h2>
                         <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-6 sm:leading-7 text-gray-50">
-                          For homes, offices, warehouses, and managed sites across Pakistan.
+                          For homes, offices, warehouses, and managed sites across Rawalpindi/Islamabad and nearby areas.
                         </p>
                       </div>
                     </div>
@@ -269,16 +269,16 @@ export function HeroSection() {
             <div>
               <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-green mb-4">
                 <span className="h-px w-10 bg-brand-green/60" />
-                About PestPro
+                About IC Pest Control
               </div>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight text-brand-navy mb-5">
-                Effective pest control solutions for homes, offices, and enterprises
+                Safe, reliable pest management for every property
               </h2>
               <p className="text-slate-600 text-base sm:text-lg leading-8">
-                PestPro is a Pakistan-focused pest control company offering professional pest
-                management, fumigation, termite treatment, rodent control, disinfection, water
-                tank cleaning, and floor maintenance services for residential and commercial
-                properties.
+                At IC Pest Control, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. We use advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
+              </p>
+              <p className="text-slate-600 text-base sm:text-lg leading-8 mt-4">
+                We follow Integrated Pest Management (IPM) principles for long-term protection with minimal environmental impact. Our commitment to precision, safety, and customer satisfaction makes us one of the most reliable pest control companies in Islamabad and Rawalpindi.
               </p>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -295,7 +295,7 @@ export function HeroSection() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link href="/about" className="btn-primary">
-                  Learn More About PestPro
+                  Learn More About IC Pest Control
                   <ArrowRight size={18} />
                 </Link>
                 <Link href="/services" className="btn-outline">
@@ -309,7 +309,7 @@ export function HeroSection() {
                 <div className="relative h-[320px] sm:h-[400px] lg:h-[460px]">
                   <Image
                     src={heroImage}
-                    alt="PestPro pest control professional on site"
+                    alt="IC PestControl pest control professional on site"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -323,7 +323,7 @@ export function HeroSection() {
                   </div>
                   <div>
                     <div className="text-2xl font-semibold text-brand-navy">Major Cities</div>
-                    <div className="mt-1 text-sm text-slate-500">Coverage across Pakistan</div>
+                    <div className="mt-1 text-sm text-slate-500">Rawalpindi & Islamabad</div>
                   </div>
                   <div>
                     <div className="text-2xl font-semibold text-brand-navy">Homes & Businesses</div>

@@ -53,7 +53,7 @@ export function BusinessSectorsSection() {
               Pest management services for your business
             </h2>
             <p className="text-white/75 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 mb-5 sm:mb-7">
-              PestPro supports companies across multiple business sectors with professional pest control,
+              IC PestControl supports companies across multiple business sectors with professional pest control,
               recurring service planning, site inspections, and practical follow-up for operational environments.
             </p>
             <Link

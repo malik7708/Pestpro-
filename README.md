@@ -28,7 +28,7 @@ The following image placeholders have been added to the website. Please provide 
 
 - **our-aim-image.jpg** - Image for the "Our Aim" section on the homepage (HeroSection component)
 - **contact-us-image.jpg** - Image for the "Get In Touch" section on the contact page
-- **about-us-image.jpg** - Image for the "About PestPro" section on the about page
+- **about-us-image.jpg** - Image for the "About IC PestControl" section on the about page
 - **integrity-image.jpg** - Image for the "Integrity First" value card on the about page
 - **family-safety-image.jpg** - Image for the "Family Safety" value card on the about page
 - **excellence-image.jpg** - Image for the "Excellence" value card on the about page

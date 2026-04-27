@@ -6,13 +6,13 @@ import Image from "next/image";
 
 const faqs = [
   {
-    q: "How quickly can PestPro respond to a pest complaint?",
+    q: "How quickly can IC PestControl respond to a pest complaint?",
     a: "We offer fast scheduling in our main service areas, especially Islamabad, Rawalpindi, Lahore, and Karachi. Response time depends on the city, the type of pest issue, and the urgency of the complaint.",
     image: "/hero.png",
   },
   {
     q: "Do you provide pest control for offices, warehouses, and companies?",
-    a: "Yes. PestPro provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
+    a: "Yes. IC PestControl provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
     image: "/floor.png",
   },
   {
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Do you offer termite control and fumigation services in Pakistan?",
-    a: "Yes. PestPro provides termite treatment, fumigation support, rodent control, cockroach treatment, bed bug removal, mosquito control, and general pest control for residential and commercial clients in Pakistan.",
+    a: "Yes. IC PestControl provides termite treatment, fumigation support, rodent control, cockroach treatment, bed bug removal, mosquito control, and general pest control for residential and commercial clients in Pakistan.",
     image: "/termite.png",
   },
   {
@@ -135,7 +135,7 @@ export function FAQSection() {
               Our team can guide you on termite treatment, fumigation, rodent control,
               cockroach treatment, and commercial pest control scheduling.
             </p>
-            <a href="tel:+923069235099" className="btn-primary text-sm py-3">
+                <a href="tel:+923229162746" className="btn-primary text-sm py-3">
               Call Us Now
             </a>
           </div>

@@ -1,6 +1,6 @@
 # Admin User Creation Script
 
-This directory contains utility scripts for the PestPro application.
+This directory contains utility scripts for the IC PestControl application.
 
 ## `create-admin.ts`
 
@@ -43,10 +43,10 @@ npx ts-node scripts/create-admin.ts
 
 ```
 ========================================
-  PestPro Admin User Creation Script
+  IC PestControl Admin User Creation Script
 ========================================
 
-Enter admin email: admin@pestpro.com
+Enter admin email: islamabadpestcontrolservices9@gmail.com
 Enter admin password (min 8 characters): ••••••••
 Confirm password: ••••••••
 
@@ -59,7 +59,7 @@ Confirm password: ••••••••
   Admin User Details:
 ========================================
 ID:        1
-Email:     admin@pestpro.com
+Email:     islamabadpestcontrolservices9@gmail.com
 Role:      admin
 Created:   4/19/2026, 4:15:30 PM
 ========================================

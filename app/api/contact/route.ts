@@ -36,7 +36,6 @@ export async function POST(req: NextRequest) {
 
     // Basic rate limiting
     const clientIP = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown';
-    const now = Date.now();
     const userRequests = rateLimit.get(clientIP) || 0;
 
     if (userRequests >= MAX_REQUESTS) {
@@ -81,7 +80,7 @@ export async function POST(req: NextRequest) {
       console.log("Email server connection verified");
 
       const mailOptions = {
-        from: `"PestPro Contact Form" <${process.env.EMAIL_FROM}>`,
+        from: `"IC PestControl Contact Form" <${process.env.EMAIL_FROM}>`,
         to: process.env.EMAIL_TO,
         subject: `New Contact Message from ${name}`,
         html: `
@@ -109,7 +108,7 @@ export async function POST(req: NextRequest) {
 
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
             <p style="color: #6b7280; font-size: 12px; text-align: center;">
-              This message was sent from the PestPro website contact form.
+              This message was sent from the IC PestControl website contact form.
             </p>
           </div>
         `,

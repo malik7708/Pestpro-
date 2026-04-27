@@ -1,9 +1,9 @@
 import { HeroSection } from "@/components/home/HeroSection";
 import { ParallaxServicesSection } from "@/components/sections/ParallaxServicesSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
 import { BusinessSectorsSection } from "@/components/home/BusinessSectorsSection";
 import { ExpertiseSection } from "@/components/home/ExpertiseSection";
 import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
+import { LocalSearchSection } from "@/components/home/LocalSearchSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { ServiceAreasSection } from "@/components/home/ServiceAreasSection";
@@ -16,10 +16,10 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ParallaxServicesSection />
-      <ServicesSection />
       <BusinessSectorsSection />
       <ExpertiseSection />
       <WhyChooseUsSection />
+      <LocalSearchSection />
       <ProcessSection />
       <TestimonialsSection />
       <ServiceAreasSection />

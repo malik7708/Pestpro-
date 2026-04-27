@@ -1,4 +1,4 @@
-# PestPro Admin System - Quick Start Guide
+# IC PestControl Admin System - Quick Start Guide
 
 ## Overview
 
@@ -143,7 +143,7 @@ pestpro/
 └── scripts/
     ├── create-admin.js     # Create admin user
     ├── test-apis.sh        # Test all endpoints
-    └── PestPro-API-Collection.postman_collection.json
+    └── IC-PestControl-API-Collection.postman_collection.json
 ```
 
 ---
@@ -211,7 +211,7 @@ npx prisma migrate reset                     # Reset database
 
 # Testing
 ./scripts/test-apis.sh                       # Test all endpoints (requires bash)
-# Import PestPro-API-Collection.postman_collection.json to Postman
+# Import IC-PestControl-API-Collection.postman_collection.json to Postman
 ```
 
 ---
@@ -221,7 +221,7 @@ npx prisma migrate reset                     # Reset database
 ### Using Postman
 
 1. Open Postman
-2. Click "Import" → Select `scripts/PestPro-API-Collection.postman_collection.json`
+2. Click "Import" → Select `scripts/IC-PestControl-API-Collection.postman_collection.json`
 3. Set variable `BASE_URL` to `http://localhost:3000`
 4. Login first to get auth token
 5. Test admin endpoints with token
@@ -499,7 +499,7 @@ See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed instructions.
 └── scripts/
     ├── create-admin.js              (150 lines)
     ├── test-apis.sh                 (200 lines)
-    └── PestPro-API-Collection.postman_collection.json
+    └── IC-PestControl-API-Collection.postman_collection.json
 ```
 
 **Total Code:** ~2,500 lines (production-ready)

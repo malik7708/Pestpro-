@@ -1,53 +1,24 @@
 import type { Metadata } from "next";
-import { CheckCircle, Award, Star } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle, Award, Star, Trophy, Users, MapPin, CheckCircle2, Leaf } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
-import { ParallaxServicesSection } from "@/components/sections/ParallaxServicesSection";
 
 export const metadata: Metadata = {
-  title: "About Us – PestPro | Trusted Pest Control Since 2005",
+  title: "About Us – IC Pest Control | Trusted Pest Control in Islamabad & Rawalpindi",
   description:
-    "Learn about PestPro's 18-year history, our certified team, eco-friendly approach, and commitment to protecting homes and businesses across Illinois.",
+    "Learn about IC Pest Control's commitment to safe, reliable pest management using advanced techniques and eco-friendly products. Serving Islamabad, Rawalpindi, Taxila, and Murree.",
 };
 
 
-const team = [
-  {
-    name: "Michael Anderson",
-    role: "Founder & CEO",
-    experience: "22 years",
-    cert: "Certified Pesticide Applicator",
-    avatar: "MA",
-    color: "from-brand-green to-emerald-500",
-    bio: "Founded PestPro in 2005 after 4 years with the NPMA. Michael's vision: make professional pest control accessible and safe for every family.",
-  },
-  {
-    name: "Jennifer Lee",
-    role: "Head of Operations",
-    experience: "14 years",
-    cert: "QualityPro Certified",
-    avatar: "JL",
-    color: "from-blue-500 to-cyan-500",
-    bio: "Jennifer oversees all field operations, ensuring every technician upholds our gold standard of service and safety protocols.",
-  },
-  {
-    name: "Carlos Rivera",
-    role: "Lead Termite Specialist",
-    experience: "16 years",
-    cert: "Structural Fumigation Licensed",
-    avatar: "CR",
-    color: "from-amber-500 to-orange-500",
-    bio: "Illinois' leading termite expert, Carlos has treated over 5,000 homes and developed our proprietary dual-barrier termite system.",
-  },
-  {
-    name: "Amanda Foster",
-    role: "Bed Bug Division Head",
-    experience: "10 years",
-    cert: "Bed Bug Specialist Certified",
-    avatar: "AF",
-    color: "from-purple-500 to-violet-500",
-    bio: "Amanda leads our K-9 bed bug detection program and heat treatment division with a 99.8% elimination success rate.",
-  },
-];
+const ceo = {
+  name: "Muhummad Abuzar",
+  role: "Founder & CEO",
+  experience: "22 years",
+  cert: "Certified Pesticide Applicator",
+  avatar: "MA",
+  color: "from-brand-green to-emerald-500",
+  bio: "Founded IC PestControl in 2005 after 4 years with the NPMA. Muhummad Abuzar's vision has always been to make professional pest control accessible, safe, and dependable for every family and business we serve.",
+};
 
 const values = [
   { title: "Integrity First", desc: "Honest assessments, transparent pricing. We never recommend services you don't need.", image: "integrity-image.png", order: 1 },
@@ -63,16 +34,6 @@ const certifications = [
   { name: "GreenPro Eco-Friendly Certification", year: "Sustainable practices" },
   { name: "Better Business Bureau A+ Rating", year: "18 consecutive years" },
   { name: "Illinois Department of Agriculture", year: "Licensed & regulated" },
-];
-
-const milestones = [
-  { year: "2005", event: "PestPro founded in Springfield, IL with 3 technicians" },
-  { year: "2008", event: "Expanded to 12 service areas across central Illinois" },
-  { year: "2012", event: "Received QualityPro certification — top 3% of US companies" },
-  { year: "2015", event: "Launched K-9 bed bug detection program" },
-  { year: "2018", event: "Opened second office in Chicago, serving metro area" },
-  { year: "2020", event: "Introduced GreenPro eco-friendly treatment line" },
-  { year: "2023", event: "Surpassed 20,000 protected homes milestone" },
 ];
 
 const policies = [
@@ -116,20 +77,20 @@ export default function AboutPage() {
    
       {/* Hero */}
       <section
-        className="pt-48 pb-24 relative"
-        style={{ background: "linear-gradient(135deg, #0d1f3c 0%, #0f4d2e 60%, #0d1f3c 100%)" }}
+        className="pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/hero.png)'}}
       >
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`, backgroundSize: "40px 40px" }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/30 to-slate-950/40"></div>
         <div className="container-max relative z-10 text-center">
-          <div className="section-tag justify-center text-brand-green-light mb-6">
-            <span className="w-8 h-0.5 bg-brand-green-light" />
+          <div className="inline-flex items-center gap-2 sm:gap-3 bg-brand-green/20 backdrop-blur-sm border border-brand-green-100 text-white rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 text-[10px] sm:text-sm font-semibold">
+            <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-brand-green rounded-full" />
             Est. 2005 — 18 Years of Excellence
-            <span className="w-8 h-0.5 bg-brand-green-light" />
+            <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-brand-green rounded-full" />
           </div>
-          <h1 className="font-display text-5xl lg:text-6xl font-bold text-white mb-6">
-            About <span className="text-brand-gold">PestPro</span>
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+            About <span className="text-green-200">IC PestControl</span>
           </h1>
-          <p className="text-white/70 text-xl max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-xl text-white/90 max-w-2xl mx-auto px-2">
             Illinois&apos; most trusted pest control company, protecting homes and businesses since 2005.
           </p>
         </div>
@@ -142,28 +103,34 @@ export default function AboutPage() {
             <div>
               <div className="section-tag">
                 <span className="w-8 h-0.5 bg-brand-green" />
-                About PestPro
+                About IC PestControl
               </div>
               <h2 className="section-heading mb-6">
                 Leading Provider of <span className="text-gradient">Pest Control Services</span>
               </h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
-                  PestPro is a leading provider of pest control services / termite control services company in major cities of Pakistan, including Rawalpindi, Islamabad, Sargodha, Faisalabad, Lahore, Sialkot and Peshawar. Whether you&apos;re searching for &quot;pest control near me&quot; or &quot;exterminator near me,&quot; we are your trusted local experts, delivering effective, affordable, and eco-friendly solutions to both residential and commercial clients.
+                  At IC Pest Control, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. Our team uses advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
                 </p>
                 <p>
-                  With years of hands-on experience, our team knows exactly how to handle termite problems—whether it&apos;s spotting early signs of an infestation, explaining the treatment costs clearly, or providing effective anti-termite solutions that truly work for both homes and businesses.
+                  We follow the principles of Integrated Pest Management (IPM), ensuring long-term protection with minimal environmental impact. Our commitment to precision, safety, and customer satisfaction makes us one of the most reliable pest control companies in Islamabad and Rawalpindi.
+                </p>
+                <p className="font-semibold text-brand-navy dark:text-brand-green">
+                  Whether you need pest control, termite treatment, fumigation, rodent control, cockroach removal, or dengue spray services — we have the expertise and dedication to protect your property.
                 </p>
               </div>
             </div>
 
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
-                <div className="text-center text-gray-500 dark:text-gray-400">
-                  <div className="text-6xl mb-4">🖼️</div>
-                  <div className="text-sm font-medium">About Us Image Placeholder</div>
-                  <div className="text-xs mt-1">Replace with: about-us-image.jpg</div>
-                </div>
+                <Image
+                  src="/collage.png"
+                  alt="About IC PestControl"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -186,25 +153,25 @@ export default function AboutPage() {
         <div className="container-max relative z-10 text-white">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="section-tag">
-                <span className="w-8 h-0.5 bg-brand-green" />
+              <div className="section-tag bg-lime-200/200 text-lime-200 mb-6">
+                <span className="w-8 h-0.5 bg-lime-200" />
                 Our Story
               </div>
               <h2 className="section-heading mb-6 text-white">
                 Built on Trust,<br />
-                <span className="text-gradient">Driven by Results</span>
+                <span className="text-lime-200">Driven by Results</span>
               </h2>
               <div className="space-y-4 text-white/85 leading-relaxed">
                 <p>
-                  PestPro was founded in 2005 by Michael Anderson, a certified pesticide applicator with a simple but powerful mission: 
+                  IC PestControl was founded in 2005 by Muhummad Abuzar, a certified pesticide applicator with a simple but powerful mission: 
                   to provide honest, effective, and family-safe pest control services to Illinois homeowners.
                 </p>
                 <p>
-                  Starting with just 3 technicians and a single service van, Michael built PestPro on the principle that 
+                  Starting with just 3 technicians and a single service van, Muhummad Abuzar built IC PestControl on the principle that 
                   every customer deserves transparent pricing, expert service, and guaranteed results — no exceptions.
                 </p>
                 <p>
-                  Today, PestPro employs over 50 certified specialists, serves 12+ service areas, and has protected more than 
+                  Today, IC PestControl employs over 50 certified specialists, serves 12+ service areas, and has protected more than 
                   20,000 homes and businesses. We&apos;re still locally owned, family-operated, and just as committed to our 
                   founding values as the day we started.
                 </p>
@@ -224,23 +191,34 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Timeline */}
+            {/* Achievements & Statistics */}
             <div className="space-y-6 bg-white/10 backdrop-blur-sm rounded-[32px] p-8 border border-white/15">
-              <h3 className="font-display font-bold text-white text-2xl mb-6">Our Journey</h3>
-              {milestones.map(({ year, event }, i) => (
-                <div key={year} className="flex gap-4 rounded-3xl bg-white/5 p-5">
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 gradient-green rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 shadow-brand-sm">
-                      {year.slice(2)}
+              <h3 className="font-display font-bold text-white text-2xl mb-8">Our Achievements</h3>
+              
+              {/* Achievement Cards */}
+              <div className="space-y-5">
+                {[
+                  { Icon: Trophy, stat: "20,000+", label: "Properties Protected", desc: "Residential and commercial" },
+                  { Icon: Users, stat: "50+", label: "Certified Experts", desc: "Trained and qualified team members" },
+                  { Icon: Star, stat: "4.9/5", label: "Client Satisfaction", desc: "Highest rating in the region" },
+                  { Icon: MapPin, stat: "12+", label: "Service Areas", desc: "Covering Islamabad, Rawalpindi, Taxila & Murree" },
+                  { Icon: CheckCircle2, stat: "100%", label: "Guaranteed Results", desc: "Safe treatments with long-term prevention" },
+                  { Icon: Leaf, stat: "IPM", label: "Certified Methods", desc: "Integrated Pest Management approach" },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-4 rounded-3xl bg-white/5 p-5 hover:bg-white/10 transition-all">
+                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-brand-green/20">
+                      <item.Icon size={28} className="text-[#c8e87d]" />
                     </div>
-                    {i < milestones.length - 1 && <div className="w-0.5 h-full bg-brand-green/30 my-1" />}
+                    <div className="flex-grow">
+                      <div className="flex items-baseline gap-2 mb-1">
+                        <span className="font-display text-2xl font-bold text-[#c8e87d]">{item.stat}</span>
+                        <span className="text-white/85 font-semibold text-lg">{item.label}</span>
+                      </div>
+                      <p className="text-white/70 text-sm">{item.desc}</p>
+                    </div>
                   </div>
-                  <div className="pb-1">
-                    <div className="text-brand-green font-semibold text-sm">{year}</div>
-                    <div className="text-white/85 text-sm leading-relaxed">{event}</div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -278,10 +256,13 @@ export default function AboutPage() {
                 }}
               >
                 <div className="relative w-full h-32 mb-4 rounded-md overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
-                  <div className="text-center text-gray-500 dark:text-gray-400">
-                    <div className="text-3xl mb-2">🖼️</div>
-                    <div className="text-xs font-medium">{image.replace('-image.jpg', '').replace('-', ' ')}</div>
-                  </div>
+                  <Image
+                    src={`/${image}`}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 320px"
+                  />
                 </div>
                 <h3 className="font-display font-bold text-brand-navy dark:text-white text-lg mb-3">{title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{desc}</p>
@@ -291,42 +272,67 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* CEO */}
       <section className="section-padding bg-white dark:bg-gray-950">
         <div className="container-max">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="section-tag justify-center">
               <span className="w-8 h-0.5 bg-brand-green" />
-              Our Team
+              Leadership
               <span className="w-8 h-0.5 bg-brand-green" />
             </div>
             <h2 className="section-heading mb-4">
-              Meet the <span className="text-gradient">Experts</span>
+              Meet the <span className="text-gradient">Founder</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              Our leadership team brings decades of combined experience and genuine passion for pest-free living.
+              The company is led by one experienced professional with a clear focus on safe service, honest guidance, and long-term trust.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="card-base p-8 text-center group">
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center text-white font-display font-bold text-2xl mx-auto mb-5 group-hover:scale-110 transition-transform shadow-lg`}>
-                  {member.avatar}
+          <div className="mx-auto max-w-5xl rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-6 shadow-sm sm:p-8 lg:p-10 dark:border-gray-800 dark:from-gray-900 dark:to-gray-950">
+            <div className="grid gap-8 lg:grid-cols-[280px_1fr] lg:items-center">
+              <div className="flex flex-col items-center rounded-[1.75rem] border border-slate-200 bg-white p-8 text-center shadow-sm dark:border-gray-800 dark:bg-gray-900">
+                <div className={`mb-5 flex h-24 w-24 items-center justify-center rounded-[1.5rem] bg-gradient-to-br ${ceo.color} font-display text-3xl font-bold text-white shadow-lg`}>
+                  {ceo.avatar}
                 </div>
-                <h3 className="font-display font-bold text-brand-navy dark:text-white text-lg">{member.name}</h3>
-                <div className="text-brand-green font-medium text-sm mt-1 mb-1">{member.role}</div>
-                <div className="text-gray-500 text-xs mb-3 flex items-center justify-center gap-2">
-                  <Award size={12} className="text-brand-gold" />
-                  {member.cert}
+                <h3 className="font-display text-2xl font-bold text-brand-navy dark:text-white">{ceo.name}</h3>
+                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-brand-green">{ceo.role}</p>
+                <div className="mt-5 space-y-3 text-sm text-slate-600 dark:text-gray-400">
+                  <div className="flex items-center justify-center gap-2">
+                    <Award size={14} className="text-brand-gold" />
+                    <span>{ceo.cert}</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <Star size={14} className="fill-brand-gold text-brand-gold" />
+                    <span>{ceo.experience} experience</span>
+                  </div>
                 </div>
-                <div className="text-xs text-gray-500 flex items-center justify-center gap-1 mb-4">
-                  <Star size={12} className="fill-brand-gold text-brand-gold" />
-                  {member.experience} experience
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">{member.bio}</p>
               </div>
-            ))}
+
+              <div className="rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+                <h3 className="font-display text-3xl font-semibold text-brand-navy dark:text-white">
+                  Leadership built on experience and accountability
+                </h3>
+                <p className="mt-5 text-base leading-8 text-slate-600 dark:text-gray-400">
+                  {ceo.bio}
+                </p>
+                <p className="mt-4 text-base leading-8 text-slate-600 dark:text-gray-400">
+                  His leadership approach is centered on service quality, practical treatment planning, and clear communication so clients feel confident from inspection through follow-up.
+                </p>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  {[
+                    "Trusted local leadership",
+                    "Inspection-led decisions",
+                    "Safe and professional service",
+                  ].map((item) => (
+                    <div key={item} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm font-medium text-slate-700 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-300">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -371,10 +377,10 @@ export default function AboutPage() {
               <span className="w-8 h-0.5 bg-brand-green" />
             </div>
             <h2 className="section-heading mb-4">
-              Policy of <span className="text-gradient">A to Z Global Enterprises</span>
+              Policy of <span className="text-gradient">IC PestControl Enterprises</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              At A to Z Global Enterprises, our policies reflect our dedication to quality service, environmental responsibility, and customer well-being.
+              IC PestControl, our policies reflect our dedication to quality service, environmental responsibility, and customer well-being.
             </p>
           </div>
 

@@ -1,12 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, Shield, Star, CheckCircle } from "lucide-react";
 
 const services = [
-  { href: "/services#termite", label: "Termite Control" },
-  { href: "/services#rodent", label: "Rodent Control" },
-  { href: "/services#cockroach", label: "Cockroach Treatment" },
-  { href: "/services#bedbug", label: "Bed Bug Removal" },
-  { href: "/services#general", label: "General Pest Control" },
+  { href: "/services/pest-control", label: "Pest Control" },
+  { href: "/services/fumigation", label: "Fumigation" },
+  { href: "/services/maintenance", label: "Maintenance" },
 ];
 
 const quickLinks = [
@@ -53,16 +52,19 @@ export function Footer() {
       <div className="container-max py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 gradient-green rounded-xl flex items-center justify-center">
-                <span className="text-white text-base sm:text-lg font-semibold font-display">P</span>
+            <div className="mb-4 sm:mb-5">
+              <div className="rounded-lg overflow-hidden inline-block">
+                <Image
+                  src="/logo-img.png"
+                  alt="IC PestControl Logo"
+                  width={180}
+                  height={50}
+                  className="h-auto w-auto"
+                />
               </div>
-              <span className="font-display font-semibold text-base sm:text-xl tracking-tight text-white">
-                Pest<span className="text-brand-green-100">Pro</span>
-              </span>
             </div>
             <p className="text-white/60 text-xs sm:text-sm leading-5 sm:leading-relaxed mb-4 sm:mb-6">
-              Your trusted pest control experts for homes and businesses. We deliver safer,
+              IC PestControl - Your trusted pest control experts for homes and businesses. We deliver safer,
               effective solutions for termites, rodents, cockroaches, bed bugs, and general pest issues.
             </p>
             <div className="flex gap-2 sm:gap-3">
@@ -120,8 +122,8 @@ export function Footer() {
             <h3 className="text-white font-semibold font-display text-base sm:text-lg mb-4 sm:mb-5">Get In Touch</h3>
             <div className="space-y-3 sm:space-y-4">
               {[
-                { icon: Phone, value: "+92 306 9235099", href: "tel:+923069235099", label: "Emergency line" },
-                { icon: Mail, value: "info@pestpro.pk", href: "mailto:info@pestpro.pk", label: "Email us" },
+              { icon: Phone, value: "+92 322 9162746", href: "tel:+923229162746", label: "Emergency line" },
+                { icon: Mail, value: "islamabadpestcontrolservices@gmail.com", href: "mailto:islamabadpestcontrolservices@gmail.com", label: "Email us" },
                 { icon: MapPin, value: "Islamabad, Pakistan", href: "#", label: "Our location" },
               ].map(({ icon: Icon, value, href, label }) => (
                 <a key={label} href={href} className="flex items-start gap-2 sm:gap-3 group">
@@ -144,7 +146,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-max py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-white/40 text-sm">© {new Date().getFullYear()} PestPro Pest Control. All rights reserved.</p>
+          <p className="text-white/40 text-sm">© {new Date().getFullYear()} IC PestControl - Islamabad Pest Control. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-white/40 hover:text-white/70 text-xs transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="text-white/40 hover:text-white/70 text-xs transition-colors">Terms of Service</Link>

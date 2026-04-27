@@ -1,4 +1,4 @@
-# 🎯 PestPro Admin System - Complete Implementation Summary
+# 🎯 IC PestControl Admin System - Complete Implementation Summary
 
 ## ✅ Project Completion Status
 
@@ -187,7 +187,7 @@ PostgreSQL (Neon)
 
 - `scripts/create-admin.js` (150 lines)
 - `scripts/test-apis.sh` (200 lines)
-- `scripts/PestPro-API-Collection.postman_collection.json`
+- `scripts/IC-PestControl-API-Collection.postman_collection.json`
 
 ### Documentation
 

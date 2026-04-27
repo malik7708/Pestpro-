@@ -4,44 +4,44 @@ import { useEffect, useState, useRef, useCallback } from "react";
 
 const testimonials = [
   {
-    name: "Dennis Callis",
+    name: "Usman Butt",
     role: "Homeowner",
     location: "Islamabad",
     company: "Residential Client",
-    date: "Aug 29, 2017",
+    date: "Aug 29, 2011",
     rating: 4.9,
     initials: "DC",
     color: "#0f766e",
-    text: "PestPro fixed my pest issue with a strong, fast plan and great follow-up. The team arrived on time and explained everything clearly. Exceptional service from start to finish.",
+    text: "IC PestControl fixed my pest issue with a strong, fast plan and great follow-up. The team arrived on time and explained everything clearly. Exceptional service from start to finish.",
   },
   {
     name: "Sana Tariq",
     role: "Homeowner",
     location: "Rawalpindi",
     company: "Family Residence",
-    date: "Aug 29, 2017",
+    date: "May 22, 2015",
     rating: 4.9,
     initials: "ST",
     color: "#0d9488",
     text: "I booked a termite inspection and the response was more professional than expected. They were careful, honest, and incredibly useful in their advice. Will definitely return.",
   },
   {
-    name: "Bradley Lawlor",
+    name: "Sanaullah Khan",
     role: "Residential Client",
-    location: "Faisalabad",
+    location: "Rawalpindi",
     company: "Apartment Management",
-    date: "Aug 29, 2017",
+    date: "Aug 04, 2020",
     rating: 5.0,
     initials: "BL",
     color: "#115e59",
-    text: "PestPro provided a structured recurring plan that finally gave us the control and reporting our property needed. Professional, thorough and completely reliable.",
+    text: "IC PestControl provided a structured recurring plan that finally gave us the control and reporting our property needed. Professional, thorough and completely reliable.",
   },
   {
-    name: "Patricia Sanders",
+    name: "Parvez Shah",
     role: "Business Owner",
-    location: "Sargodha",
+    location: "Taxila",
     company: "Food Business",
-    date: "Aug 29, 2017",
+    date: "June 12, 2018",
     rating: 4.9,
     initials: "PS",
     color: "#0f766e",
@@ -50,17 +50,16 @@ const testimonials = [
   {
     name: "Hassan Enterprises",
     role: "Operations Team",
-    location: "Peshawar",
+    location: "Islamabad",
     company: "Warehouse Client",
-    date: "Aug 29, 2017",
+    date: "July 29, 2024",
     rating: 5.0,
     initials: "HE",
     color: "#0d9488",
-    text: "Their warehouse fumigation was efficient and respectful of our schedule. PestPro reduced pests while keeping our team working normally. A truly seamless experience.",
+    text: "Their warehouse fumigation was efficient and respectful of our schedule. IC PestControl reduced pests while keeping our team working normally. A truly seamless experience.",
   },
 ];
 
-const ORBIT_SIZE = 400;
 const RADIUS = 158;
 const CENTER = 200;
 const TOTAL = testimonials.length;
@@ -191,7 +190,7 @@ export function TestimonialsSection() {
             <div className="bg-white rounded-[26px] p-10 relative overflow-hidden shadow-lg border border-[#2f6b4f]/6">
               <div className="absolute top-0 left-0 right-0 h-0.75 bg-gradient-to-r from-[#2f6b4f] via-[#3d8660] to-[#2f6b4f] bg-[length:200%_100%] animate-[shimmer_3.5s_linear_infinite]" />
               <div className="flex items-start justify-between gap-4 mb-5">
-                <div className="text-5xl leading-none text-[#2f6b4f]/13 flex-1">"</div>
+                <div className="text-5xl leading-none text-[#2f6b4f]/13 flex-1">&quot;</div>
                 <svg className="w-12 h-12 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Google" role="img">
                   <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                   <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>

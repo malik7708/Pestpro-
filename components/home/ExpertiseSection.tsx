@@ -2,42 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 const expertiseItems = [
-  {
-    title: "Fumigation Services",
+   {
+    title: "Pest Control Services",
     description:
-      "Our fumigation solutions bring efficient removal of pests to ensure that your surroundings are free of pests and safe.",
-    image: "/pest2.png",
-  },
-  {
-    title: "Termite Proofing",
-    description:
-      "We prepare complete termite proofing to safeguard your home from the structural damage caused by termites.",
-    image: "/termite.png",
-  },
-  {
-    title: "Rodents Control",
-    description:
-      "Our rodent control services are designed to protect your building and storage structures while preventing the damage that rodents cause.",
+      "Our pest control services cover a wide range of pests, including termites, rodents, cockroaches, ants, flies, mosquitoes, and more. We use effective treatments to eliminate pests and protect your property.",
     image: "/rodent2.png",
   },
   {
-    title: "Disinfection",
+    title: "Fumigation Services",
     description:
-      "Our COVID-19 disinfection service is a priority for safety and health, providing a safer and cleaner environment for you and your family members.",
-    image: "/Disinfection.png",
+      "Our fumigation solutions bring efficient removal of pests to ensure that your surroundings are free of pests and safe.We use professional-grade fumigants and techniques to target pests in hard-to-reach areas, providing comprehensive protection for your property.",
+    image: "/pest2.png",
   },
   {
-    title: "Water Tank Cleaning Services",
+    title: "Termite Control Services",
     description:
-      "To ensure a safe and clean supply of water, we provide professional cleaning of water tanks for commercial and residential properties and homes.",
-    image: "/tank.png",
+      "Our termite control services include thorough inspections, effective treatments, and preventive measures to protect your property from termite damage. We use industry-approved methods to eliminate termites and prevent future infestations.",
+    image: "/termite.png",
   },
-  {
-    title: "Floor Scoring, Cleaning and Polishing",
-    description:
-      "The well-qualified floor scoring, cleaning and polishing solutions warrant that your floors are spotless to extend their lives and improve their appearance.",
-    image: "/floor.png",
-  },
+ 
 ];
 
 export function ExpertiseSection() {
@@ -55,16 +38,16 @@ export function ExpertiseSection() {
       <div className="relative z-10">
         <div className="container-max">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="section-tag justify-center">
-              <span className="w-8 h-0.5 bg-brand-green" />
+            <div className="section-tag justify-center bg-lime-200/200 text-lime-200 mb-4">
+              <span className="w-8 h-0.5 bg-lime-200" />
               Our Expertise
-              <span className="w-8 h-0.5 bg-brand-green" />
+              <span className="w-8 h-0.5 bg-lime-200" />
             </div>
             <h2 className="section-heading mb-4 text-white">
-              Extended Site Support and <span className="text-[#c8e87d]">Specialized Services</span>
+              Extended Site Support and <span className="text-lime-200">Specialized Services</span>
             </h2>
             <p className="text-white/90 text-lg leading-8">
-              Along with pest control, PestPro also supports clients with related hygiene,
+              Along with pest control, IC PestControl also supports clients with related hygiene,
               treatment, and maintenance services for residential, commercial, and managed properties.
             </p>
           </div>
