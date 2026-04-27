@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { FadeIn, PageTransition } from "@/components/ui/motion";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,11 +65,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={inter.variable}>
         <ThemeProvider>
+          <FadeIn>
             <Navbar />
-            <main>{children}</main>
+          </FadeIn>
+          <main>
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <FadeIn>
             <Footer />
+          </FadeIn>
+          <FadeIn delay={0.1}>
             <WhatsAppButton />
+          </FadeIn>
+          <FadeIn delay={0.16}>
             <ScrollToTop />
+          </FadeIn>
         </ThemeProvider>
       </body>
     </html>

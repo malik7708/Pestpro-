@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Phone, MessageCircle, Mail, Clock, CheckCircle, Shield } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
   title: "Contact IC PestControl – Expert Pest Control Services",
@@ -11,6 +12,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
+      <FadeIn>
       <section className="pt-24 sm:pt-32 lg:pt-48 pb-12 sm:pb-16 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/hero.png)'}}>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/30 to-slate-950/40"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
@@ -26,8 +28,10 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+      </FadeIn>
 
       {/* Main Contact Section */}
+      <FadeIn>
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
@@ -120,8 +124,10 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* Service Areas Section */}
+      <FadeIn>
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
@@ -151,8 +157,10 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* Services Overview */}
+      <FadeIn>
       <section  className="py-12 sm:py-16 lg:py-32 relative"
         style={{
           backgroundImage: "url('/hero2.png')",
@@ -190,8 +198,10 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* Location Map */}
+      <FadeIn>
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Find Us on the Map</h2>
@@ -209,6 +219,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
     </>
   );
 }

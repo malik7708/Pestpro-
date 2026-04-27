@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
 
 const expertiseItems = [
    {
@@ -37,7 +38,7 @@ export function ExpertiseSection() {
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10">
         <div className="container-max">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <FadeIn className="text-center max-w-3xl mx-auto mb-16">
             <div className="section-tag justify-center bg-lime-200/200 text-lime-200 mb-4">
               <span className="w-8 h-0.5 bg-lime-200" />
               Our Expertise
@@ -50,42 +51,41 @@ export function ExpertiseSection() {
               Along with pest control, IC PestControl also supports clients with related hygiene,
               treatment, and maintenance services for residential, commercial, and managed properties.
             </p>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <StaggerGroup className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
             {expertiseItems.map((item) => (
-              <article
-                key={item.title}
-                className="overflow-hidden rounded-[15px] bg-green-50 dark:bg-gray-950/95 backdrop-blur-sm border border-white/20 dark:border-gray-800 shadow-card hover:shadow-card-hover transition-all duration-300"
-              >
-                <div className="h-1.5 bg-brand-green" />
-                <div className="relative h-56">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 1280px) 100vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 to-transparent" />
-                </div>
-
-                <div className="p-7">
-                  <h3 className="font-display text-[1.35rem] font-semibold text-brand-navy dark:text-white mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-7">
-                    {item.description}
-                  </p>
-                  <div className="mt-6">
-                    <Link href="/services" className="btn-primary">
-                      Explore
-                    </Link>
+              <StaggerItem key={item.title}>
+                <article className="group overflow-hidden rounded-[15px] border border-white/20 bg-green-50 shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover dark:border-gray-800 dark:bg-gray-950/95 dark:backdrop-blur-sm">
+                  <div className="h-1.5 bg-brand-green" />
+                  <div className="media-zoom relative h-56">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 1280px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
                   </div>
-                </div>
-              </article>
+
+                  <div className="p-7">
+                    <h3 className="mb-3 font-display text-[1.35rem] font-semibold text-brand-navy transition-colors duration-300 group-hover:text-brand-green dark:text-white">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-7 text-gray-600 dark:text-gray-400">
+                      {item.description}
+                    </p>
+                    <div className="mt-6">
+                      <Link href="/services" className="btn-primary">
+                        Explore
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGroup>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Shield } from "lucide-react";
 import { mainServiceCards, mainServices } from "@/lib/servicesConfig";
 import { CTASection } from "@/components/sections/CTASection";
+import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
   title: "All Services",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <FadeIn>
       <section
        className="pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/collage.png)'}}
@@ -48,7 +50,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
+      <FadeIn>
       <section className="section-padding bg-white">
         <div className="container-max">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -86,7 +90,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
+      <FadeIn>
       <section className="section-padding bg-slate-50">
         <div className="container-max">
           <div className="max-w-3xl">
@@ -127,7 +133,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
 
+      <FadeIn>
       <section className="section-padding bg-[#0d4b33] text-white">
         <div className="container-max text-center">
           <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -146,7 +154,10 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <CTASection />
+      </FadeIn>
+      <FadeIn>
+        <CTASection />
+      </FadeIn>
     </>
   );
 }

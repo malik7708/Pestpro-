@@ -23,7 +23,7 @@ const ceo = {
 const values = [
   { title: "Integrity First", desc: "Honest assessments, transparent pricing. We never recommend services you don't need.", image: "integrity-image.png", order: 1 },
   { title: "Family Safety", desc: "All treatments prioritize the safety of your children, pets, and the environment.", image: "family-safety-image.png", order: 2 },
-  { title: "Excellence", desc: "Continuous training and investment in the latest pest control technologies.", image: "excellence-image.png", order: 4 },
+  { title: "Excellence", desc: "Continuous training and investment in the latest pest control technologies.", image: "excellence-image..png", order: 4 },
   { title: "Community", desc: "Locally owned and operated. We reinvest in the communities we serve.", image: "community-image.png", order: 3 },
 ];
 

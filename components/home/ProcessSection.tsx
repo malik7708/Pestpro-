@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, ClipboardList, FlaskConical, ShieldCheck, ArrowRight } from "lucide-react";
+import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
 
 const steps = [
   {
@@ -42,7 +43,7 @@ export function ProcessSection() {
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10">
         <div className="container-max">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <FadeIn className="text-center max-w-3xl mx-auto mb-16">
             <div className="section-tag justify-center bg-lime-200/200 text-lime-200 mb-4">
               <span className="w-8 h-0.5 bg-lime-200" />
               How It Works
@@ -55,30 +56,31 @@ export function ProcessSection() {
               Our process is designed to keep treatment straightforward for homeowners,
               office teams, restaurants, and commercial facilities that need a reliable pest control partner.
             </p>
-          </div>
+          </FadeIn>
 
-          <div className="columns-2 gap-4 mb-14 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-4">
+          <StaggerGroup className="columns-2 gap-4 mb-14 md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-4">
             {steps.map((step, index) => (
-              <div
-                key={step.number}
-                className={`mb-4 break-inside-avoid rounded-[24px] bg-green-50 dark:bg-gray-950/95 backdrop-blur-sm border border-white/20 dark:border-gray-800 p-5 sm:p-7 shadow-card md:mb-0 ${
-                  index % 2 === 1 ? "mt-7 md:mt-0" : "mt-0"
-                }`}
-              >
-                <div className="h-1.5 bg-brand-green rounded-t-[24px]" />
-                <div className="flex items-center justify-between mb-5 mt-5">
-                  <div className="w-12 h-12 rounded-2xl bg-green-200 dark:bg-brand-green/10 flex items-center justify-center">
-                    <step.icon size={22} className="text-brand-green" />
+              <StaggerItem key={step.number}>
+                <div
+                  className={`group mb-4 break-inside-avoid rounded-[24px] border border-white/20 bg-green-50 p-5 shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover dark:border-gray-800 dark:bg-gray-950/95 dark:backdrop-blur-sm md:mb-0 ${
+                    index % 2 === 1 ? "mt-7 md:mt-0" : "mt-0"
+                  }`}
+                >
+                  <div className="h-1.5 rounded-t-[24px] bg-brand-green" />
+                  <div className="mb-5 mt-5 flex items-center justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-200 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 dark:bg-brand-green/10">
+                      <step.icon size={22} className="text-brand-green" />
+                    </div>
+                    <span className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-green">{step.number}</span>
                   </div>
-                  <span className="text-sm font-semibold tracking-[0.18em] uppercase text-brand-green">{step.number}</span>
+                  <h3 className="mb-3 font-display text-lg font-semibold text-brand-navy transition-colors duration-300 group-hover:text-brand-green dark:text-white sm:text-xl">{step.title}</h3>
+                  <p className="text-sm leading-7 text-gray-600 dark:text-gray-400">{step.description}</p>
                 </div>
-                <h3 className="font-display font-semibold text-brand-navy dark:text-white text-lg sm:text-xl mb-3">{step.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-7">{step.description}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGroup>
 
-          <div className="rounded-[28px] bg-brand-navy/95 backdrop-blur-sm text-white px-8 py-10 lg:px-10 lg:py-12 border border-white/20">
+          <FadeIn className="rounded-[28px] bg-brand-navy/95 backdrop-blur-sm text-white px-8 py-10 lg:px-10 lg:py-12 border border-white/20">
             <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-8 items-center">
               <div>
                 <h3 className="font-display text-3xl font-semibold tracking-tight mb-3">
@@ -98,7 +100,7 @@ export function ProcessSection() {
                 </Link>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

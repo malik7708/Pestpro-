@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { FAQSection } from "@/components/home/FAQSection";
 import { ParallaxServicesSection } from "@/components/sections/ParallaxServicesSection";
+import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | IC PestControl - Islamabad Pest Control",
@@ -17,6 +18,7 @@ export default function FAQsPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       {/* Page Header */}
+      <FadeIn>
       <section  className="pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/termite.png)'}}>
         <div className="container-max text-center">
@@ -29,11 +31,15 @@ export default function FAQsPage() {
           </p>
         </div>
       </section>
+      </FadeIn>
 
       {/* FAQ Content */}
-      <FAQSection />
+      <FadeIn>
+        <FAQSection />
+      </FadeIn>
 
       {/* Bottom CTA */}
+      <FadeIn>
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container-max text-center">
           <h2 className="font-display text-3xl font-bold text-brand-navy dark:text-white mb-4">
@@ -53,6 +59,7 @@ export default function FAQsPage() {
           </div>
         </div>
       </section>
+      </FadeIn>
     </div>
   );
 }

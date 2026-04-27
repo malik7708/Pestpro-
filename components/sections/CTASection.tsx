@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Phone, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
 
 interface FormData {
   name: string;
@@ -130,52 +131,62 @@ export function CTASection() {
 
       <div className="container-max relative z-10">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_0.9fr] items-center">
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8">
-              <span className="text-brand-green-100 font-semibold text-sm">Free inspection</span>
-              <span className="text-white/80 text-sm">for homes and businesses</span>
-            </div>
+          <StaggerGroup className="text-center lg:text-left">
+            <StaggerItem>
+              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2">
+                <span className="text-sm font-semibold text-brand-green-100">Free inspection</span>
+                <span className="text-sm text-white/80">for homes and businesses</span>
+              </div>
+            </StaggerItem>
 
-            <h2 className="font-display text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-6">
-              Worried about termites
-              <br />
-              <span className="text-brand-green-100">or pest infestation?</span>
-            </h2>
+            <StaggerItem>
+              <h2 className="mb-6 font-display text-4xl font-semibold tracking-tight text-white lg:text-5xl">
+                Worried about termites
+                <br />
+                <span className="text-brand-green-100">or pest infestation?</span>
+              </h2>
+            </StaggerItem>
 
-            <p className="text-white/80 text-xl max-w-2xl mb-8">
-              Get professional help before it&apos;s too late. Contact IC Pest Control today for fast, effective, and affordable pest control services in Islamabad and Rawalpindi. Your safety and satisfaction are our top priorities.
-            </p>
+            <StaggerItem>
+              <p className="mb-8 max-w-2xl text-xl text-white/80">
+                Get professional help before it&apos;s too late. Contact IC Pest Control today for fast, effective, and affordable pest control services in Islamabad and Rawalpindi. Your safety and satisfaction are our top priorities.
+              </p>
+            </StaggerItem>
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-10">
+            <div className="mb-10 grid gap-4 sm:grid-cols-2">
               {[
                 "Free Inspection",
                 "Same-Day Service",
                 "100% Guaranteed",
                 "No Hidden Fees",
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-white/80 text-sm rounded-3xl bg-white/5 border border-white/10 px-4 py-3">
-                  <CheckCircle size={18} className="text-brand-green-100" />
-                  {item}
-                </div>
+                <StaggerItem key={item}>
+                  <div className="flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80">
+                    <CheckCircle size={18} className="text-brand-green-100" />
+                    {item}
+                  </div>
+                </StaggerItem>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="tel:+923229162746" className="btn-primary inline-flex items-center justify-center gap-3 text-base px-8 py-4 text-lg">
-                <Phone size={20} />
-                Call +92 322 9162746
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-lg"
-              >
-                Book Free Inspection
-                <ArrowRight size={20} />
-              </Link>
-            </div>
-          </div>
+            <StaggerItem>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+                <a href="tel:+923229162746" className="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 text-base text-lg">
+                  <Phone size={20} />
+                  Call +92 322 9162746
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-white/20"
+                >
+                  Book Free Inspection
+                  <ArrowRight size={20} />
+                </Link>
+              </div>
+            </StaggerItem>
+          </StaggerGroup>
 
-          <div className="border border-emerald-200/10 bg-emerald-900/40 backdrop-blur-xl p-6 shadow-2xl shadow-emerald-950/20">
+          <FadeIn className="border border-emerald-200/10 bg-emerald-900/40 p-6 shadow-2xl shadow-emerald-950/20 backdrop-blur-xl" delay={0.08}>
             <p className="text-brand-green-100 font-semibold uppercase tracking-[0.24em] text-sm mb-3">Request a callback</p>
             <h3 className="text-3xl font-semibold text-white mb-5">Quick contact form</h3>
 
@@ -263,7 +274,7 @@ export function CTASection() {
                 )}
               </button>
             </form>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

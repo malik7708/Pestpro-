@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
 
 const sectors = [
   {
@@ -38,54 +39,57 @@ export function BusinessSectorsSection() {
   return (
     <section className="section-padding bg-white dark:bg-gray-950">
       <div className="container-max">
-        <div
-          className="relative overflow-hidden rounded-[24px] sm:rounded-[30px] px-4 py-8 sm:px-6 sm:py-10 md:px-10 lg:px-14"
-          style={{
-            background:
-              "linear-gradient(rgba(18, 28, 36, 0.68), rgba(18, 28, 36, 0.68)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80') center/cover",
-          }}
-        >
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-5 text-white/80 text-xs sm:text-sm font-medium">
-              Commercial Pest Control
-            </div>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.8rem] font-semibold tracking-tight text-white mb-3 sm:mb-4">
-              Pest management services for your business
-            </h2>
-            <p className="text-white/75 text-sm sm:text-base lg:text-lg leading-6 sm:leading-7 lg:leading-8 mb-5 sm:mb-7">
-              IC PestControl supports companies across multiple business sectors with professional pest control,
-              recurring service planning, site inspections, and practical follow-up for operational environments.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-xl transition-all duration-300"
-            >
-              Speak to a commercial pest expert today
-              <ArrowRight size={16} className="sm:w-5 sm:h-5" />
-            </Link>
-          </div>
-        </div>
-
-        <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4 md:grid md:grid-cols-2 md:gap-4 lg:gap-6 md:space-y-0 xl:grid-cols-3">
-          {sectors.map((sector, index) => (
-            <article
-              key={sector.title}
-              className={`overflow-hidden rounded-[18px] sm:rounded-[22px] bg-white dark:bg-gray-950 border border-slate-200/70 dark:border-gray-800 shadow-card w-full md:w-auto ${
-                index % 2 === 0 ? "mr-auto" : "ml-auto md:ml-0"
-              }`}
-            >
-              <div className="h-1 bg-brand-green" />
-              <div className="p-4 sm:p-5 lg:p-7">
-                <h3 className="font-display text-base sm:text-lg lg:text-[1.35rem] font-semibold text-brand-navy dark:text-white mb-2 sm:mb-3">
-                  {sector.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm leading-5 sm:leading-6 lg:leading-7">
-                  {sector.description}
-                </p>
+        <FadeIn>
+          <div
+            className="relative overflow-hidden rounded-[24px] px-4 py-8 sm:rounded-[30px] sm:px-6 sm:py-10 md:px-10 lg:px-14"
+            style={{
+              background:
+                "linear-gradient(rgba(18, 28, 36, 0.68), rgba(18, 28, 36, 0.68)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80') center/cover",
+            }}
+          >
+            <div className="mx-auto max-w-2xl text-center">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-medium text-white/80 sm:mb-5 sm:px-4 sm:py-2 sm:text-sm">
+                Commercial Pest Control
               </div>
-            </article>
+              <h2 className="mb-3 font-display text-2xl font-semibold tracking-tight text-white sm:mb-4 sm:text-3xl lg:text-[2.8rem]">
+                Pest management services for your business
+              </h2>
+              <p className="mb-5 text-sm leading-6 text-white/75 sm:mb-7 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
+                IC PestControl supports companies across multiple business sectors with professional pest control,
+                recurring service planning, site inspections, and practical follow-up for operational environments.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-white/20 sm:px-8 sm:py-4"
+              >
+                Speak to a commercial pest expert today
+                <ArrowRight size={16} className="sm:h-5 sm:w-5" />
+              </Link>
+            </div>
+          </div>
+        </FadeIn>
+
+        <StaggerGroup className="mt-6 space-y-3 sm:mt-8 sm:space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 lg:gap-6 xl:grid-cols-3">
+          {sectors.map((sector, index) => (
+            <StaggerItem key={sector.title}>
+              <article
+                className={`w-full overflow-hidden rounded-[18px] border border-slate-200/70 bg-white shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover dark:border-gray-800 dark:bg-gray-950 md:w-auto ${
+                  index % 2 === 0 ? "mr-auto" : "ml-auto md:ml-0"
+                }`}
+              >
+                <div className="h-1 bg-brand-green" />
+                <div className="p-4 sm:p-5 lg:p-7">
+                  <h3 className="mb-2 font-display text-base font-semibold text-brand-navy sm:mb-3 sm:text-lg lg:text-[1.35rem] dark:text-white">
+                    {sector.title}
+                  </h3>
+                  <p className="text-xs leading-5 text-gray-600 sm:text-sm sm:leading-6 lg:leading-7 dark:text-gray-400">
+                    {sector.description}
+                  </p>
+                </div>
+              </article>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </section>
   );

@@ -10,22 +10,47 @@ import { ServiceAreasSection } from "@/components/home/ServiceAreasSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { EmergencyBanner } from "@/components/home/EmergencyBanner";
 import { CTASection } from "@/components/sections/CTASection";
+import { FadeIn } from "@/components/ui/motion";
 
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <ParallaxServicesSection />
-      <BusinessSectorsSection />
-      <ExpertiseSection />
-      <WhyChooseUsSection />
-      <LocalSearchSection />
-      <ProcessSection />
-      <TestimonialsSection />
-      <ServiceAreasSection />
-      <FAQSection />
-      <EmergencyBanner />
-      <CTASection />
+      <FadeIn>
+        <HeroSection />
+      </FadeIn>
+      <FadeIn>
+        <ParallaxServicesSection />
+      </FadeIn>
+      <FadeIn>
+        <BusinessSectorsSection />
+      </FadeIn>
+      <FadeIn>
+        <ExpertiseSection />
+      </FadeIn>
+      <FadeIn>
+        <WhyChooseUsSection />
+      </FadeIn>
+      <FadeIn>
+        <LocalSearchSection />
+      </FadeIn>
+      <FadeIn>
+        <ProcessSection />
+      </FadeIn>
+      <FadeIn>
+        <TestimonialsSection />
+      </FadeIn>
+      <FadeIn>
+        <ServiceAreasSection />
+      </FadeIn>
+      <FadeIn>
+        <FAQSection />
+      </FadeIn>
+      <FadeIn>
+        <EmergencyBanner />
+      </FadeIn>
+      <FadeIn>
+        <CTASection />
+      </FadeIn>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { Shield, Award, Clock, Leaf, Users, Building2, CheckCircle2 } from "lucide-react";
+import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
 
 const reasons = [
   {
@@ -59,6 +60,7 @@ export function WhyChooseUsSection() {
     <section className="section-padding bg-white dark:bg-gray-950">
       <div className="container-max">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <FadeIn>
           <div>
             <div className="section-tag">
               <span className="w-8 h-0.5 bg-brand-green" />
@@ -108,29 +110,29 @@ export function WhyChooseUsSection() {
               </div>
             </div>
           </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+          <StaggerGroup className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5">
             {reasons.map(({ icon: Icon, title, description, stat, statLabel }) => (
-              <div
-                key={title}
-                className="card-base p-4 sm:p-6 group hover:border-brand-green/30 border border-transparent"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 gradient-green rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform shadow-brand-sm">
-                    <Icon size={22} className="text-white" />
+              <StaggerItem key={title}>
+                <div className="card-base group border border-transparent p-4 hover:border-brand-green/30 sm:p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="gradient-green flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl shadow-brand-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                      <Icon size={22} className="text-white" />
+                    </div>
+                    <div>
+                      <div className="mb-1 font-display text-sm font-semibold text-brand-navy dark:text-white sm:text-base">{title}</div>
+                      <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">{description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-display font-semibold text-brand-navy dark:text-white text-sm sm:text-base mb-1">{title}</div>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-6">{description}</p>
+                  <div className="mt-4 flex items-center gap-2 border-t border-gray-100 pt-4 dark:border-gray-800">
+                    <span className="font-display text-xl font-bold text-brand-green">{stat}</span>
+                    <span className="text-xs text-gray-500">{statLabel}</span>
                   </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center gap-2">
-                  <span className="font-display font-bold text-brand-green text-xl">{stat}</span>
-                  <span className="text-gray-500 text-xs">{statLabel}</span>
-                </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGroup>
         </div>
       </div>
     </section>
