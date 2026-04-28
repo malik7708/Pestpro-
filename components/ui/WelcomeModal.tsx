@@ -34,7 +34,7 @@ export function WelcomeModal() {
       <div className="relative z-10 w-full max-w-3xl rounded-[2rem] border border-white/10 bg-slate-900/95 p-8 shadow-2xl shadow-black/40 backdrop-blur-xl">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-4">
-            <p className="text-sm uppercase tracking-[0.36em] text-emerald-300">Welcome to IC PestControl</p>
+            <p className="text-sm uppercase tracking-[0.36em] text-emerald-300">Welcome to ISB PestControl</p>
             <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Protect Your Home Today
             </h2>

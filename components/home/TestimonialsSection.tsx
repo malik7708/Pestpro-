@@ -12,7 +12,7 @@ const testimonials = [
     rating: 4.9,
     initials: "DC",
     color: "#0f766e",
-    text: "IC PestControl fixed my pest issue with a strong, fast plan and great follow-up. The team arrived on time and explained everything clearly. Exceptional service from start to finish.",
+    text: "ISB PestControl fixed my pest issue with a strong, fast plan and great follow-up. The team arrived on time and explained everything clearly. Exceptional service from start to finish.",
   },
   {
     name: "Sana Tariq",
@@ -34,7 +34,7 @@ const testimonials = [
     rating: 5.0,
     initials: "BL",
     color: "#115e59",
-    text: "IC PestControl provided a structured recurring plan that finally gave us the control and reporting our property needed. Professional, thorough and completely reliable.",
+    text: "ISB PestControl provided a structured recurring plan that finally gave us the control and reporting our property needed. Professional, thorough and completely reliable.",
   },
   {
     name: "Parvez Shah",
@@ -56,7 +56,7 @@ const testimonials = [
     rating: 5.0,
     initials: "HE",
     color: "#0d9488",
-    text: "Their warehouse fumigation was efficient and respectful of our schedule. IC PestControl reduced pests while keeping our team working normally. A truly seamless experience.",
+    text: "Their warehouse fumigation was efficient and respectful of our schedule. ISB PestControl reduced pests while keeping our team working normally. A truly seamless experience.",
   },
 ];
 

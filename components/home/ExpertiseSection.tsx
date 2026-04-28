@@ -48,8 +48,8 @@ export function ExpertiseSection() {
               Extended Site Support and <span className="text-lime-200">Specialized Services</span>
             </h2>
             <p className="text-white/90 text-lg leading-8">
-              Along with pest control, IC PestControl also supports clients with related hygiene,
-              treatment, and maintenance services for residential, commercial, and managed properties.
+              Along with pest control, ISB PestControl also supports clients with related hygiene
+              and treatment services for residential, commercial, and managed properties.
             </p>
           </FadeIn>
 

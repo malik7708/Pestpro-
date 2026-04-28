@@ -4,7 +4,7 @@ import { mainServices } from "@/lib/servicesConfig";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Maintenance Services | Disinfection, Floor Cleaning, Water Tank | IC PestControl",
+  title: "Maintenance Services | Disinfection, Floor Cleaning, Water Tank | ISB PestControl",
   description: "Professional maintenance services including disinfection, floor cleaning and polishing, and water tank cleaning.",
 };
 

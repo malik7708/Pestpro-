@@ -1,4 +1,4 @@
-# IC PestControl Admin System - Quick Start Guide
+# ISB PestControl Admin System - Quick Start Guide
 
 ## Overview
 

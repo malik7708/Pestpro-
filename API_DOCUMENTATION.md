@@ -1,8 +1,8 @@
-# IC PestControl Backend API Documentation
+# ISB PestControl Backend API Documentation
 
 ## Overview
 
-Complete backend API system for IC PestControl - Pest Control Management Website with:
+Complete backend API system for ISB PestControl - Pest Control Management Website with:
 
 - User authentication (JWT-based)
 - Admin dashboard with user and message management

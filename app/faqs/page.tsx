@@ -4,11 +4,11 @@ import { ParallaxServicesSection } from "@/components/sections/ParallaxServicesS
 import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | IC PestControl - Islamabad Pest Control",
+  title: "Frequently Asked Questions | ISB PestControl - Islamabad Pest Control",
   description: "Get answers to common questions about our pest control services, treatments, pricing, and guarantees. Professional pest control experts ready to help.",
   keywords: "pest control FAQ, pest questions, termite control FAQ, bed bug treatment questions, pest control pricing",
   openGraph: {
-    title: "Frequently Asked Questions | IC PestControl - Islamabad Pest Control",
+    title: "Frequently Asked Questions | ISB PestControl - Islamabad Pest Control",
     description: "Get answers to common questions about our pest control services, treatments, pricing, and guarantees.",
     type: "website",
   },

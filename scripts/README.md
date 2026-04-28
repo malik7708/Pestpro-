@@ -1,6 +1,6 @@
 # Admin User Creation Script
 
-This directory contains utility scripts for the IC PestControl application.
+This directory contains utility scripts for the ISB PestControl application.
 
 ## `create-admin.ts`
 
@@ -43,7 +43,7 @@ npx ts-node scripts/create-admin.ts
 
 ```
 ========================================
-  IC PestControl Admin User Creation Script
+  ISB PestControl Admin User Creation Script
 ========================================
 
 Enter admin email: islamabadpestcontrolservices9@gmail.com

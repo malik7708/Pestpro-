@@ -6,19 +6,19 @@ import Image from "next/image";
 
 const faqs = [
   {
-    q: "How quickly can IC PestControl respond to a pest complaint?",
+    q: "How quickly can ISB PestControl respond to a pest complaint?",
     a: "We offer fast scheduling in our main service areas, especially Islamabad, Rawalpindi, Lahore, and Karachi. Response time depends on the city, the type of pest issue, and the urgency of the complaint.",
     image: "/hero.png",
   },
   {
     q: "Do you provide pest control for offices, warehouses, and companies?",
-    a: "Yes. IC PestControl provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
+    a: "Yes. ISB PestControl provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
     image: "/floor.png",
   },
   {
     q: "Are your pest control treatments suitable for families and workplaces?",
     a: "Our team selects treatment methods according to the site, pest type, and occupancy needs. We also guide clients on practical precautions before and after treatment so the process remains safer and more manageable.",
-    image: "/Disinfection.png",
+    image: "/pest3.png",
   },
   {
     q: "Do I need to leave the property during treatment?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Do you offer termite control and fumigation services in Pakistan?",
-    a: "Yes. IC PestControl provides termite treatment, fumigation support, rodent control, cockroach treatment, bed bug removal, mosquito control, and general pest control for residential and commercial clients in Pakistan.",
+    a: "Yes. ISB PestControl provides termite treatment, fumigation support, rodent control, cockroach treatment, bed bug removal, mosquito control, and general pest control for residential and commercial clients in Pakistan.",
     image: "/termite.png",
   },
   {

@@ -1,4 +1,4 @@
-# IC PestControl Production Deployment Guide
+# ISB PestControl Production Deployment Guide
 
 ## Pre-Deployment Checklist
 
@@ -521,4 +521,4 @@ For issues or questions:
 
 **Deployment Complete!** 🎉
 
-Your IC PestControl admin system is now live and secure.
+Your ISB PestControl admin system is now live and secure.

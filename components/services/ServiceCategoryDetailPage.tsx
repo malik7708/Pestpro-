@@ -33,13 +33,6 @@ const themeByService: Record<
     button: "bg-white text-[#22313d] hover:bg-[#e7fbf8]",
     muted: "text-white/80",
   },
-  maintenance: {
-    hero: "from-[#133d63] via-[#1c5b7f] to-[#8cd3ff]",
-    badge: "border-[#8cd3ff]/35 bg-[#8cd3ff]/12 text-[#eef9ff]",
-    card: "border-[#8cd3ff]/20 bg-white/10",
-    button: "bg-white text-[#133d63] hover:bg-[#edf8ff]",
-    muted: "text-white/80",
-  },
 };
 
 function SectionTitle({
@@ -112,7 +105,7 @@ export function ServiceCategoryDetailPage({
     areaServed: ["Islamabad", "Rawalpindi"],
     provider: {
       "@type": "LocalBusiness",
-      name: "IC PestControl",
+      name: "ISB PestControl",
       telephone: "+92 322 9162746",
       url: "https://icpestcontrol.com",
     },
@@ -296,7 +289,7 @@ export function ServiceCategoryDetailPage({
               </h2>
               <div className="space-y-4 text-slate-600">
                 <p>
-                  At IC PestControl, our team of certified professionals specializes in {data.category.label.toLowerCase()} with proven methods that deliver results. We combine industry-leading techniques with eco-friendly solutions to protect your property and family.
+                  At ISB PestControl, our team of certified professionals specializes in {data.category.label.toLowerCase()} with proven methods that deliver results. We combine industry-leading techniques with eco-friendly solutions to protect your property and family.
                 </p>
                 <p>
                   Whether you&apos;re dealing with an active infestation or planning preventative treatment, our specialists conduct thorough inspections and develop customized treatment plans tailored to your specific situation and property layout.
@@ -497,7 +490,7 @@ export function ServiceCategoryDetailPage({
                   Need help choosing the right service?
                 </h2>
                 <p className="mt-4 max-w-2xl text-base leading-7 text-white/75">
-                  Tell us about the pest issue, sanitation need, or maintenance concern. We will help you choose the right service plan for your property and usage pattern.
+                  Tell us about the pest issue or sanitation need. We will help you choose the right service plan for your property and usage pattern.
                 </p>
               </div>
 
@@ -520,7 +513,7 @@ export function ServiceCategoryDetailPage({
           <SectionTitle
             eyebrow="Explore More"
             title="You may also need these services"
-            description="These related service cards make it easier to explore other treatments and maintenance options that often fit the same property needs."
+            description="These related service cards make it easier to explore other treatments that often fit the same property needs."
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">

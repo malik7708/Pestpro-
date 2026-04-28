@@ -8,14 +8,11 @@ import { FadeIn } from "@/components/ui/motion";
 export const metadata: Metadata = {
   title: "All Services",
   description:
-    "Explore pest control, termite control, fumigation, disinfection, floor care, and water tank cleaning services for homes and businesses.",
+    "Explore pest control, termite control, and fumigation services for homes and businesses.",
   keywords: [
     "pest control services",
     "termite control services",
     "fumigation services",
-    "maintenance services",
-    "water tank cleaning",
-    "disinfection services",
   ],
 };
 
@@ -60,7 +57,7 @@ export default function ServicesPage() {
               <div className="section-tag">Service Highlights</div>
               <h2 className="section-heading">Start with the service you need most</h2>
               <p className="mt-4 text-lg leading-8 text-slate-600">
-                Your trusted choice for expert pest control, termite treatment, fumigation, and maintenance services in Islamabad and Rawalpindi, serving both residential and commercial properties.
+                Your trusted choice for expert pest control, termite treatment, and fumigation services in Islamabad and Rawalpindi, serving both residential and commercial properties.
               </p>
             </div>
             <Link href="/contact" className="btn-primary">
@@ -142,7 +139,7 @@ export default function ServicesPage() {
             Need help choosing the right service page?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-white/80">
-            Share the issue you are facing and we will point you to the best pest control, termite, fumigation, or maintenance service for your property.
+            Share the issue you are facing and we will point you to the best pest control, termite, or fumigation service for your property.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/contact" className="btn-secondary">

@@ -4,9 +4,9 @@ import { CheckCircle, Award, Star, Trophy, Users, MapPin, CheckCircle2, Leaf } f
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Us – IC Pest Control | Trusted Pest Control in Islamabad & Rawalpindi",
+  title: "About Us – ISB Pest Control | Trusted Pest Control in Islamabad & Rawalpindi",
   description:
-    "Learn about IC Pest Control's commitment to safe, reliable pest management using advanced techniques and eco-friendly products. Serving Islamabad, Rawalpindi, Taxila, and Murree.",
+    "Learn about ISB Pest Control's commitment to safe, reliable pest management using advanced techniques and eco-friendly products. Serving Islamabad, Rawalpindi, Taxila, and Murree.",
 };
 
 
@@ -17,7 +17,7 @@ const ceo = {
   cert: "Certified Pesticide Applicator",
   avatar: "MA",
   color: "from-brand-green to-emerald-500",
-  bio: "Founded IC PestControl in 2005 after 4 years with the NPMA. Muhummad Abuzar's vision has always been to make professional pest control accessible, safe, and dependable for every family and business we serve.",
+  bio: "Founded ISB PestControl in 2005 after 4 years with the NPMA. Muhummad Abuzar's vision has always been to make professional pest control accessible, safe, and dependable for every family and business we serve.",
 };
 
 const values = [
@@ -88,7 +88,7 @@ export default function AboutPage() {
             <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-brand-green rounded-full" />
           </div>
           <h1 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            About <span className="text-green-200">IC PestControl</span>
+            About <span className="text-green-200">ISB PestControl</span>
           </h1>
           <p className="text-sm sm:text-base lg:text-xl text-white/90 max-w-2xl mx-auto px-2">
             Illinois&apos; most trusted pest control company, protecting homes and businesses since 2005.
@@ -103,14 +103,14 @@ export default function AboutPage() {
             <div>
               <div className="section-tag">
                 <span className="w-8 h-0.5 bg-brand-green" />
-                About IC PestControl
+                About ISB PestControl
               </div>
               <h2 className="section-heading mb-6">
                 Leading Provider of <span className="text-gradient">Pest Control Services</span>
               </h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
-                  At IC Pest Control, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. Our team uses advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
+                  At ISB PestControl, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. Our team uses advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
                 </p>
                 <p>
                   We follow the principles of Integrated Pest Management (IPM), ensuring long-term protection with minimal environmental impact. Our commitment to precision, safety, and customer satisfaction makes us one of the most reliable pest control companies in Islamabad and Rawalpindi.
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <div className="aspect-square rounded-3xl overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                 <Image
                   src="/collage.png"
-                  alt="About IC PestControl"
+                  alt="About ISB PestControl"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 500px"
@@ -159,15 +159,15 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-sm leading-8 text-white/85 sm:text-base">
                 <p>
-                  IC PestControl was founded in 2005 by Muhummad Abuzar, a certified pesticide applicator with a simple but powerful mission: 
+                  ISB PestControl was founded in 2005 by Muhummad Abuzar, a certified pesticide applicator with a simple but powerful mission: 
                   to provide honest, effective, and family-safe pest control services to Illinois homeowners.
                 </p>
                 <p>
-                  Starting with just 3 technicians and a single service van, Muhummad Abuzar built IC PestControl on the principle that 
+                  Starting with just 3 technicians and a single service van, Muhummad Abuzar built ISB PestControl on the principle that 
                   every customer deserves transparent pricing, expert service, and guaranteed results — no exceptions.
                 </p>
                 <p>
-                  Today, IC PestControl employs over 50 certified specialists, serves 12+ service areas, and has protected more than 
+                  Today, ISB PestControl employs over 50 certified specialists, serves 12+ service areas, and has protected more than 
                   20,000 homes and businesses. We&apos;re still locally owned, family-operated, and just as committed to our 
                   founding values as the day we started.
                 </p>
@@ -373,10 +373,10 @@ export default function AboutPage() {
               <span className="w-8 h-0.5 bg-brand-green" />
             </div>
             <h2 className="section-heading mb-4">
-              Policy of <span className="text-gradient">IC PestControl Enterprises</span>
+              Policy of <span className="text-gradient">ISB PestControl Enterprises</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              IC PestControl, our policies reflect our dedication to quality service, environmental responsibility, and customer well-being.
+              ISB PestControl, our policies reflect our dedication to quality service, environmental responsibility, and customer well-being.
             </p>
           </div>
 

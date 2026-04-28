@@ -49,7 +49,7 @@ export function ParallaxServicesSection() {
             transition={{ duration: 0.6, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="text-lg sm:text-xl leading-8 mb-8 text-white/90"
           >
-            Our expert team provides comprehensive pest management solutions for homes and businesses across Rawalpindi/Islamabad and nearby areas. From termite treatment to disinfection services, we ensure your property is safe and pest-free.
+            Our expert team provides comprehensive pest management solutions for homes and businesses across Rawalpindi/Islamabad and nearby areas. From termite treatment to fumigation services, we ensure your property is safe and pest-free.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 18 }}

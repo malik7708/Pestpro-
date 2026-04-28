@@ -16,7 +16,6 @@ import { useEffect, useState } from "react";
 import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
 import heroImage from "../../public/termite1.png";
 import termiteImage from "../../public/pest3.png";
-import disinfectionImage from "../../public/Disinfection.png";
 
 const slides: Array<{
   id: string;
@@ -31,7 +30,7 @@ const slides: Array<{
     eyebrow: "Trusted Pest & Termite Control",
     title: "Expert pest control for homes and businesses",
     description:
-      "IC Pest Control is a trusted pest and termite control company serving Rawalpindi, Islamabad, Taxila, and Murree. We provide reliable, safe, and effective solutions with guaranteed results.",
+      "ISB Pest Control is a trusted pest and termite control company serving Rawalpindi, Islamabad, Taxila, and Murree. We provide reliable, safe, and effective solutions with guaranteed results.",
     image: heroImage,
     cta: "Book free inspection",
   },
@@ -50,7 +49,7 @@ const slides: Array<{
     title: "Complete pest management for peace of mind",
     description:
       "From dengue spray and mosquito control to rodent removal and cockroach extermination. All services designed for long-lasting protection.",
-    image: disinfectionImage,
+    image: termiteImage,
     cta: "Request service details",
   },
 ];
@@ -285,6 +284,18 @@ export function HeroSection() {
                         </button>
                       </div>
                     </div>
+
+                    <div className="hidden gap-4 lg:grid">
+                      {[1, 2, 3].map((index) => (
+                        <motion.div
+                          key={`frame-${index}`}
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.4, delay: 0.1 * index }}
+                          className="relative overflow-hidden rounded-[24px] border-2 border-slate-300 bg-white/40 backdrop-blur-sm min-h-[110px]"
+                        />
+                      ))}
+                    </div>
                   </div>
 
                   <div className="mt-3 flex items-center justify-center gap-2 sm:mt-4 lg:hidden">
@@ -313,7 +324,7 @@ export function HeroSection() {
               <StaggerItem>
                 <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-green mb-4">
                   <span className="h-px w-10 bg-brand-green/60" />
-                  About IC Pest Control
+                  About ISB Pest Control
                 </div>
               </StaggerItem>
               <StaggerItem>
@@ -323,7 +334,7 @@ export function HeroSection() {
               </StaggerItem>
               <StaggerItem>
                 <p className="text-slate-600 text-base sm:text-lg leading-8">
-                  At IC Pest Control, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. We use advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
+                  At ISB Pest Control, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. We use advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
                 </p>
               </StaggerItem>
               <StaggerItem>
@@ -346,7 +357,7 @@ export function HeroSection() {
               <StaggerItem>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link href="/about" className="btn-primary">
-                    Learn More About IC Pest Control
+                    Learn More About ISB Pest Control
                     <ArrowRight size={18} />
                   </Link>
                   <Link href="/services" className="btn-outline">
@@ -361,7 +372,7 @@ export function HeroSection() {
                 <div className="relative h-[320px] sm:h-[400px] lg:h-[460px]">
                   <Image
                     src={heroImage}
-                    alt="IC PestControl pest control professional on site"
+                    alt="ISB PestControl pest control professional on site"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"

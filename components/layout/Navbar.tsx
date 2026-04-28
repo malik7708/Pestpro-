@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
@@ -19,8 +19,19 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [activeDesktopServiceId, setActiveDesktopServiceId] = useState<string | null>(null);
   const [expandedMobileCategory, setExpandedMobileCategory] = useState<string | null>(null);
+  const [expandedMobileService, setExpandedMobileService] = useState<string | null>(null);
+
+  const topServices = useMemo(
+    () => mainServices.filter((service) => service.id === "pest-control" || service.id === "fumigation"),
+    []
+  );
+
+  const activeDesktopService = activeDesktopServiceId
+    ? topServices.find((service) => service.id === activeDesktopServiceId)
+    : null;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -31,6 +42,20 @@ export function Navbar() {
   const closeMobileMenu = () => {
     setMobileOpen(false);
     setExpandedMobileCategory(null);
+    setExpandedMobileService(null);
+  };
+
+  const toggleMobileService = (serviceId: string) => {
+    setExpandedMobileService((current) => (current === serviceId ? null : serviceId));
+  };
+
+  const openDesktopServices = () => {
+    setDesktopServicesOpen(true);
+  };
+
+  const closeDesktopServices = () => {
+    setDesktopServicesOpen(false);
+    setActiveDesktopServiceId(null);
   };
 
   return (
@@ -64,7 +89,7 @@ export function Navbar() {
                     alt="PestPro Logo"
                     width={180}
                     height={50}
-                    className="h-auto w-auto"
+                    className="h-auto w-auto max-w-[170px] sm:max-w-[180px]"
                     priority
                   />
                 </div>
@@ -72,7 +97,7 @@ export function Navbar() {
             </motion.div>
 
             <motion.div
-              className="hidden items-center gap-8 lg:flex"
+              className="hidden items-center gap-7 xl:flex"
               initial="hidden"
               animate="visible"
               variants={{
@@ -111,88 +136,118 @@ export function Navbar() {
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.35 }}
-                className="relative group"
-                onMouseEnter={() => setHoveredCategory(null)}
-                onMouseLeave={() => setHoveredCategory(null)}
+                className="relative"
+                onMouseEnter={openDesktopServices}
+                onMouseLeave={closeDesktopServices}
               >
-                <Link
-                  href="/services"
+                <button
+                  type="button"
                   className={`flex items-center gap-1 font-bold text-sm transition-colors hover:text-brand-green ${
                     scrolled ? "text-slate-900 dark:text-white" : "text-white"
                   }`}
                 >
                   Services
-                  <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
-                </Link>
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform duration-200 ${desktopServicesOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
 
-                <div className="absolute left-0 top-full z-50 mt-3 w-80 translate-y-[-25px] scale-90 overflow-hidden rounded-2xl border-2 border-brand-green-100 bg-gradient-to-b from-white to-brand-green-50 opacity-0 invisible shadow-2xl transition-all duration-500 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 dark:border-brand-green-200 dark:from-gray-900 dark:to-gray-800">
-                  <div className="p-2">
-                    {mainServices.map((mainService, idx) => (
-                      <div
-                        key={mainService.id}
-                        className="relative group/main"
-                        onMouseEnter={() => setHoveredCategory(mainService.id)}
-                      >
-                        <Link
-                          href={mainService.href}
-                          className="relative block overflow-hidden rounded-xl px-5 py-3 text-sm font-medium text-brand-navy transition-all duration-300 ease-out before:absolute before:left-0 before:top-0 before:h-1 before:w-0 before:bg-brand-green before:transition-all before:duration-400 before:ease-out before:content-[''] hover:bg-gradient-to-r hover:from-brand-green hover:to-brand-green-light hover:text-white hover:before:w-full dark:text-white"
-                          style={{ transitionDelay: `${idx * 50}ms` }}
-                        >
-                          <span className="relative z-10 flex items-center justify-between gap-2">
-                            <span className="flex items-center gap-2">
-                              <div className="h-2 w-2 rounded-full bg-brand-green transition-colors duration-300 group-hover/main:bg-white" />
-                              {mainService.label}
-                            </span>
-                            <ChevronRight size={14} className="translate-x-0 opacity-0 transition-all duration-300 group-hover/main:translate-x-1 group-hover/main:opacity-100" />
-                          </span>
-                        </Link>
+                <AnimatePresence>
+                  {desktopServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.96 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                      transition={{ duration: 0.22, ease }}
+                      className="absolute left-0 top-full z-50 mt-3 flex items-start gap-3"
+                    >
+                      <div className="w-[330px] rounded-[28px] border-2 border-brand-green-100 bg-gradient-to-b from-white to-brand-green-50 p-3 shadow-2xl dark:border-brand-green-200 dark:from-gray-900 dark:to-gray-800">
+                        {topServices.map((service) => {
+                          const isActive = activeDesktopService?.id === service.id;
 
-                        {hoveredCategory === mainService.id && (
-                          <div className="absolute left-full top-0 z-50 ml-2 w-72 rounded-2xl border-2 border-brand-green-100 bg-white opacity-0 invisible shadow-2xl transition-all duration-300 group-hover/main:visible group-hover/main:opacity-100 dark:border-brand-green-200 dark:bg-gray-950">
-                            <div className="p-3">
-                              <div className="mb-3 border-b border-slate-200 pb-3 dark:border-gray-800">
-                                <h3 className="text-sm font-bold text-brand-navy dark:text-white">
-                                  {mainService.label}
-                                </h3>
-                                <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
-                                  {mainService.description}
-                                </p>
-                              </div>
-
-                              <div className="space-y-1">
-                                {mainService.categories.map((category) => (
-                                  <div key={category.label} className="group/cat">
-                                    <div className="rounded-lg px-3 py-2 transition-colors hover:bg-brand-green-50 dark:hover:bg-gray-900">
-                                      <p className="mb-1 text-xs font-bold uppercase tracking-wider text-brand-green">
-                                        {category.label}
-                                      </p>
-                                      <div className="space-y-0.5">
-                                        {category.items.map((item) => (
-                                          <Link
-                                            key={item.label}
-                                            href={item.href}
-                                            className="block text-xs text-slate-700 transition-all duration-200 hover:pl-2 hover:text-brand-green dark:text-slate-300 dark:hover:text-brand-green-100"
-                                          >
-                                            â†’ {item.label}
-                                          </Link>
-                                        ))}
-                                      </div>
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        )}
+                          return (
+                            <button
+                              key={service.id}
+                              type="button"
+                              onMouseEnter={() => setActiveDesktopServiceId(service.id)}
+                              className={`mb-2 flex w-full items-center justify-between rounded-2xl px-5 py-4 text-left transition-all duration-200 last:mb-0 ${
+                                isActive
+                                  ? "bg-brand-green text-white shadow-lg"
+                                  : "bg-transparent text-brand-navy hover:bg-brand-green/10 dark:text-white"
+                              }`}
+                            >
+                              <span className="flex items-center gap-3">
+                                <span
+                                  className={`h-2.5 w-2.5 rounded-full ${
+                                    isActive ? "bg-white" : "bg-brand-green"
+                                  }`}
+                                />
+                                <span className="text-base font-semibold">{service.label}</span>
+                              </span>
+                              <ChevronRight
+                                size={16}
+                                className={`transition-transform duration-200 ${isActive ? "translate-x-1" : ""}`}
+                              />
+                            </button>
+                          );
+                        })}
                       </div>
-                    ))}
-                  </div>
-                </div>
+
+                      {activeDesktopService && (
+                        <motion.div
+                          key={activeDesktopService.id}
+                          initial={{ opacity: 0, x: 12 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 8 }}
+                          transition={{ duration: 0.2, ease }}
+                          className="w-[360px] max-h-[70vh] overflow-y-auto rounded-[28px] border-2 border-brand-green-100 bg-white p-4 shadow-2xl dark:border-brand-green-200 dark:bg-gray-950"
+                        >
+                          <div className="mb-4 border-b border-slate-200 pb-4 dark:border-gray-800">
+                            <h3 className="text-lg font-bold text-brand-navy dark:text-white">
+                              {activeDesktopService.label}
+                            </h3>
+                            <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                              {activeDesktopService.shortDesc ?? activeDesktopService.description}
+                            </p>
+                          </div>
+
+                          <div className="space-y-3">
+                            {activeDesktopService.categories.map((category) => (
+                              <div
+                                key={category.label}
+                                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 dark:border-gray-800 dark:bg-gray-900"
+                              >
+                                <Link
+                                  href={category.href}
+                                  className="mb-2 block text-sm font-bold uppercase tracking-[0.16em] text-brand-green hover:text-brand-green-dark"
+                                >
+                                  {category.label}
+                                </Link>
+                                <div className="space-y-1.5">
+                                  {category.items.map((item) => (
+                                    <Link
+                                      key={item.label}
+                                      href={item.href}
+                                      className="block text-sm text-slate-700 transition-all duration-200 hover:translate-x-1 hover:text-brand-green dark:text-slate-300 dark:hover:text-brand-green-100"
+                                    >
+                                      &gt; {item.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             </motion.div>
 
             <motion.div
-              className="hidden items-center gap-3 lg:flex"
+              className="hidden items-center gap-3 xl:flex"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.28 }}
@@ -212,13 +267,14 @@ export function Navbar() {
               </Link>
             </motion.div>
 
-            <div className="flex lg:hidden">
+            <div className="flex xl:hidden">
               <motion.button
                 whileTap={{ scale: 0.92 }}
                 onClick={() => setMobileOpen((value) => !value)}
                 className={`rounded-lg p-2 ${
                   scrolled ? "text-slate-900 dark:text-white" : "text-white"
                 }`}
+                aria-label="Toggle menu"
               >
                 <AnimatePresence initial={false} mode="wait">
                   <motion.span
@@ -245,7 +301,7 @@ export function Navbar() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="fixed inset-0 z-30 bg-black/50 lg:hidden"
+                className="fixed inset-0 z-30 bg-black/50 xl:hidden"
                 onClick={closeMobileMenu}
               />
               <motion.div
@@ -253,7 +309,7 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -18 }}
                 transition={{ duration: 0.28, ease }}
-                className="fixed left-0 right-0 top-[88px] z-40 max-h-[calc(100vh-88px)] overflow-y-auto bg-white dark:bg-gray-950"
+                className="fixed left-0 right-0 top-[88px] z-40 max-h-[calc(100vh-88px)] overflow-y-auto bg-white dark:bg-gray-950 xl:hidden"
               >
                 <motion.div
                   className="container-max space-y-2 py-4"
@@ -315,35 +371,25 @@ export function Navbar() {
                           transition={{ duration: 0.25 }}
                           className="overflow-hidden"
                         >
-                          <div className="mt-2 space-y-2 pl-4">
-                            {mainServices.map((mainService) => (
-                              <div key={mainService.id}>
-                                <div className="flex items-center gap-2">
-                                  <Link
-                                    href={mainService.href}
-                                    onClick={closeMobileMenu}
-                                    className="flex-1 px-3 py-2 text-xs font-semibold text-brand-green transition-colors hover:text-brand-green-light"
-                                  >
-                                    {mainService.label}
-                                  </Link>
-                                  <button
-                                    onClick={() =>
-                                      setExpandedMobileCategory(
-                                        expandedMobileCategory === mainService.id ? "services" : mainService.id
-                                      )
-                                    }
-                                    aria-label={`Toggle ${mainService.label}`}
-                                    className="px-3 py-2 text-brand-green transition-colors hover:text-brand-green-light"
-                                  >
-                                    <ChevronRight
-                                      size={14}
-                                      className={`transition-transform ${expandedMobileCategory === mainService.id ? "rotate-90" : ""}`}
-                                    />
-                                  </button>
-                                </div>
+                          <div className="mt-3 space-y-3">
+                            {topServices.map((service) => (
+                              <div
+                                key={service.id}
+                                className="rounded-2xl border border-slate-200 bg-slate-50 p-3 dark:border-gray-800 dark:bg-gray-900"
+                              >
+                                <button
+                                  onClick={() => toggleMobileService(service.id)}
+                                  className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-sm font-semibold text-brand-navy transition-colors hover:bg-brand-green/10 dark:text-white"
+                                >
+                                  <span>{service.label}</span>
+                                  <ChevronRight
+                                    size={16}
+                                    className={`transition-transform ${expandedMobileService === service.id ? "rotate-90" : ""}`}
+                                  />
+                                </button>
 
                                 <AnimatePresence initial={false}>
-                                  {expandedMobileCategory === mainService.id && (
+                                  {expandedMobileService === service.id && (
                                     <motion.div
                                       initial={{ height: 0, opacity: 0 }}
                                       animate={{ height: "auto", opacity: 1 }}
@@ -351,25 +397,28 @@ export function Navbar() {
                                       transition={{ duration: 0.22 }}
                                       className="overflow-hidden"
                                     >
-                                      <div className="mt-1 space-y-2 pl-3">
-                                        {mainService.categories.map((category) => (
-                                          <div key={category.label}>
+                                      <div className="mt-2 space-y-3 px-3 pb-2">
+                                        {service.categories.map((category) => (
+                                          <div
+                                            key={category.label}
+                                            className="rounded-xl border border-slate-200 bg-white px-3 py-3 dark:border-gray-800 dark:bg-gray-950"
+                                          >
                                             <Link
                                               href={category.href}
                                               onClick={closeMobileMenu}
-                                              className="mb-1 block text-xs font-bold uppercase tracking-wider text-brand-green transition-colors hover:text-brand-green-light"
+                                              className="mb-2 block text-xs font-bold uppercase tracking-[0.14em] text-brand-green"
                                             >
                                               {category.label}
                                             </Link>
-                                            <div className="space-y-1">
+                                            <div className="space-y-1.5">
                                               {category.items.map((item) => (
                                                 <Link
                                                   key={item.label}
                                                   href={item.href}
                                                   onClick={closeMobileMenu}
-                                                  className="block pl-2 text-xs text-slate-600 hover:text-brand-green dark:text-slate-400"
+                                                  className="block text-xs text-slate-600 transition-colors hover:text-brand-green dark:text-slate-400"
                                                 >
-                                                  â†’ {item.label}
+                                                  &gt; {item.label}
                                                 </Link>
                                               ))}
                                             </div>

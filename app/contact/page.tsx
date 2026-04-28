@@ -4,8 +4,8 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "Contact IC PestControl – Expert Pest Control Services",
-  description: "Get in touch with IC PestControl for professional pest control solutions. Call +92-306-923-5099 or submit your inquiry online. 24/7 emergency support available.",
+  title: "Contact ISB PestControl – Expert Pest Control Services",
+  description: "Get in touch with ISB PestControl for professional pest control solutions. Call +92-306-923-5099 or submit your inquiry online. 24/7 emergency support available.",
 };
 
 export default function ContactPage() {
@@ -185,9 +185,6 @@ export default function ContactPage() {
               { title: "Cockroach Control", desc: "Complete cockroach infestation management" },
               { title: "Bed Bug Treatment", desc: "Safe and thorough bed bug removal" },
               { title: "Rodent Control", desc: "Humane rodent and pest management" },
-              { title: "Disinfection Services", desc: "Professional sanitization and disinfection" },
-              { title: "Water Tank Cleaning", desc: "Complete tank cleaning and maintenance" },
-              { title: "Floor Treatments", desc: "Polishing and specialized floor treatments" },
               { title: "24/7 Emergency", desc: "Urgent pest situations handled immediately" },
             ].map((service) => (
               <div key={service.title} className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-sm border border-green-100">
@@ -214,7 +211,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="IC PestControl Service Areas"
+              title="ISB PestControl Service Areas"
             />
           </div>
         </div>

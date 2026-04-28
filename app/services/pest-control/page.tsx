@@ -4,7 +4,7 @@ import { mainServices } from "@/lib/servicesConfig";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Pest Control Services | IC PestControl",
+  title: "Pest Control Services | ISB PestControl",
   description: "Comprehensive pest control services including termite control, rodent control, insect control and more.",
 };
 

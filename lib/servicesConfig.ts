@@ -132,40 +132,6 @@ export const mainServices: MainService[] = [
       },
     ],
   },
-  {
-    id: "maintenance",
-    label: "Maintenance Services",
-    description: "Property maintenance and sanitation services",
-    href: "/services/maintenance",
-    shortDesc: "Disinfection, cleaning & water tank services",
-    categories: [
-      {
-        label: "Disinfection",
-        description: "Professional sanitization services",
-        href: "/services/maintenance/disinfection",
-        items: [
-          { href: "/services/maintenance/disinfection", label: "Disinfection Services" },
-        ],
-      },
-      {
-        label: "Floor Services",
-        description: "Cleaning and polishing",
-        href: "/services/maintenance/floor",
-        items: [
-          { href: "/services/maintenance/floor", label: "Floor Cleaning & Polishing" },
-          { href: "/services/maintenance/floor", label: "Floor Scoring" },
-        ],
-      },
-      {
-        label: "Water Tank Cleaning",
-        description: "Tank cleaning and maintenance",
-        href: "/services/maintenance/water-tank",
-        items: [
-          { href: "/services/maintenance/water-tank", label: "Water Tank Cleaning" },
-        ],
-      },
-    ],
-  },
 ];
 
 // Flat array for quick access
@@ -202,11 +168,19 @@ export const mainServiceCards = [
     href: "/services/pest-control/termite",
   },
   {
-    id: "disinfection",
-    number: "04", 
-    title: "Disinfection Services",
-    description: "Professional sanitization services to ensure a safe and clean environment.",
-    icon: "",
-    href: "/services/maintenance/disinfection",
+    id: "rodent-control",
+    number: "04",
+    title: "Rodent Control Services",
+    description: "Effective rodent control solutions to eliminate infestations and prevent future occurrences.",
+    icon: "🐀",
+    href: "/services/pest-control/rodent",
   },
+  {
+    id: "insect-control",
+    number: "05",
+    title: "Insect Control Services",
+    description: "Comprehensive insect control solutions to protect your property from various pest infestations.",
+    icon: "🦋",
+    href: "/services/pest-control/insect",
+  }
 ];
