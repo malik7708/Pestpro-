@@ -285,15 +285,26 @@ export function HeroSection() {
                       </div>
                     </div>
 
-                    <div className="hidden gap-4 lg:grid">
-                      {[1, 2, 3].map((index) => (
-                        <motion.div
-                          key={`frame-${index}`}
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.4, delay: 0.1 * index }}
-                          className="relative overflow-hidden rounded-[24px] border-2 border-slate-300 bg-white/40 backdrop-blur-sm min-h-[110px]"
-                        />
+                    <div className="hidden gap-4 sm:grid">
+                      {slides.map((slide, index) => (
+                        <button
+                          key={slide.id}
+                          onClick={() => setCurrent(index)}
+                          className={`relative overflow-hidden rounded-[24px] border transition-all ${
+                            index === current
+                              ? "border-brand-green shadow-brand"
+                              : "border-slate-200 opacity-75"
+                          }`}
+                        >
+                          <Image
+                            src={slide.image}
+                            alt={slide.eyebrow}
+                            fill
+                            sizes="110px"
+                            className="object-cover"
+                          />
+                          <div className="absolute inset-0 bg-slate-950/28" />
+                        </button>
                       ))}
                     </div>
                   </div>
