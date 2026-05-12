@@ -13,7 +13,7 @@ const faqs = [
   {
     q: "Do you provide pest control for offices, warehouses, and companies?",
     a: "Yes. ISB PestControl provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
-    image: "/floor.png",
+    image: "/hotel-fumigation.png",
   },
   {
     q: "Are your pest control treatments suitable for families and workplaces?",
@@ -38,7 +38,7 @@ const faqs = [
   {
     q: "How is pricing decided for pest control work?",
     a: "Pricing depends on the pest type, property size, infestation level, access conditions, and the treatment plan required. We first review the complaint and then provide a clear quote based on the actual site needs.",
-    image: "/tank.png",
+    image: "/ant-control.png",
   },
   {
     q: "Do you offer follow-up support after treatment?",

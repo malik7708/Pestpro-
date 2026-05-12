@@ -56,7 +56,7 @@ export function ExpertiseSection() {
           <StaggerGroup className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
             {expertiseItems.map((item) => (
               <StaggerItem key={item.title}>
-                <article className="group overflow-hidden rounded-[15px] border border-white/20 bg-green-50 shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover dark:border-gray-800 dark:bg-gray-950/95 dark:backdrop-blur-sm">
+                <article className="group overflow-hidden rounded-[15px] border border-white/20 bg-green-50 shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-card-hover dark:border-gray-800 dark:bg-gray-950/95 dark:backdrop-blur-sm flex flex-col h-full">
                   <div className="h-1.5 bg-brand-green" />
                   <div className="media-zoom relative h-56">
                     <Image
@@ -69,11 +69,11 @@ export function ExpertiseSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
                   </div>
 
-                  <div className="p-7">
+                  <div className="p-7 flex flex-col flex-grow">
                     <h3 className="mb-3 font-display text-[1.35rem] font-semibold text-brand-navy transition-colors duration-300 group-hover:text-brand-green dark:text-white">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-7 text-gray-600 dark:text-gray-400">
+                    <p className="text-sm leading-7 text-gray-600 dark:text-gray-400 flex-grow">
                       {item.description}
                     </p>
                     <div className="mt-6">

@@ -28,20 +28,10 @@ export const mainServices: MainService[] = [
   {
     id: "pest-control",
     label: "Pest Control Services",
-    description: "Comprehensive pest control solutions for all types of pests",
+    description: "Comprehensive pest control solutions for rodents, insects and more",
     href: "/services/pest-control",
-    shortDesc: "Termite, rodent, insect & pest control services",
+    shortDesc: "Rodent, insect & pest control services",
     categories: [
-      {
-        label: "Termite Control",
-        description: "Termite treatment and proofing",
-        href: "/services/pest-control/termite",
-        items: [
-          { href: "/services/pest-control/termite", label: "Termite Control / Proofing" },
-          { href: "/services/pest-control/termite", label: "Pre-Termite Treatment" },
-          { href: "/services/pest-control/termite", label: "Post-Termite Treatment" },
-        ],
-      },
       {
         label: "Rodent Control",
         description: "Rat and rodent elimination",
@@ -72,6 +62,25 @@ export const mainServices: MainService[] = [
         href: "/services/pest-control/dengue",
         items: [
           { href: "/services/pest-control/dengue", label: "Dengue Control Services" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "termite-control",
+    label: "Termite Control Services",
+    description: "Expert termite treatment, prevention and proofing",
+    href: "/services/termite-control",
+    shortDesc: "Termite treatment, prevention & proofing",
+    categories: [
+      {
+        label: "Termite Treatment",
+        description: "Termite treatment and proofing",
+        href: "/services/termite-control/treatment",
+        items: [
+          { href: "/services/termite-control/treatment", label: "Termite Control / Proofing" },
+          { href: "/services/termite-control/treatment", label: "Pre-Termite Treatment" },
+          { href: "/services/termite-control/treatment", label: "Post-Termite Treatment" },
         ],
       },
     ],

@@ -49,7 +49,7 @@ export default function ContactPage() {
               <a href="tel:+923229162746" className="block text-xl sm:text-2xl font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2">
                 +92 322 9162746
                 </a>
-                <p className="text-xs sm:text-sm text-gray-600">Mon–Fri 7am–7pm, Sat 8am–5pm</p>
+                <p className="text-xs sm:text-sm text-gray-600">Mon-Sun ------ 24 / 7</p>
               </div>
 
               {/* WhatsApp */}
@@ -93,16 +93,8 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex justify-between pb-3 sm:pb-4 border-b border-gray-100">
-                    <span className="text-xs sm:text-sm text-gray-700 font-medium">Monday – Friday</span>
-                    <span className="text-xs sm:text-sm font-semibold text-gray-900">7:00 AM – 7:00 PM</span>
-                  </div>
-                  <div className="flex justify-between pb-3 sm:pb-4 border-b border-gray-100">
-                    <span className="text-xs sm:text-sm text-gray-700 font-medium">Saturday</span>
-                    <span className="text-xs sm:text-sm font-semibold text-gray-900">8:00 AM – 5:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-xs sm:text-sm text-gray-700 font-medium">Sunday</span>
-                    <span className="text-xs sm:text-sm font-semibold text-[#2f6b4f]">Emergency Only</span>
+                    <span className="text-xs sm:text-sm text-gray-700 font-medium">Monday – Sunday</span>
+                    <span className="text-xs sm:text-sm font-semibold text-gray-900">24 / 7</span>
                   </div>
                 </div>
                 <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-100">

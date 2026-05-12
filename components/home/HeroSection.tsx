@@ -2,57 +2,37 @@
 
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
   MapPin,
   Phone,
   ShieldCheck,
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
 import heroImage from "../../public/termite1.png";
-import termiteImage from "../../public/pest3.png";
+import fumigationImage from "../../public/pest3.png";
+import mosquitoImage from "../../public/mosquito-control.png";
+import rodentImage from "../../public/rodent1.jpg";
+import residentialImage from "../../public/residential-fumigation.png";
 
-const slides: Array<{
-  id: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  image: StaticImageData;
-  cta: string;
-}> = [
-  {
-    id: "home",
-    eyebrow: "Trusted Pest & Termite Control",
-    title: "Expert pest control for homes and businesses",
-    description:
-      "ISB Pest Control is a trusted pest and termite control company serving Rawalpindi, Islamabad, Taxila, and Murree. We provide reliable, safe, and effective solutions with guaranteed results.",
-    image: heroImage,
-    cta: "Book free inspection",
-  },
-  {
-    id: "termite",
-    eyebrow: "Termite Treatment & Prevention",
-    title: "Protect your property from hidden termite damage",
-    description:
-      "Best and expert termite inspection and treatment using modern techniques and eco-friendly products. Prevent future infestations with expert care.",
-    image: termiteImage,
-    cta: "Get termite inspection",
-  },
-  {
-    id: "fumigation",
-    eyebrow: "Fumigation & Pest Solutions",
-    title: "Complete pest management for peace of mind",
-    description:
-      "From dengue spray and mosquito control to rodent removal and cockroach extermination. All services designed for long-lasting protection.",
-    image: termiteImage,
-    cta: "Request service details",
-  },
+const serviceImages: StaticImageData[] = [
+  mosquitoImage,
+  rodentImage,
+  fumigationImage,
+  residentialImage,
 ];
+
+const heroSlide = {
+  id: "fumigation",
+  eyebrow: "Pest Control | Fumigation, Termite Treatment(Deemak) | Dengue Spray Services",
+  title: "Top best & professional pest management in Rawalpindi/Islamabad",
+  description:
+    "ISB PEST CONTROL offers trusted pest control, termite treatment(Deemak), fumigation, and dengue spray services in Islamabad and Rawalpindi with safe, affordable, and guaranteed solutions.",
+  image: fumigationImage,
+  cta: "Request service details",
+};
 
 const companyPoints = [
   "Pest control, termite treatment, fumigation, and dengue spray services",
@@ -63,17 +43,7 @@ const companyPoints = [
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function HeroSection() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((value) => (value + 1) % slides.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const activeSlide = slides[current];
+  const activeSlide = heroSlide;
 
   return (
     <>
@@ -106,49 +76,41 @@ export function HeroSection() {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(216,240,107,0.1),transparent_34%)]" />
                   </div>
 
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={activeSlide.id}
-                      initial={{ opacity: 0, y: 28 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -22 }}
-                      transition={{ duration: 0.55, ease }}
-                      className="relative z-10"
-                    >
-                      <StaggerGroup>
-                        <StaggerItem>
-                          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/14 bg-white/8 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/82 backdrop-blur-sm sm:px-4 sm:py-2">
-                            <ShieldCheck size={12} className="sm:h-4 sm:w-4" />
-                            <span>Islamabad PestControl</span>
-                          </div>
-                        </StaggerItem>
+                  <div className="relative z-10">
+                    <StaggerGroup>
+                      <StaggerItem>
+                        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/14 bg-white/8 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/82 backdrop-blur-sm sm:px-4 sm:py-2">
+                          <ShieldCheck size={12} className="sm:h-4 sm:w-4" />
+                          <span>Islamabad PestControl</span>
+                        </div>
+                      </StaggerItem>
 
-                        <StaggerItem>
-                          <div className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#d5ee94]">
-                            {activeSlide.eyebrow}
-                          </div>
-                        </StaggerItem>
+                      <StaggerItem>
+                        <div className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#d5ee94]">
+                          {activeSlide.eyebrow}
+                        </div>
+                      </StaggerItem>
 
-                        <StaggerItem>
-                          <h1 className="mt-3 max-w-md font-display text-2xl font-semibold leading-[1.05] tracking-tight sm:mt-4 sm:text-3xl sm:leading-tight lg:text-4xl xl:text-[2.8rem]">
-                            {activeSlide.title}
-                          </h1>
-                        </StaggerItem>
+                      <StaggerItem>
+                        <h1 className="mt-3 max-w-md font-display text-2xl font-semibold leading-[1.05] tracking-tight sm:mt-4 sm:text-3xl sm:leading-tight lg:text-4xl xl:text-[2.8rem]">
+                          {activeSlide.title}
+                        </h1>
+                      </StaggerItem>
 
-                        <StaggerItem>
-                          <p className="mt-3 max-w-md text-[14px] leading-6 text-white/78 sm:mt-4 sm:text-[15px] sm:leading-7">
-                            {activeSlide.description}
-                          </p>
-                        </StaggerItem>
+                      <StaggerItem>
+                        <p className="mt-3 max-w-md text-[14px] leading-6 text-white/78 sm:mt-4 sm:text-[15px] sm:leading-7">
+                          {activeSlide.description}
+                        </p>
+                      </StaggerItem>
 
-                        <StaggerItem>
-                          <div className="mt-4 flex items-start gap-2 rounded-[16px] border border-white/10 bg-white/6 px-3 py-2 text-xs text-white/78 backdrop-blur-[2px] sm:mt-5 sm:gap-3 sm:rounded-[20px] sm:px-4 sm:py-3 sm:text-sm">
-                            <MapPin size={16} className="mt-0.5 flex-shrink-0 text-[#d5ee94]" />
-                            <span className="leading-5">Serving Islamabad / Rawalpindi & Nearby Areas</span>
-                          </div>
-                        </StaggerItem>
+                      <StaggerItem>
+                        <div className="mt-4 flex items-start gap-2 rounded-[16px] border border-white/10 bg-white/6 px-3 py-2 text-xs text-white/78 backdrop-blur-[2px] sm:mt-5 sm:gap-3 sm:rounded-[20px] sm:px-4 sm:py-3 sm:text-sm">
+                          <MapPin size={16} className="mt-0.5 flex-shrink-0 text-[#d5ee94]" />
+                          <span className="leading-5">Serving Islamabad / Rawalpindi & Nearby Areas</span>
+                        </div>
+                      </StaggerItem>
 
-                        <StaggerItem>
+                      <StaggerItem>
                           <div className="mt-4 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:items-center sm:gap-3">
                             <motion.a
                               href="tel:+923229162746"
@@ -172,55 +134,45 @@ export function HeroSection() {
                           </div>
                         </StaggerItem>
                       </StaggerGroup>
-                    </motion.div>
-                  </AnimatePresence>
+                    </div>
                 </FadeIn>
 
                 <FadeIn className="bg-[#f3f5f3] p-2 sm:p-3 md:p-4 lg:p-6" delay={0.08}>
-                  <div className="grid min-h-[300px] grid-cols-1 gap-3 sm:min-h-[400px] sm:grid-cols-[80px_minmax(0,1fr)_80px] lg:min-h-[540px] lg:grid-cols-[110px_minmax(0,1fr)_110px] xl:gap-5">
-                    <div className="hidden gap-4 sm:grid">
-                      {slides.map((slide, index) => (
-                        <button
-                          key={slide.id}
-                          onClick={() => setCurrent(index)}
-                          className={`relative overflow-hidden rounded-[24px] border transition-all ${
-                            index === current
-                              ? "border-brand-green shadow-brand"
-                              : "border-slate-200 opacity-75"
-                          }`}
+                  <div className="grid min-h-[450px] grid-cols-1 gap-3 sm:min-h-[550px] sm:grid-cols-[80px_minmax(0,1fr)_80px] lg:min-h-[620px] lg:grid-cols-[110px_minmax(0,1fr)_110px] xl:gap-5">
+                    <div className="hidden gap-4 sm:grid sm:grid-rows-4">
+                      {serviceImages.map((image, index) => (
+                        <div
+                          key={index}
+                          className="relative h-full overflow-hidden rounded-[24px] border border-brand-green shadow-brand"
                         >
                           <Image
-                            src={slide.image}
-                            alt={slide.eyebrow}
+                            src={image}
+                            alt={`Service ${index + 1}`}
                             fill
                             sizes="110px"
                             className="object-cover"
                           />
                           <div className="absolute inset-0 bg-slate-950/28" />
-                        </button>
+                        </div>
                       ))}
                     </div>
 
-                    <div className="relative min-h-[250px] overflow-hidden rounded-[24px] sm:min-h-[360px] sm:rounded-[28px] lg:min-h-[400px]">
-                      <AnimatePresence mode="wait">
-                        <motion.div
-                          key={`image-${activeSlide.id}`}
-                          initial={{ opacity: 0, scale: 1.08 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.96 }}
-                          transition={{ duration: 0.75, ease }}
-                          className="absolute inset-0"
-                        >
-                          <Image
-                            src={activeSlide.image}
-                            alt={activeSlide.title}
-                            fill
-                            priority
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 85vw, 56vw"
-                            className="object-cover"
-                          />
-                        </motion.div>
-                      </AnimatePresence>
+                    <div className="relative min-h-[350px] overflow-hidden rounded-[24px] sm:min-h-[450px] sm:rounded-[28px] lg:min-h-[600px]">
+                      <motion.div
+                        initial={{ opacity: 0, scale: 1.08 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.75, ease }}
+                        className="absolute inset-0"
+                      >
+                        <Image
+                          src={activeSlide.image}
+                          alt={activeSlide.title}
+                          fill
+                          priority
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 85vw, 56vw"
+                          className="object-cover"
+                        />
+                      </motion.div>
                       <div className="absolute inset-0 bg-gradient-to-t from-[#081d14]/60 via-[#081d14]/10 to-transparent" />
 
                       <div className="absolute left-3 right-3 top-3 sm:left-4 sm:right-4 sm:top-4 lg:left-6 lg:right-6 lg:top-6">
@@ -249,77 +201,25 @@ export function HeroSection() {
                           </p>
                         </div>
                       </motion.div>
-
-                      <div className="absolute left-1/2 top-4 flex -translate-x-1/2 gap-2 sm:hidden">
-                        {slides.map((_, index) => (
-                          <button
-                            key={index}
-                            onClick={() => setCurrent(index)}
-                            className={`h-2 w-2 rounded-full transition-all ${
-                              index === current ? "bg-[#d8f06b]" : "bg-white/50"
-                            }`}
-                            aria-label={`Go to slide ${index + 1}`}
-                          />
-                        ))}
-                      </div>
-
-                      <div className="absolute inset-x-4 top-1/2 flex -translate-y-1/2 justify-between sm:hidden">
-                        <button
-                          onClick={() =>
-                            setCurrent((value) => (value - 1 + slides.length) % slides.length)
-                          }
-                          className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/30"
-                          aria-label="Previous slide"
-                        >
-                          <ChevronLeft size={20} />
-                        </button>
-                        <button
-                          onClick={() =>
-                            setCurrent((value) => (value + 1) % slides.length)
-                          }
-                          className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/30"
-                          aria-label="Next slide"
-                        >
-                          <ChevronRight size={20} />
-                        </button>
-                      </div>
                     </div>
 
-                    <div className="hidden gap-4 sm:grid">
-                      {slides.map((slide, index) => (
-                        <button
-                          key={slide.id}
-                          onClick={() => setCurrent(index)}
-                          className={`relative overflow-hidden rounded-[24px] border transition-all ${
-                            index === current
-                              ? "border-brand-green shadow-brand"
-                              : "border-slate-200 opacity-75"
-                          }`}
+                    <div className="hidden gap-4 sm:grid sm:grid-rows-4">
+                      {serviceImages.map((image, index) => (
+                        <div
+                          key={index}
+                          className="relative h-full overflow-hidden rounded-[24px] border border-brand-green shadow-brand"
                         >
                           <Image
-                            src={slide.image}
-                            alt={slide.eyebrow}
+                            src={image}
+                            alt={`Service ${index + 1}`}
                             fill
                             sizes="110px"
                             className="object-cover"
                           />
                           <div className="absolute inset-0 bg-slate-950/28" />
-                        </button>
+                        </div>
                       ))}
                     </div>
-                  </div>
-
-                  <div className="mt-3 flex items-center justify-center gap-2 sm:mt-4 lg:hidden">
-                    {slides.map((slide, index) => (
-                      <button
-                        key={`mobile-${slide.id}`}
-                        onClick={() => setCurrent(index)}
-                        aria-label={`View ${slide.title}`}
-                        className={`h-2 w-2 rounded-full transition-all sm:h-2.5 sm:w-2.5 ${
-                          index === current ? "w-6 bg-brand-green sm:w-8" : "w-2 bg-slate-300 sm:w-2.5"
-                        }`}
-                      />
-                    ))}
                   </div>
                 </FadeIn>
               </div>

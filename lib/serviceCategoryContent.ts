@@ -133,7 +133,7 @@ const remoteMedia = {
       alt: "Drain system fumigation service",
     },
     hotel: {
-      image: `/hotel-fumigation.png`,
+      image: `/pest3.png`,
       alt: "Hotel fumigation service",
     },
     restaurant: {
@@ -343,6 +343,82 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
     ],
     image: "/termite1.png",
     imageAlt: "Professional termite control treatment being applied near a wall and floor edge",
+  },
+  "termite-control/treatment": {
+    heroTitle: "Professional Termite Treatment & Proofing Services",
+    heroDescription:
+      "Expert termite treatment, prevention and proofing for residential, commercial and industrial properties in Islamabad, Rawalpindi and nearby areas.",
+    overviewTitle: "Comprehensive termite control solutions",
+    overviewParagraphs: [
+      "Termites can cause significant structural damage if left untreated. Our termite control service focuses on early detection, targeted treatment, and long-term prevention to protect your property from termite infestation.",
+      "We provide specialized treatment for pre-construction termite proofing and post-construction termite treatment to ensure complete protection regardless of your property type.",
+      "Our expert team assesses your specific needs and develops a customized treatment plan using safe, effective methods for homes, offices, commercial buildings, and industrial properties.",
+    ],
+    metrics: [
+      { value: "3+", label: "Treatment options" },
+      { value: "Pre & Post", label: "Construction coverage" },
+      { value: "Inspection-led", label: "Approach" },
+    ],
+    highlights: [
+      "Comprehensive property inspection to identify termite activity and entry points",
+      "Pre-construction termite proofing for new buildings",
+      "Post-construction treatment for existing properties",
+      "Targeted application around foundations, walls, and woodwork",
+      "Prevention guidance to reduce future termite attraction",
+    ],
+    suitableFor: [
+      "Homes with wooden structures and fixtures",
+      "Commercial buildings and offices",
+      "New construction projects requiring preventive treatment",
+      "Properties with signs of termite activity or damage",
+    ],
+    warningSigns: [
+      "Mud tubes along walls, pillars, or skirting lines",
+      "Hollow or damaged wood in frames and structures",
+      "Termite dust (frass) or discarded wings",
+      "Bubbling paint or swollen wood",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between pre-termite and post-termite treatment?",
+        answer:
+          "Pre-termite treatment is applied during construction to build a preventive barrier, while post-termite treatment targets existing infestations on completed properties with access to vulnerable areas.",
+      },
+      {
+        question: "How long does termite treatment last?",
+        answer:
+          "The longevity of treatment depends on the method used and environmental conditions. Regular inspections help ensure ongoing protection.",
+      },
+      {
+        question: "Is the treatment safe for families and businesses?",
+        answer:
+          "Yes. We use approved, safe treatment methods that protect occupants while effectively eliminating termites.",
+      },
+    ],
+    process: [
+      {
+        title: "Detailed Inspection",
+        description:
+          "Our experts inspect your property to locate termite evidence, identify vulnerable areas, and assess the extent of infestation.",
+      },
+      {
+        title: "Treatment Planning",
+        description:
+          "We develop a customized treatment strategy based on your property type, construction stage, and infestation level.",
+      },
+      {
+        title: "Professional Application",
+        description:
+          "Our team applies targeted treatments to eliminate termites and create protective barriers around your property.",
+      },
+      {
+        title: "Follow-up & Prevention",
+        description:
+          "We provide guidance on maintenance and prevention to help keep your property protected from future termite activity.",
+      },
+    ],
+    image: "/termite1.png",
+    imageAlt: "Professional termite treatment and proofing service",
   },
   "pest-control/rodent": {
     heroTitle: "Rodent Control Services in Islamabad/Rawalpindi and Nearby Areas",

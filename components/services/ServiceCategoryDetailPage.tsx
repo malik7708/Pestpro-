@@ -26,7 +26,14 @@ const themeByService: Record<
     button: "bg-white text-[#0d4b33] hover:bg-[#f3ffd0]",
     muted: "text-white/78",
   },
-  fumigation: {
+  "termite-control": {
+    hero: "from-[#0d4b33] via-[#1a6a49] to-[#d4ef8a]",
+    badge: "border-[#d4ef8a]/35 bg-[#d4ef8a]/12 text-[#f2ffd2]",
+    card: "border-[#d4ef8a]/20 bg-white/10",
+    button: "bg-white text-[#0d4b33] hover:bg-[#f3ffd0]",
+    muted: "text-white/78",
+  },
+  "fumigation": {
     hero: "from-[#22313d] via-[#335261] to-[#7ec4bf]",
     badge: "border-[#7ec4bf]/35 bg-[#7ec4bf]/12 text-[#d9fffb]",
     card: "border-[#7ec4bf]/20 bg-white/10",

@@ -25,7 +25,7 @@ export function Navbar() {
   const [expandedMobileService, setExpandedMobileService] = useState<string | null>(null);
 
   const topServices = useMemo(
-    () => mainServices.filter((service) => service.id === "pest-control" || service.id === "fumigation"),
+    () => mainServices.filter((service) => service.id === "pest-control" || service.id === "termite-control" || service.id === "fumigation"),
     []
   );
 
@@ -140,8 +140,8 @@ export function Navbar() {
                 onMouseEnter={openDesktopServices}
                 onMouseLeave={closeDesktopServices}
               >
-                <button
-                  type="button"
+                <Link
+                  href="/services"
                   className={`flex items-center gap-1 font-bold text-sm transition-colors hover:text-brand-green ${
                     scrolled ? "text-slate-900 dark:text-white" : "text-white"
                   }`}
@@ -151,7 +151,7 @@ export function Navbar() {
                     size={14}
                     className={`transition-transform duration-200 ${desktopServicesOpen ? "rotate-180" : ""}`}
                   />
-                </button>
+                </Link>
 
                 <AnimatePresence>
                   {desktopServicesOpen && (
@@ -351,8 +351,9 @@ export function Navbar() {
                     }}
                     className="mt-2 border-t border-slate-100 pt-2 dark:border-gray-800"
                   >
-                    <button
-                      onClick={() => setExpandedMobileCategory(expandedMobileCategory === "services" ? null : "services")}
+                    <Link
+                      href="/services"
+                      onClick={closeMobileMenu}
                       className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold text-slate-800 transition-colors hover:bg-brand-green-50 hover:text-brand-green dark:text-white dark:hover:bg-gray-900"
                     >
                       Services
@@ -360,7 +361,7 @@ export function Navbar() {
                         size={16}
                         className={`transition-transform ${expandedMobileCategory === "services" ? "rotate-180" : ""}`}
                       />
-                    </button>
+                    </Link>
 
                     <AnimatePresence initial={false}>
                       {expandedMobileCategory === "services" && (

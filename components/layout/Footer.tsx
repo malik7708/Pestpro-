@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, Clock, Shield, Star, CheckCircle } from "lucide-re
 
 const services = [
   { href: "/services/pest-control", label: "Pest Control" },
+  { href: "/services/termite-control", label: "Termite Treatment" },
   { href: "/services/fumigation", label: "Fumigation" },
 ];
 
@@ -111,9 +112,7 @@ export function Footer() {
 
             <h3 className="text-white font-semibold font-display text-base sm:text-lg mt-6 sm:mt-8 mb-3 sm:mb-4">Business Hours</h3>
             <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-white/60">
-              <div className="flex justify-between"><span>Mon - Fri</span><span className="text-white/80">7:00 AM - 7:00 PM</span></div>
-              <div className="flex justify-between"><span>Saturday</span><span className="text-white/80">8:00 AM - 5:00 PM</span></div>
-              <div className="flex justify-between"><span>Sunday</span><span className="text-brand-green-100">Emergency Only</span></div>
+              <div className="flex justify-between"><span>Mon - Sunday</span><span className="text-white/80">24 / 7</span></div>
             </div>
           </div>
 
