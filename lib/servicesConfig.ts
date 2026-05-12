@@ -33,15 +33,6 @@ export const mainServices: MainService[] = [
     shortDesc: "Rodent, insect & pest control services",
     categories: [
       {
-        label: "Rodent Control",
-        description: "Rat and rodent elimination",
-        href: "/services/pest-control/rodent",
-        items: [
-          { href: "/services/pest-control/rodent", label: "Rodent / Rat Control" },
-          { href: "/services/pest-control/rodent", label: "Mouse Control" },
-        ],
-      },
-      {
         label: "Insect Control",
         description: "Flies, ants, mosquito & other insects",
         href: "/services/pest-control/insects",
@@ -56,6 +47,15 @@ export const mainServices: MainService[] = [
           { href: "/services/pest-control/insects", label: "Wood Borer Control" },
         ],
       },
+      {
+        label: "Rodent Control",
+        description: "Rat and rodent elimination",
+        href: "/services/pest-control/rodent",
+        items: [
+          { href: "/services/pest-control/rodent", label: "Rodent / Rat Control" },
+          { href: "/services/pest-control/rodent", label: "Mouse Control" },
+        ],
+      }, 
       {
         label: "Dengue Control",
         description: "Dengue prevention and control",
