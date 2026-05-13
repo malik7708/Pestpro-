@@ -351,16 +351,24 @@ export function Navbar() {
                     }}
                     className="mt-2 border-t border-slate-100 pt-2 dark:border-gray-800"
                   >
-                    <button
-                      onClick={() => setExpandedMobileCategory(expandedMobileCategory === "services" ? null : "services")}
-                      className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold text-slate-800 transition-colors hover:bg-brand-green-50 hover:text-brand-green dark:text-white dark:hover:bg-gray-900"
-                    >
-                      Services
-                      <ChevronDown
-                        size={16}
-                        className={`transition-transform ${expandedMobileCategory === "services" ? "rotate-180" : ""}`}
-                      />
-                    </button>
+                    <div className="flex w-full items-center rounded-xl transition-colors hover:bg-brand-green-50 dark:hover:bg-gray-900">
+                      <Link
+                        href="/services"
+                        onClick={closeMobileMenu}
+                        className="flex-1 px-4 py-3 text-sm font-bold text-slate-800 dark:text-white"
+                      >
+                        Services
+                      </Link>
+                      <button
+                        onClick={() => setExpandedMobileCategory(expandedMobileCategory === "services" ? null : "services")}
+                        className="flex items-center justify-center px-4 py-3 text-slate-800 dark:text-white"
+                      >
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform ${expandedMobileCategory === "services" ? "rotate-180" : ""}`}
+                        />
+                      </button>
+                    </div>
 
                     <AnimatePresence initial={false}>
                       {expandedMobileCategory === "services" && (
