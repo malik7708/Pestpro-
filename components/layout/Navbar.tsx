@@ -351,9 +351,8 @@ export function Navbar() {
                     }}
                     className="mt-2 border-t border-slate-100 pt-2 dark:border-gray-800"
                   >
-                    <Link
-                      href="/services"
-                      onClick={closeMobileMenu}
+                    <button
+                      onClick={() => setExpandedMobileCategory(expandedMobileCategory === "services" ? null : "services")}
                       className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold text-slate-800 transition-colors hover:bg-brand-green-50 hover:text-brand-green dark:text-white dark:hover:bg-gray-900"
                     >
                       Services
@@ -361,7 +360,7 @@ export function Navbar() {
                         size={16}
                         className={`transition-transform ${expandedMobileCategory === "services" ? "rotate-180" : ""}`}
                       />
-                    </Link>
+                    </button>
 
                     <AnimatePresence initial={false}>
                       {expandedMobileCategory === "services" && (
