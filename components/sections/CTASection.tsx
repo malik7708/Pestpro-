@@ -171,9 +171,9 @@ export function CTASection() {
 
             <StaggerItem>
               <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-                <a href="tel:+923229162746" className="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 text-base text-lg">
+                <a href="tel:+923005515809" className="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 text-base text-lg">
                   <Phone size={20} />
-                  Call +92 322 9162746
+                  Call +92 300 5515809
                 </a>
                 <Link
                   href="/contact"

@@ -92,7 +92,7 @@ export function ProcessSection() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-4 lg:items-stretch">
-              <a href="tel:+923229162746" className="btn-primary text-base justify-center">
+              <a href="tel:+923005515809" className="btn-primary text-base justify-center">
                   <Phone size={20} /> Call for Free Quote
                 </a>
                 <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/18 border border-white/20 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300">

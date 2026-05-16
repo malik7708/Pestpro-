@@ -30,14 +30,14 @@ export function EmergencyBanner() {
 
           <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
             <a
-                  href="tel:+923229162746"
+                  href="tel:+923005515809"
               className="inline-flex items-center gap-3 bg-white text-brand-navy hover:bg-slate-100 font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg"
             >
               <Phone size={20} />
-                  +92 322 9162746
+                  +92 300 5515809
             </a>
             <a
-                  href="https://wa.me/923229162746"
+                  href="https://wa.me/923005515809"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300"

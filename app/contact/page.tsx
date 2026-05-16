@@ -46,8 +46,8 @@ export default function ContactPage() {
                   </div>
                   <CheckCircle size={18} className="text-[#2f6b4f] flex-shrink-0" />
                 </div>
-              <a href="tel:+923229162746" className="block text-xl sm:text-2xl font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2">
-                +92 322 9162746
+              <a href="tel:+923005515809" className="block text-xl sm:text-2xl font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2">
+                +92 300 5515809
                 </a>
                 <p className="text-xs sm:text-sm text-gray-600">Mon-Sun ------ 24 / 7</p>
               </div>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   </div>
                   <Shield size={18} className="text-[#2f6b4f] flex-shrink-0" />
                 </div>
-              <a href="https://wa.me/923229162746" target="_blank" rel="noopener noreferrer" className="block text-xl sm:text-2xl font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2">
+              <a href="https://wa.me/923005515809" target="_blank" rel="noopener noreferrer" className="block text-xl sm:text-2xl font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2">
                   Quick Chat
                 </a>
                 <p className="text-xs sm:text-sm text-gray-600">Fast responses, 7 days a week</p>
@@ -76,8 +76,8 @@ export default function ContactPage() {
                   </div>
                   <CheckCircle size={18} className="text-[#2f6b4f] flex-shrink-0" />
                 </div>
-                <a href="mailto:islamabadpestcontrolservices@gmail.com" className="block text-sm sm:text-lg font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2 break-all">
-                  islamabadpestcontrolservices@gmail.com
+                <a href="mailto:islamabadpestcontrolspk@gmail.com" className="block text-sm sm:text-lg font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2 break-all">
+                  islamabadpestcontrolspk@gmail.com
                 </a>
                 <p className="text-xs sm:text-sm text-gray-600">Response within 2 hours</p>
               </div>

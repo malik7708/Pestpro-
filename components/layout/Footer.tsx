@@ -120,8 +120,8 @@ export function Footer() {
             <h3 className="text-white font-semibold font-display text-base sm:text-lg mb-4 sm:mb-5">Get In Touch</h3>
             <div className="space-y-3 sm:space-y-4">
               {[
-              { icon: Phone, value: "+92 322 9162746", href: "tel:+923229162746", label: "Emergency line" },
-                { icon: Mail, value: "islamabadpestcontrolservices@gmail.com", href: "mailto:islamabadpestcontrolservices@gmail.com", label: "Email us" },
+              { icon: Phone, value: "+92 300 5515809", href: "tel:+923005515809", label: "Emergency line" },
+                { icon: Mail, value: "islamabadpestcontrolspk@gmail.com", href: "mailto:islamabadpestcontrolspk@gmail.com", label: "Email us" },
                 { icon: MapPin, value: "Address:  New mal, Kuri road, Jinnah Avenue Islamabad, Pakistan", href: "#", label: "Our location" },
               ].map(({ icon: Icon, value, href, label }) => (
                 <a key={label} href={href} className="flex items-start gap-2 sm:gap-3 group">

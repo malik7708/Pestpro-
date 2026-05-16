@@ -67,8 +67,8 @@ export function Navbar() {
         className="bg-brand-navy px-4 py-2 text-center text-xs font-medium text-white sm:text-sm"
       >
         <span className="font-semibold">24/7 Emergency Service</span> | Call Now:{" "}
-        <a href="tel:+923229162746" className="font-semibold underline transition-colors hover:text-brand-green-100">
-          +92 322 9162746
+        <a href="tel:+923005515809" className="font-semibold underline transition-colors hover:text-brand-green-100">
+          +92 300 5515809
         </a>
         <span className="hidden sm:inline"> | Free inspection available</span>
       </motion.div>
@@ -259,7 +259,7 @@ export function Navbar() {
                 }`}
               >
                 <Phone size={16} />
-                +92 322 9162746
+                +92 300 5515809
               </a>
 
               <Link href="/contact" className="btn-primary px-5 py-2.5 text-sm">
@@ -451,7 +451,7 @@ export function Navbar() {
                     }}
                     className="flex flex-col gap-3 border-t border-slate-100 pt-3 dark:border-gray-800"
                   >
-                    <a href="tel:+923229162746" className="btn-outline justify-center py-3 text-center text-sm">
+                    <a href="tel:+923005515809" className="btn-outline justify-center py-3 text-center text-sm">
                       <Phone size={16} /> Call Now
                     </a>
                     <Link href="/contact" onClick={closeMobileMenu} className="btn-primary justify-center py-3 text-center text-sm">

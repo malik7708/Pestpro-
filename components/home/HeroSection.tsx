@@ -113,7 +113,7 @@ export function HeroSection() {
                       <StaggerItem>
                           <div className="mt-4 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:items-center sm:gap-3">
                             <motion.a
-                              href="tel:+923229162746"
+                              href="tel:+923005515809"
                               whileHover={{ y: -2, scale: 1.01 }}
                               whileTap={{ scale: 0.98 }}
                               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d8f06b] px-5 py-3 text-xs font-semibold text-[#173225] transition-colors hover:bg-[#cae45a] sm:px-7 sm:py-4 sm:text-sm"
