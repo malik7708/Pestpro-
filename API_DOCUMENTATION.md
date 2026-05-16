@@ -42,7 +42,7 @@ Login with admin credentials.
 
 ```json
 {
-  "email": "islamabadpestcontrolservices9@gmail.com",
+  "email": "info@islamabadpestcontrolpk.com",
   "password": "securepassword"
 }
 ```
@@ -53,7 +53,7 @@ Login with admin credentials.
 {
   "user": {
     "id": 1,
-    "email": "islamabadpestcontrolservices9@gmail.com",
+    "email": "info@islamabadpestcontrolpk.com",
     "role": "admin"
   }
 }
@@ -69,7 +69,7 @@ Login with admin credentials.
 ```bash
 curl -X POST http://localhost:3000/api/login \
   -H "Content-Type: application/json" \
-  -d '{"email": "islamabadpestcontrolservices9@gmail.com", "password": "password123"}'
+  -d '{"email": "info@islamabadpestcontrolpk.com", "password": "password123"}'
 ```
 
 ---
@@ -119,7 +119,7 @@ curl -X GET "http://localhost:3000/api/admin/users?page=1&limit=10" \
   "users": [
     {
       "id": 1,
-      "email": "islamabadpestcontrolservices9@gmail.com",
+      "email": "info@islamabadpestcontrolpk.com",
       "role": "admin",
       "createdAt": "2026-04-19T05:00:00Z"
     }
@@ -377,7 +377,7 @@ model ContactMessage {
 # 1. Login
 curl -i -X POST http://localhost:3000/api/login \
   -H "Content-Type: application/json" \
-  -d '{"email": "islamabadpestcontrolservices9@gmail.com", "password": "admin786"}'
+  -d '{"email": "info@islamabadpestcontrolpk.com", "password": "admin786"}'
 
 # 2. Extract token from Set-Cookie header
 # Use it in subsequent requests:
@@ -450,7 +450,7 @@ SMTP_HOST="smtp.gmail.com"
 SMTP_PORT="587"
 EMAIL_FROM="your-email@gmail.com"
 EMAIL_PASSWORD="your-app-password"
-EMAIL_TO="islamabadpestcontrolservices9@gmail.com"
+EMAIL_TO="info@islamabadpestcontrolpk.com"
 
 # Site
 NEXT_PUBLIC_SITE_URL="http://localhost:3000"

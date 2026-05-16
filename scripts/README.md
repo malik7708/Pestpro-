@@ -46,7 +46,7 @@ npx ts-node scripts/create-admin.ts
   ISB PestControl Admin User Creation Script
 ========================================
 
-Enter admin email: islamabadpestcontrolservices9@gmail.com
+Enter admin email: info@islamabadpestcontrolpk.com
 Enter admin password (min 8 characters): ••••••••
 Confirm password: ••••••••
 
@@ -59,7 +59,7 @@ Confirm password: ••••••••
   Admin User Details:
 ========================================
 ID:        1
-Email:     islamabadpestcontrolservices9@gmail.com
+Email:     info@islamabadpestcontrolpk.com
 Role:      admin
 Created:   4/19/2026, 4:15:30 PM
 ========================================

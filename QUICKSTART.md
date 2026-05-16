@@ -108,7 +108,7 @@ npx prisma studio
 
 **Default Credentials:**
 
-- Email: `islamabadpestcontrolservices9@gmail.com`
+- Email: `info@islamabadpestcontrolpk.com`
 - Password: `admin786`
 
 ---

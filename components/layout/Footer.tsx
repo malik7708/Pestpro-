@@ -121,7 +121,7 @@ export function Footer() {
             <div className="space-y-3 sm:space-y-4">
               {[
               { icon: Phone, value: "+92 300 5515809", href: "tel:+923005515809", label: "Emergency line" },
-                { icon: Mail, value: "islamabadpestcontrolspk@gmail.com", href: "mailto:islamabadpestcontrolspk@gmail.com", label: "Email us" },
+                { icon: Mail, value: "info@islamabadpestcontrolpk.com", href: "mailto:info@islamabadpestcontrolpk.com", label: "Email us" },
                 { icon: MapPin, value: "Address:  New mal, Kuri road, Jinnah Avenue Islamabad, Pakistan", href: "#", label: "Our location" },
               ].map(({ icon: Icon, value, href, label }) => (
                 <a key={label} href={href} className="flex items-start gap-2 sm:gap-3 group">

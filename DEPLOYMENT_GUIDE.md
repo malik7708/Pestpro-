@@ -53,9 +53,9 @@ JWT_SECRET="generate-new-secure-secret-here-min-32-chars"
 # Email Service (Gmail, SendGrid, etc.)
 SMTP_HOST="smtp.gmail.com"
 SMTP_PORT="587"
-EMAIL_FROM="islamabadpestcontrolservices9@gmail.com"
+EMAIL_FROM="info@islamabadpestcontrolpk.com"
 EMAIL_PASSWORD="your-production-app-password"
-EMAIL_TO="islamabadpestcontrolservices9@gmail.com"
+EMAIL_TO="info@islamabadpestcontrolpk.com"
 
 # Site Configuration
 NEXT_PUBLIC_SITE_URL="https://pestpro.com"
@@ -458,7 +458,7 @@ CREATE INDEX idx_contact_email ON "ContactMessage"(email);
 ```bash
 # Test critical endpoints
 curl -H "Content-Type: application/json" \
-  -d '{"email":"islamabadpestcontrolservices9@gmail.com","password":"admin786"}' \
+  -d '{"email":"info@islamabadpestcontrolpk.com","password":"admin786"}' \
   https://pestpro.com/api/login
 
 # Verify contact form
