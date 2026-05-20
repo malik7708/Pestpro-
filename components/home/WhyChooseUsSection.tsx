@@ -64,7 +64,7 @@ export function WhyChooseUsSection() {
           <div>
             <div className="section-tag">
               <span className="w-8 h-0.5 bg-brand-green" />
-              Why Choose IC Pest Control
+              Why Choose ISB Pest Control
             </div>
             <h2 className="section-heading mb-6">
               The best pest control
@@ -72,7 +72,7 @@ export function WhyChooseUsSection() {
               <span className="text-gradient">near you in Islamabad & Rawalpindi</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-8 mb-6">
-              Looking for the best pest control near you? Here&apos;s why customers trust IC Pest Control for their pest management needs.
+              Looking for the best pest control near you? Here&apos;s why customers trust ISB Pest Control for their pest management needs.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-8 mb-8">
               We provide eco-friendly and safe treatments with affordable pricing and guaranteed results. Our experienced and trained technicians offer fast response times and reliable service using advanced equipment and modern techniques.
@@ -80,7 +80,7 @@ export function WhyChooseUsSection() {
 
             <div className="grid grid-cols-3 gap-4 mb-10">
               {[
-                { n: "5,000+", label: "Properties Protected", sub: "Residential & commercial" },
+                { n: "20k+", label: "Properties Protected", sub: "Residential & commercial" },
                 { n: "4.9", label: "Client Rating", sub: "Service satisfaction" },
                 { n: "100%", label: "Safe Methods", sub: "Eco-friendly products" },
               ].map(({ n, label, sub }) => (

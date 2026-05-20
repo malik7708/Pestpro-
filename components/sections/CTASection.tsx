@@ -149,7 +149,7 @@ export function CTASection() {
 
             <StaggerItem>
               <p className="mb-8 max-w-2xl text-xl text-white/80">
-                Get professional help before it&apos;s too late. Contact IC Pest Control today for fast, effective, and affordable pest control services in Islamabad and Rawalpindi. Your safety and satisfaction are our top priorities.
+                Get professional help before it&apos;s too late. Contact ISB Pest Control today for fast, effective, and affordable pest control services in Islamabad and Rawalpindi. Your safety and satisfaction are our top priorities.
               </p>
             </StaggerItem>
 

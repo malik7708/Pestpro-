@@ -1100,7 +1100,7 @@ function getItemMedia(itemLabel: string, fallbackImage: string, fallbackAlt: str
 
   if (label.includes("lizard")) {
     return {
-     image: "/lizard-control.png",
+     image: "/lizard.png",
       imageAlt: "Lizard control service image",
     };
   }

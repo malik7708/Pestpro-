@@ -76,10 +76,10 @@ export default function ContactPage() {
                   </div>
                   <CheckCircle size={18} className="text-[#2f6b4f] flex-shrink-0" />
                 </div>
-                <a href="mailto:islamabadpestcontrolspk@gmail.com" className="block text-sm sm:text-lg font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2 break-all">
-                  islamabadpestcontrolspk@gmail.com
+                <a href="mailto:info@islamabadpestcontrolpk.com" className="block text-sm sm:text-lg font-bold text-gray-900 hover:text-[#2f6b4f] transition-colors mb-2 break-all">
+                  info@islamabadpestcontrolpk.com
                 </a>
-                <p className="text-xs sm:text-sm text-gray-600">Response within 2 hours</p>
+                <p className="text-xs sm:text-sm text-gray-600">Response within 24 hours</p>
               </div>
 
               {/* Business Hours */}
@@ -109,7 +109,6 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-10 shadow-sm border border-gray-200">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
-                <p className="text-xs sm:text-sm text-gray-600 mb-6 sm:mb-8">Fill out the form below and our team will get back to you within 2 hours during business hours.</p>
                 <ContactForm />
               </div>
             </div>

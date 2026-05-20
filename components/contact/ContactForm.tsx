@@ -103,28 +103,14 @@ export function ContactForm() {
 
       {/* Green Header */}
       <div className="bg-[#2f6b4f] px-4 sm:px-6 py-5 sm:py-6">
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/15 px-2.5 sm:px-3 py-1 sm:py-1.5">
-          <span className="h-1 sm:h-1.5 w-1 sm:w-1.5 rounded-full bg-[#6ee7a7]" />
-          <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-[0.12em] text-white/90">
-            Free · No obligation
-          </span>
-        </div>
+        
         <h2 className="text-xl sm:text-2xl font-bold leading-snug text-white">
           Request free<br />inspection
         </h2>
         <p className="mt-1 sm:mt-1.5 text-[11px] sm:text-xs text-white/70 leading-relaxed">
           Fill in below — we call back within 24 hours.
         </p>
-        <div className="mt-3 sm:mt-4 flex gap-2 sm:gap-4 border-t border-white/15 pt-3 sm:pt-4">
-          {[["1", "Submit request"], ["2", "We call you back"], ["3", "Free inspection"]].map(([n, label]) => (
-            <div key={n} className="flex items-center gap-1.5 sm:gap-2">
-              <div className="flex h-4 sm:h-5 w-4 sm:w-5 flex-shrink-0 items-center justify-center rounded-full bg-white/20 text-[8px] sm:text-[9px] font-bold text-white">
-                {n}
-              </div>
-              <span className="text-[9px] sm:text-[10px] leading-tight text-white/75">{label}</span>
-            </div>
-          ))}
-        </div>
+        
       </div>
 
       {/* Form Body */}
@@ -231,15 +217,6 @@ export function ContactForm() {
               }
             </span>
           </button>
-
-          <div className="flex items-center justify-center gap-2 sm:gap-4 border-t border-[#edf3ef] pt-3 sm:pt-4 flex-wrap">
-            {["Licensed & insured", "Same-day available", "Safe treatments"].map((t) => (
-              <div key={t} className="flex items-center gap-1 sm:gap-1.5">
-                <span className="h-1 sm:h-1.5 w-1 sm:w-1.5 rounded-full bg-[#6ee7a7]" />
-                <span className="text-[9px] sm:text-[10px] font-semibold text-[#6a9a7a]">{t}</span>
-              </div>
-            ))}
-          </div>
         </form>
       </div>
     </div>

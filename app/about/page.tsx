@@ -91,7 +91,7 @@ export default function AboutPage() {
             About <span className="text-green-200">ISB PestControl</span>
           </h1>
           <p className="text-sm sm:text-base lg:text-xl text-white/90 max-w-2xl mx-auto px-2">
-            Illinois&apos; most trusted pest control company, protecting homes and businesses since 2005.
+            ISB PestControl is the most trusted pest control company, protecting homes and businesses since 2005.
           </p>
         </div>
       </section>
