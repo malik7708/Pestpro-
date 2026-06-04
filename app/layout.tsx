@@ -40,7 +40,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "PestControlBusiness",
   name: "ISB PestControl - Islamabad Pest Control",
-  url: "https://icpestcontrol.com",
+  url: "https://islamabadpestcontrolpk.com",
   telephone: "+92-306-923-5099",
   priceRange: "$$",
   address: {

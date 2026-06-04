@@ -17,10 +17,10 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { href: "https://facebook.com", label: "Facebook", letter: "f" },
-  { href: "https://instagram.com", label: "Instagram", letter: "in" },
-  { href: "https://twitter.com", label: "Twitter", letter: "X" },
-  { href: "https://youtube.com", label: "YouTube", letter: ">" },
+  { href: "https://www.facebook.com/share/1CodhewoQp/", label: "Facebook", letter: "f" },
+  { href: "https://www.instagram.com/islamabadpestcontrolpk?utm_source=qr&igsh=N2dmdmtyNHphaGhj", label: "Instagram", letter: "in" },
+  { href: "https://x.com/islamabadpest", label: "Twitter", letter: "X" },
+  { href: "https://www.youtube.com/channel/UCoIgSIwnHB3aOXbJgRryncA", label: "YouTube", letter: ">" },
 ];
 
 export function Footer() {
@@ -122,7 +122,7 @@ export function Footer() {
               {[
               { icon: Phone, value: "+92 300 5515809", href: "tel:+923005515809", label: "Emergency line" },
                 { icon: Mail, value: "info@islamabadpestcontrolpk.com", href: "mailto:info@islamabadpestcontrolpk.com", label: "Email us" },
-                { icon: MapPin, value: "Address:  New mal, Kuri road, Jinnah Avenue Islamabad, Pakistan", href: "#", label: "Our location" },
+                { icon: MapPin, value: "Address:  Newmal, Kuri road, Jinnah Avenue Islamabad, Pakistan", href: "#", label: "Our location" },
               ].map(({ icon: Icon, value, href, label }) => (
                 <a key={label} href={href} className="flex items-start gap-2 sm:gap-3 group">
                   <div className="w-7 h-7 sm:w-9 sm:h-9 bg-brand-green/20 group-hover:bg-brand-green rounded-lg flex items-center justify-center flex-shrink-0 transition-colors">
