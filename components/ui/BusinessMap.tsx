@@ -41,10 +41,15 @@ const CONFIGURATION = {
 };
 
 export function BusinessMap({ className = "", height = "320px", compact = false }: BusinessMapProps) {
-  // Simpler, reliable approach: use Google Maps embed with the exact Place ID.
-  // This ensures the pin and place name are visible in the iframe.
+  // Use Google Maps Embed API with a public API key when available so the
+  // place marker and business info render reliably. Fall back to the place
+  // URL if a public key isn't set (may be blocked by some browsers/sites).
   const PLACE_ID = "ChIJZfDsz6Dr3zgRSSkf-MOyXgI"; // exact place id the user provided
-  const src = `https://www.google.com/maps/place/?q=place_id:${PLACE_ID}&output=embed&z=17`;
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const hasKey = Boolean(apiKey && apiKey.length > 0);
+  const src = hasKey
+    ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=place_id:${PLACE_ID}&zoom=17`
+    : `https://www.google.com/maps/place/?q=place_id:${PLACE_ID}&output=embed&z=17`;
 
   return (
     <div className={`overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm ${className}`.trim()}>
@@ -61,6 +66,13 @@ export function BusinessMap({ className = "", height = "320px", compact = false 
       )}
 
       <div className="w-full" style={{ height }}>
+        {!hasKey && (
+          <div className="p-3 text-xs text-yellow-700 bg-yellow-50 border border-yellow-100 rounded-md mb-2">
+            Map is using a public embed fallback. To ensure a reliable embedded
+            map and Place details, set `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` in your
+            environment and enable Maps Embed API in Google Cloud Console.
+          </div>
+        )}
         <iframe
           src={src}
           width="100%"
