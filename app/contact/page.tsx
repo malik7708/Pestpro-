@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Phone, MessageCircle, Mail, Clock, CheckCircle, Shield } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { BusinessMap } from "@/components/ui/BusinessMap";
 import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, Shield, Star, CheckCircle } from "lucide-react";
+import { BusinessMap } from "@/components/ui/BusinessMap";
 
 const services = [
   { href: "/services/pest-control", label: "Pest Control" },
@@ -139,6 +140,10 @@ export function Footer() {
               Get Free Inspection
             </Link>
           </div>
+        </div>
+
+        <div className="mt-8 sm:mt-10">
+          <BusinessMap compact height="220px" />
         </div>
       </div>
 
