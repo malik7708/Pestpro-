@@ -26,10 +26,10 @@ const serviceImages: StaticImageData[] = [
 
 const heroSlide = {
   id: "fumigation",
-  eyebrow: "Pest Control | Fumigation, Termite Treatment(Deemak) | Dengue Spray Services",
-  title: "Top best & professional pest management in Rawalpindi/Islamabad",
+  eyebrow: "Pest Control | Fumigation, Termite Treatment (Deemak) | Dengue Spray Services",
+  title: "Trusted pest management in Rawalpindi and Islamabad",
   description:
-    "Islamabad PEST CONTROL offers trusted pest control, termite treatment(Deemak), fumigation, and dengue spray services in Islamabad and Rawalpindi with safe, affordable, and guaranteed solutions.",
+    "Islamabad Pest Control offers trusted pest control, termite treatment, fumigation, and dengue spray services in Islamabad and Rawalpindi with safe, affordable, and guaranteed solutions.",
   image: fumigationImage,
   cta: "Request service details",
 };
@@ -81,7 +81,7 @@ export function HeroSection() {
                       <StaggerItem>
                         <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/14 bg-white/8 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/82 backdrop-blur-sm sm:px-4 sm:py-2">
                           <ShieldCheck size={12} className="sm:h-4 sm:w-4" />
-                          <span>Islamabad PestControl</span>
+                          <span>Islamabad Pest Control</span>
                         </div>
                       </StaggerItem>
 
@@ -283,7 +283,7 @@ export function HeroSection() {
                 <div className="relative h-[320px] sm:h-[400px] lg:h-[460px]">
                   <Image
                     src={heroImage}
-                    alt="Islamabad PestControl pest control professional on site"
+                    alt="Islamabad Pest Control professional on site"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"

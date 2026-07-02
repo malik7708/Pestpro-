@@ -6,13 +6,13 @@ import Image from "next/image";
 
 const faqs = [
   {
-    q: "How quickly can Islamabad PestControl respond to a pest complaint?",
+    q: "How quickly can Islamabad Pest Control respond to a pest complaint?",
     a: "We offer fast scheduling in our main service areas, especially Islamabad, Rawalpindi, Lahore, and Karachi. Response time depends on the city, the type of pest issue, and the urgency of the complaint.",
     image: "/hero.png",
   },
   {
     q: "Do you provide pest control for offices, warehouses, and companies?",
-    a: "Yes. Islamabad PestControl provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
+    a: "Yes. Islamabad Pest Control provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
     image: "/hotel-fumigation.png",
   },
   {
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Do you offer termite control and fumigation services in Pakistan?",
-    a: "Yes. Islamabad PestControl provides termite treatment, fumigation support, rodent control, cockroach treatment, bed bug removal, mosquito control, and general pest control for residential and commercial clients in Pakistan.",
+    a: "Yes. Islamabad Pest Control provides termite treatment, fumigation support, rodent control, cockroach treatment, bed bug removal, mosquito control, and general pest control for residential and commercial clients in Pakistan.",
     image: "/termite.png",
   },
   {

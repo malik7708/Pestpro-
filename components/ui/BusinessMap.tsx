@@ -81,7 +81,7 @@ export function BusinessMap({ className = "", height = "320px", compact = false 
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Islamabad PestControl business location"
+          title="Islamabad Pest Control business location"
         />
       </div>
     </div>
