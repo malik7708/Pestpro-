@@ -15,11 +15,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Islamabad PestControl | #1 Pest Control Services – Termite(Deemak), Rodent & Cockroach Treatment",
+    default: "Islamabad PestControl | Best Pest Control Services in Islamabad | Termite (Deemak) & Fumigation",
     template: "%s | Islamabad PestControl - Islamabad Pest Control",
   },
   description:
-    "Professional pest control services including termite treatment(Deemak), rodent control, cockroach removal & bed bug elimination. Licensed, certified & available 24/7. Get a FREE inspection today!",
+    "Best pest control services including termite treatment(Deemak), rodent control, cockroach removal & bed bug elimination. Licensed, certified & available 24/7. Get a FREE inspection today!",
   keywords: [
 
     'pest control in Islamabad',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Islamabad PestControl - Islamabad Pest Control",
-    title: "Islamabad PestControl | Professional Pest Control Services",
+    title: "Islamabad PestControl | Best Pest Control Services in Islamabad | Termite (Deemak) & Fumigation",
     description: "Licensed pest control experts. Free inspection. 24/7 emergency service.",
   },
   robots: { index: true, follow: true },
@@ -58,11 +58,11 @@ const localBusinessSchema = {
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "123 Green Valley Rd",
-    addressLocality: "Springfield",
-    addressRegion: "IL",
-    postalCode: "62701",
-    addressCountry: "US",
+    streetAddress: "Newmal, Kuri Road, Jinnah Ave",
+    addressLocality: "Islamabad",
+    addressRegion: "Islamabad Capital Territory",
+    postalCode: "44000",
+    addressCountry: "PK",
   },
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "847" },
 };
