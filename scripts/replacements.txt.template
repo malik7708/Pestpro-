@@ -1,0 +1,9 @@
+# replacements.txt.template
+# Usage: copy this file to `replacements.txt`, then replace the placeholder
+# `LEAKED_GOOGLE_KEY_HERE` with the actual leaked key string (exact match).
+# Do NOT commit `replacements.txt` with the real key — keep it local-only.
+
+LEAKED_GOOGLE_KEY_HERE==>REDACTED-GOOGLE-KEY
+
+# Example (do NOT include the real key in this template):
+# AIzaSy...==>REDACTED-GOOGLE-KEY

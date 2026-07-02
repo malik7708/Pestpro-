@@ -29,7 +29,7 @@ const CONFIGURATION = {
     maxZoom: 17,
     mapId: "",
   },
-  mapsApiKey: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
+  mapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
   capabilities: {
     input: true,
     autocomplete: true,
