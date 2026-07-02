@@ -1,6 +1,6 @@
 # Admin User Creation Script
 
-This directory contains utility scripts for the ISB PestControl application.
+This directory contains utility scripts for the Islamabad PestControl application.
 
 ## `create-admin.ts`
 
@@ -43,7 +43,7 @@ npx ts-node scripts/create-admin.ts
 
 ```
 ========================================
-  ISB PestControl Admin User Creation Script
+  Islamabad PestControl Admin User Creation Script
 ========================================
 
 Enter admin email: info@islamabadpestcontrolpk.com
@@ -133,3 +133,4 @@ npx prisma studio
 - `prisma/schema.prisma` - Database schema with User model
 - `.env` - Environment variables (includes DATABASE_URL)
 - `app/api/login/route.ts` - Admin login endpoint
+

@@ -28,7 +28,7 @@ The following image placeholders have been added to the website. Please provide 
 
 - **our-aim-image.jpg** - Image for the "Our Aim" section on the homepage (HeroSection component)
 - **contact-us-image.jpg** - Image for the "Get In Touch" section on the contact page
-- **about-us-image.jpg** - Image for the "About ISB PestControl" section on the about page
+- **about-us-image.jpg** - Image for the "About Islamabad PestControl" section on the about page
 - **integrity-image.jpg** - Image for the "Integrity First" value card on the about page
 - **family-safety-image.jpg** - Image for the "Family Safety" value card on the about page
 - **excellence-image.jpg** - Image for the "Excellence" value card on the about page
@@ -63,3 +63,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+

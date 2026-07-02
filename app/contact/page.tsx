@@ -4,8 +4,8 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "Contact ISB PestControl – Expert Pest Control Services",
-  description: "Get in touch with ISB PestControl for professional pest control solutions. Call +92-306-923-5099 or submit your inquiry online. 24/7 emergency support available.",
+  title: "Contact Islamabad PestControl – Expert Pest Control Services",
+  description: "Get in touch with Islamabad PestControl for professional pest control solutions. Call +92-306-923-5099 or submit your inquiry online. 24/7 emergency support available.",
 };
 
 export default function ContactPage() {
@@ -202,7 +202,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="ISB PestControl Service Areas"
+              title="Islamabad PestControl Service Areas"
             />
           </div>
         </div>
@@ -211,3 +211,4 @@ export default function ContactPage() {
     </>
   );
 }
+

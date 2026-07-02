@@ -112,7 +112,7 @@ export function ServiceCategoryDetailPage({
     areaServed: ["Islamabad", "Rawalpindi"],
     provider: {
       "@type": "LocalBusiness",
-      name: "ISB PestControl",
+      name: "Islamabad PestControl",
       telephone: "+92 322 9162746",
       url: "https://icpestcontrol.com",
     },
@@ -296,7 +296,7 @@ export function ServiceCategoryDetailPage({
               </h2>
               <div className="space-y-4 text-slate-600">
                 <p>
-                  At ISB PestControl, our team of certified professionals specializes in {data.category.label.toLowerCase()} with proven methods that deliver results. We combine industry-leading techniques with eco-friendly solutions to protect your property and family.
+                  At Islamabad PestControl, our team of certified professionals specializes in {data.category.label.toLowerCase()} with proven methods that deliver results. We combine industry-leading techniques with eco-friendly solutions to protect your property and family.
                 </p>
                 <p>
                   Whether you&apos;re dealing with an active infestation or planning preventative treatment, our specialists conduct thorough inspections and develop customized treatment plans tailored to your specific situation and property layout.
@@ -549,3 +549,4 @@ export function ServiceCategoryDetailPage({
     </>
   );
 }
+

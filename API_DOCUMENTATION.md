@@ -1,8 +1,8 @@
-# ISB PestControl Backend API Documentation
+# Islamabad PestControl Backend API Documentation
 
 ## Overview
 
-Complete backend API system for ISB PestControl - Pest Control Management Website with:
+Complete backend API system for Islamabad PestControl - Pest Control Management Website with:
 
 - User authentication (JWT-based)
 - Admin dashboard with user and message management
@@ -574,3 +574,4 @@ pm2 start npm --name "pestpro" -- start
 
 **Last Updated:** April 19, 2026  
 **Version:** 1.0.0
+

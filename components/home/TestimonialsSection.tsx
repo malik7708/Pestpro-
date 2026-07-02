@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
 
@@ -12,7 +12,7 @@ const testimonials = [
     rating: 4.9,
     initials: "DC",
     color: "#0f766e",
-    text: "ISB PestControl fixed my pest issue with a strong, fast plan and great follow-up. The team arrived on time and explained everything clearly. Exceptional service from start to finish.",
+    text: "Islamabad PestControl fixed my pest issue with a strong, fast plan and great follow-up. The team arrived on time and explained everything clearly. Exceptional service from start to finish.",
   },
   {
     name: "Sana Tariq",
@@ -34,7 +34,7 @@ const testimonials = [
     rating: 5.0,
     initials: "BL",
     color: "#115e59",
-    text: "ISB PestControl provided a structured recurring plan that finally gave us the control and reporting our property needed. Professional, thorough and completely reliable.",
+    text: "Islamabad PestControl provided a structured recurring plan that finally gave us the control and reporting our property needed. Professional, thorough and completely reliable.",
   },
   {
     name: "Parvez Shah",
@@ -56,7 +56,7 @@ const testimonials = [
     rating: 5.0,
     initials: "HE",
     color: "#0d9488",
-    text: "Their warehouse fumigation was efficient and respectful of our schedule. ISB PestControl reduced pests while keeping our team working normally. A truly seamless experience.",
+    text: "Their warehouse fumigation was efficient and respectful of our schedule. Islamabad PestControl reduced pests while keeping our team working normally. A truly seamless experience.",
   },
 ];
 
@@ -176,7 +176,7 @@ export function TestimonialsSection() {
                 </button>
               );
             })}
-            <div className="absolute top-1/2 left-1/2 w-14 h-14 bg-white border border-[#2f6b4f]/12 rounded-full flex items-center justify-center text-xl text-[#2f6b4f] shadow-lg transform -translate-x-1/2 -translate-y-1/2 z-20">✦</div>
+            <div className="absolute top-1/2 left-1/2 w-14 h-14 bg-white border border-[#2f6b4f]/12 rounded-full flex items-center justify-center text-xl text-[#2f6b4f] shadow-lg transform -translate-x-1/2 -translate-y-1/2 z-20">?</div>
           </div>
 
           {/* Card */}
@@ -212,14 +212,14 @@ export function TestimonialsSection() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-[#22313d] m-0">{active.name}</p>
-                  <p className="text-xs text-slate-600 m-0 mt-0.5">{active.role} · {active.company}</p>
-                  <p className="text-xs text-slate-400 m-0 mt-0.5">📍 {active.location} · {active.date}</p>
+                  <p className="text-xs text-slate-600 m-0 mt-0.5">{active.role} • {active.company}</p>
+                  <p className="text-xs text-slate-400 m-0 mt-0.5">{active.location} • {active.date}</p>
                 </div>
               </div>
             </div>
 
             <div className="flex items-center justify-center gap-4">
-              <button className="w-10 h-10 rounded-full border border-[#2f6b4f]/22 bg-white text-[#2f6b4f] text-xl cursor-pointer flex items-center justify-center transition-all duration-200 shadow-md hover:bg-[#2f6b4f] hover:text-white hover:border-[#2f6b4f]" onClick={() => changeIndex(activeIndex - 1)} aria-label="Previous">←</button>
+              <button className="w-10 h-10 rounded-full border border-[#2f6b4f]/22 bg-white text-[#2f6b4f] text-xl cursor-pointer flex items-center justify-center transition-all duration-200 shadow-md hover:bg-[#2f6b4f] hover:text-white hover:border-[#2f6b4f]" onClick={() => changeIndex(activeIndex - 1)} aria-label="Previous">&lt;</button>
               <div className="flex gap-1.5 items-center">
                 {testimonials.map((_, i) => (
                   <button
@@ -232,7 +232,7 @@ export function TestimonialsSection() {
                   />
                 ))}
               </div>
-              <button className="w-10 h-10 rounded-full border border-[#2f6b4f]/22 bg-white text-[#2f6b4f] text-xl cursor-pointer flex items-center justify-center transition-all duration-200 shadow-md hover:bg-[#2f6b4f] hover:text-white hover:border-[#2f6b4f]" onClick={() => changeIndex(activeIndex + 1)} aria-label="Next">→</button>
+              <button className="w-10 h-10 rounded-full border border-[#2f6b4f]/22 bg-white text-[#2f6b4f] text-xl cursor-pointer flex items-center justify-center transition-all duration-200 shadow-md hover:bg-[#2f6b4f] hover:text-white hover:border-[#2f6b4f]" onClick={() => changeIndex(activeIndex + 1)} aria-label="Next">&gt;</button>
             </div>
 
             <p className="hidden text-xs text-slate-400 text-center tracking-wide mt-1">Swipe to browse reviews</p>
@@ -279,3 +279,4 @@ export function TestimonialsSection() {
     </section>
   );
 }
+

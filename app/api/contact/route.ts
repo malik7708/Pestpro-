@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
       console.log("Email server connection verified");
 
       const mailOptions = {
-        from: `"ISB PestControl Contact Form" <${process.env.EMAIL_FROM}>`,
+        from: `"Islamabad PestControl Contact Form" <${process.env.EMAIL_FROM}>`,
         to: process.env.EMAIL_TO,
         subject: `New Contact Message from ${name}`,
         html: `
@@ -108,7 +108,7 @@ export async function POST(req: NextRequest) {
 
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
             <p style="color: #6b7280; font-size: 12px; text-align: center;">
-              This message was sent from the ISB PestControl website contact form.
+              This message was sent from the Islamabad PestControl website contact form.
             </p>
           </div>
         `,
@@ -136,3 +136,4 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+

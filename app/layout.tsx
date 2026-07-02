@@ -15,22 +15,35 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "ISB PestControl | #1 Pest Control Services – Termite, Rodent & Cockroach Treatment",
-    template: "%s | ISB PestControl - Islamabad Pest Control",
+    default: "Islamabad PestControl | #1 Pest Control Services – Termite(Deemak), Rodent & Cockroach Treatment",
+    template: "%s | Islamabad PestControl - Islamabad Pest Control",
   },
   description:
-    "Professional pest control services including termite treatment, rodent control, cockroach removal & bed bug elimination. Licensed, certified & available 24/7. Get a FREE inspection today!",
+    "Professional pest control services including termite treatment(Deemak), rodent control, cockroach removal & bed bug elimination. Licensed, certified & available 24/7. Get a FREE inspection today!",
   keywords: [
+
+    'pest control in Islamabad',
+    'termite treatment in Islamabad',
+    'rodent control services',
+    'cockroach removal experts',
     "pest control services",
     "termite treatment near me",
     "best pest control company",
     "emergency pest control",
     "affordable pest removal",
+    "fumigation services",
+    "bed bug extermination",
+    "pest inspection services",
+    "disinfection and sanitization",
+    "pest control",
+    "termite treatment(Deemak)", 
+    "rodent control",
+    "cockroach treatment",
   ],
   openGraph: {
     type: "website",
-    siteName: "ISB PestControl - Islamabad Pest Control",
-    title: "ISB PestControl | Professional Pest Control Services",
+    siteName: "Islamabad PestControl - Islamabad Pest Control",
+    title: "Islamabad PestControl | Professional Pest Control Services",
     description: "Licensed pest control experts. Free inspection. 24/7 emergency service.",
   },
   robots: { index: true, follow: true },
@@ -39,7 +52,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "PestControlBusiness",
-  name: "ISB PestControl - Islamabad Pest Control",
+  name: "Islamabad PestControl - Islamabad Pest Control",
   url: "https://islamabadpestcontrolpk.com",
   telephone: "+92-306-923-5099",
   priceRange: "$$",
@@ -85,3 +98,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

@@ -1,4 +1,4 @@
-# ISB PestControl Admin System - Enhancement Roadmap
+# Islamabad PestControl Admin System - Enhancement Roadmap
 
 ## Current Features (v1.0)
 
@@ -614,3 +614,4 @@
 
 **Version:** 1.0  
 **Last Updated:** April 19, 2026
+

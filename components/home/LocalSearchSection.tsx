@@ -20,7 +20,7 @@ export function LocalSearchSection() {
             </h2>
 
             <p className="mb-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Searching for &quot;pest control near me&quot; or &quot;termite treatment in Rawalpindi&quot;? ISB Pest Control offers top-rated local extermination services you can rely on.
+              Searching for &quot;pest control near me&quot; or &quot;termite treatment in Rawalpindi&quot;? Islamabad Pest Control offers top-rated local extermination services you can rely on.
             </p>
 
             <p className="mb-8 text-lg leading-8 text-gray-600 dark:text-gray-400">
@@ -105,3 +105,4 @@ export function LocalSearchSection() {
     </section>
   );
 }
+

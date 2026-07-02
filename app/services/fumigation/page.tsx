@@ -4,7 +4,7 @@ import { mainServices } from "@/lib/servicesConfig";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Fumigation Services | Residential, Commercial & Industrial | ISB PestControl",
+  title: "Fumigation Services | Residential, Commercial & Industrial | Islamabad PestControl",
   description: "Professional fumigation services for residential, commercial, and industrial properties in Islamabad/Rawalpindi.",
 };
 
@@ -127,3 +127,4 @@ export default function FumigationPage() {
     </>
   );
 }
+

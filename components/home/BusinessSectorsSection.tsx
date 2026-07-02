@@ -55,7 +55,7 @@ export function BusinessSectorsSection() {
                 Pest management services for your business
               </h2>
               <p className="mb-5 text-sm leading-6 text-white/75 sm:mb-7 sm:text-base sm:leading-7 lg:text-lg lg:leading-8">
-                ISB PestControl supports companies across multiple business sectors with professional pest control,
+                Islamabad PestControl supports companies across multiple business sectors with professional pest control,
                 recurring service planning, site inspections, and practical follow-up for operational environments.
               </p>
               <Link
@@ -94,3 +94,4 @@ export function BusinessSectorsSection() {
     </section>
   );
 }
+

@@ -56,7 +56,7 @@ export function Footer() {
               <div className="rounded-lg overflow-hidden inline-block">
                 <Image
                   src="/logo-img.png"
-                  alt="ISB PestControl Logo"
+                  alt="Islamabad PestControl Logo"
                   width={180}
                   height={50}
                   className="h-auto w-auto"
@@ -64,7 +64,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-xs sm:text-sm leading-5 sm:leading-relaxed mb-4 sm:mb-6">
-              ISB PestControl - Your trusted pest control experts for homes and businesses. We deliver safer,
+              Islamabad PestControl - Your trusted pest control experts for homes and businesses. We deliver safer,
               effective solutions for termites, rodents, cockroaches, bed bugs, and general pest issues.
             </p>
             <div className="flex gap-2 sm:gap-3">
@@ -144,7 +144,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-max py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-white/40 text-sm">© {new Date().getFullYear()} ISB PestControl - Islamabad Pest Control. All rights reserved.</p>
+          <p className="text-white/40 text-sm">© {new Date().getFullYear()} Islamabad PestControl - Islamabad Pest Control. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-white/40 hover:text-white/70 text-xs transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="text-white/40 hover:text-white/70 text-xs transition-colors">Terms of Service</Link>
@@ -155,3 +155,4 @@ export function Footer() {
     </footer>
   );
 }
+

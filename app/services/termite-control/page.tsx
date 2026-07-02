@@ -4,7 +4,7 @@ import { mainServices } from "@/lib/servicesConfig";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Termite Control Services | ISB PestControl",
+  title: "Termite Control Services | Islamabad PestControl",
   description: "Expert termite treatment, prevention, proofing and professional termite control solutions.",
 };
 
@@ -104,3 +104,4 @@ export default function TermiteControlPage() {
     </>
   );
 }
+

@@ -42,7 +42,7 @@ export default function ServicesPage() {
               Expert pest control for every property need
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-white">
-              ISB Pest Control – your trusted partner for reliable pest control services in Islamabad and Rawalpindi. From termite inspection and fumigation to cockroach, rodent, and dengue control, we deliver complete solutions tailored for residential and commercial properties. Our experienced team ensures fast, safe, and long-lasting results you can depend on.
+              Islamabad Pest Control – your trusted partner for reliable pest control services in Islamabad and Rawalpindi. From termite inspection and fumigation to cockroach, rodent, and dengue control, we deliver complete solutions tailored for residential and commercial properties. Our experienced team ensures fast, safe, and long-lasting results you can depend on.
             </p>
           </div>
         </div>
@@ -158,3 +158,4 @@ export default function ServicesPage() {
     </>
   );
 }
+

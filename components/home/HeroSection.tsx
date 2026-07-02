@@ -29,7 +29,7 @@ const heroSlide = {
   eyebrow: "Pest Control | Fumigation, Termite Treatment(Deemak) | Dengue Spray Services",
   title: "Top best & professional pest management in Rawalpindi/Islamabad",
   description:
-    "ISB PEST CONTROL offers trusted pest control, termite treatment(Deemak), fumigation, and dengue spray services in Islamabad and Rawalpindi with safe, affordable, and guaranteed solutions.",
+    "Islamabad PEST CONTROL offers trusted pest control, termite treatment(Deemak), fumigation, and dengue spray services in Islamabad and Rawalpindi with safe, affordable, and guaranteed solutions.",
   image: fumigationImage,
   cta: "Request service details",
 };
@@ -235,7 +235,7 @@ export function HeroSection() {
               <StaggerItem>
                 <div className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-green mb-4">
                   <span className="h-px w-10 bg-brand-green/60" />
-                  About ISB Pest Control
+                  About Islamabad Pest Control
                 </div>
               </StaggerItem>
               <StaggerItem>
@@ -245,7 +245,7 @@ export function HeroSection() {
               </StaggerItem>
               <StaggerItem>
                 <p className="text-slate-600 text-base sm:text-lg leading-8">
-                  At ISB Pest Control, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. We use advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
+                  At Islamabad Pest Control, we focus on delivering high-quality pest management solutions that are safe for your family, property, and the environment. We use advanced tools and industry-approved chemicals to eliminate pests efficiently and prevent future infestations.
                 </p>
               </StaggerItem>
               <StaggerItem>
@@ -268,7 +268,7 @@ export function HeroSection() {
               <StaggerItem>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link href="/about" className="btn-primary">
-                    Learn More About ISB Pest Control
+                    Learn More About Islamabad Pest Control
                     <ArrowRight size={18} />
                   </Link>
                   <Link href="/services" className="btn-outline">
@@ -283,7 +283,7 @@ export function HeroSection() {
                 <div className="relative h-[320px] sm:h-[400px] lg:h-[460px]">
                   <Image
                     src={heroImage}
-                    alt="ISB PestControl pest control professional on site"
+                    alt="Islamabad PestControl pest control professional on site"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -312,3 +312,4 @@ export function HeroSection() {
     </>
   );
 }
+

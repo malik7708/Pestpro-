@@ -1,4 +1,4 @@
-# ISB PestControl Admin System - Quick Start Guide
+# Islamabad PestControl Admin System - Quick Start Guide
 
 ## Overview
 
@@ -528,3 +528,4 @@ See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed instructions.
 ---
 
 **Happy developing! 🚀**
+
