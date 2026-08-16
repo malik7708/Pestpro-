@@ -8,42 +8,42 @@ const faqs = [
   {
     q: "How quickly can Islamabad Pest Control respond to a pest complaint?",
     a: "We offer fast scheduling in our main service areas, especially Islamabad, Rawalpindi, Lahore, and Karachi. Response time depends on the city, the type of pest issue, and the urgency of the complaint.",
-    image: "/hero.png",
+    image: "/images/optimized/hero.webp",
   },
   {
     q: "Do you provide pest control for offices, warehouses, and companies?",
     a: "Yes. Islamabad Pest Control provides commercial pest control for offices, retail locations, warehouses, restaurants, managed buildings, and other business sites that require inspection, treatment, and recurring maintenance support.",
-    image: "/hotel-fumigation.png",
+    image: "/images/optimized/hotel-fumigation.webp",
   },
   {
     q: "Are your pest control treatments suitable for families and workplaces?",
     a: "Our team selects treatment methods according to the site, pest type, and occupancy needs. We also guide clients on practical precautions before and after treatment so the process remains safer and more manageable.",
-    image: "/pest3.png",
+    image: "/images/optimized/pest3.webp",
   },
   {
     q: "Do I need to leave the property during treatment?",
     a: "For many pest control services, full evacuation is not necessary. For some treatments, especially when site conditions require stronger application methods, our team will advise you in advance on the exact preparation and waiting period.",
-    image: "/termite2.png",
+    image: "/images/optimized/termite2.webp",
   },
   {
     q: "Do you offer termite control and fumigation services in Pakistan?",
     a: "Yes. Islamabad Pest Control provides termite treatment, fumigation support, rodent control, cockroach treatment, bed bug removal, mosquito control, and general pest control for residential and commercial clients in Pakistan.",
-    image: "/termite.png",
+    image: "/images/optimized/termite.webp",
   },
   {
     q: "How often should a business schedule pest control services?",
     a: "That depends on the site type and risk level. Restaurants, warehouses, and high-traffic commercial spaces usually benefit from scheduled pest control visits, while some offices and residential properties may need less frequent maintenance.",
-    image: "/rodent2.png",
+    image: "/images/optimized/rodent2.webp",
   },
   {
     q: "How is pricing decided for pest control work?",
     a: "Pricing depends on the pest type, property size, infestation level, access conditions, and the treatment plan required. We first review the complaint and then provide a clear quote based on the actual site needs.",
-    image: "/ant-control.png",
+    image: "/images/optimized/ant-control.webp",
   },
   {
     q: "Do you offer follow-up support after treatment?",
     a: "Yes. Follow-up support is available depending on the service scope and treatment plan. For recurring or stubborn pest issues, we may recommend additional visits or a maintenance schedule to improve long-term control.",
-    image: "/pest2.png",
+    image: "/images/optimized/pest2.webp",
   },
 ];
 
@@ -104,6 +104,8 @@ export function FAQSection() {
                         width={64}
                         height={64}
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <span className={`font-semibold text-base pr-4 ${open === i ? "text-brand-green" : "text-brand-navy dark:text-white"}`}>

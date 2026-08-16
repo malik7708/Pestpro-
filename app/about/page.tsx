@@ -21,10 +21,10 @@ const ceo = {
 };
 
 const values = [
-  { title: "Integrity First", desc: "Honest assessments, transparent pricing. We never recommend services you don't need.", image: "integrity-image.png", order: 1 },
-  { title: "Family Safety", desc: "All treatments prioritize the safety of your children, pets, and the environment.", image: "family-safety-image.png", order: 2 },
-  { title: "Excellence", desc: "Continuous training and investment in the latest pest control technologies.", image: "excellence-image..png", order: 4 },
-  { title: "Community", desc: "Locally owned and operated. We reinvest in the communities we serve.", image: "community-image.png", order: 3 },
+  { title: "Integrity First", desc: "Honest assessments, transparent pricing. We never recommend services you don't need.", image: "/images/optimized/integrity-image.webp", order: 1 },
+  { title: "Family Safety", desc: "All treatments prioritize the safety of your children, pets, and the environment.", image: "/images/optimized/family-safety-image.webp", order: 2 },
+  { title: "Excellence", desc: "Continuous training and investment in the latest pest control technologies.", image: "/images/optimized/excellence-image..webp", order: 4 },
+  { title: "Community", desc: "Locally owned and operated. We reinvest in the communities we serve.", image: "/images/optimized/community-image.webp", order: 3 },
 ];
 
 const certifications = [
@@ -78,7 +78,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section
         className="pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/hero.png)'}}
+        style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/images/optimized/hero.webp)'}}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/30 to-slate-950/40"></div>
         <div className="container-max relative z-10 text-center">
@@ -124,7 +124,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                 <Image
-                  src="/collage.png"
+                  src="/images/optimized/collage.webp"
                   alt="About Islamabad PestControl"
                   fill
                   className="object-cover"
@@ -141,7 +141,7 @@ export default function AboutPage() {
       <section
         className="relative overflow-hidden bg-brand-navy bg-cover bg-center bg-no-repeat bg-scroll pt-16 pb-12 sm:pt-20 sm:pb-14 lg:bg-fixed lg:pt-32 lg:pb-16"
         style={{
-          backgroundImage: "url('/hero2.png')",
+          backgroundImage: "url('/images/optimized/hero2.webp')",
           backgroundColor: "rgba(13, 31, 60, 0.82)",
         }}
       >
@@ -253,11 +253,13 @@ export default function AboutPage() {
               >
                 <div className="relative w-full h-32 mb-4 rounded-md overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                   <Image
-                    src={`/${image}`}
+                    src={image}
                     alt={title}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 320px"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <h3 className="font-display font-bold text-brand-navy dark:text-white text-lg mb-3">{title}</h3>

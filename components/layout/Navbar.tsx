@@ -61,9 +61,9 @@ export function Navbar() {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: -14 }}
+        initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease }}
+        transition={{ duration: 0.9, ease }}
         className="bg-brand-navy px-4 py-2 text-center text-xs font-medium text-white sm:text-sm"
       >
         <span className="font-semibold">24/7 Emergency Service</span> | Call Now:{" "}
@@ -74,18 +74,18 @@ export function Navbar() {
       </motion.div>
 
       <motion.nav
-        initial={{ opacity: 0, y: -24 }}
+        initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.55, delay: 0.08, ease }}
+        transition={{ duration: 1.0, delay: 0.08, ease }}
         className="fixed left-0 right-0 top-8 z-50 border border-white/10 bg-white/18 shadow-2xl shadow-slate-950/10 backdrop-blur-3xl backdrop-saturate-150 transition-all duration-500 dark:border-slate-800/60 dark:bg-slate-950/40"
       >
         <div className="container-max">
           <div className="flex items-center justify-between py-2">
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Link href="/" className="flex items-center gap-3 group">
+            <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.99 }} transition={{ duration: 0.3, ease }}>
+              <Link href="/" className="flex items-center gap-3 group transition-transform duration-300 ease-out">
                 <div className="overflow-hidden rounded-lg">
                   <Image
-                    src="/logo-img.png"
+                    src="/images/optimized/logo-img.webp"
                     alt="PestPro Logo"
                     width={180}
                     height={50}
@@ -117,7 +117,7 @@ export function Navbar() {
                     hidden: { opacity: 0, y: -10 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  transition={{ duration: 0.35 }}
+                  transition={{ duration: 0.45, ease }}
                 >
                   <Link
                     href={link.href}
@@ -135,7 +135,7 @@ export function Navbar() {
                   hidden: { opacity: 0, y: -10 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                transition={{ duration: 0.35 }}
+                transition={{ duration: 0.45, ease }}
                 className="relative"
                 onMouseEnter={openDesktopServices}
                 onMouseLeave={closeDesktopServices}
@@ -156,10 +156,10 @@ export function Navbar() {
                 <AnimatePresence>
                   {desktopServicesOpen && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.96 }}
+                      initial={{ opacity: 0, y: 8, scale: 0.98 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.22, ease }}
+                      exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                      transition={{ duration: 0.42, ease }}
                       className="absolute left-0 top-full z-50 mt-3 flex items-start gap-3"
                     >
                       <div className="w-[330px] rounded-[28px] border-2 border-brand-green-100 bg-gradient-to-b from-white to-brand-green-50 p-3 shadow-2xl dark:border-brand-green-200 dark:from-gray-900 dark:to-gray-800">
@@ -200,7 +200,7 @@ export function Navbar() {
                           initial={{ opacity: 0, x: 12 }}
                           animate={{ opacity: 1, x: 0 }}
                           exit={{ opacity: 0, x: 8 }}
-                          transition={{ duration: 0.2, ease }}
+                          transition={{ duration: 0.32, ease }}
                           className="w-[360px] max-h-[70vh] overflow-y-auto rounded-[28px] border-2 border-brand-green-100 bg-white p-4 shadow-2xl dark:border-brand-green-200 dark:bg-gray-950"
                         >
                           <div className="mb-4 border-b border-slate-200 pb-4 dark:border-gray-800">
@@ -250,7 +250,7 @@ export function Navbar() {
               className="hidden items-center gap-3 xl:flex"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.28 }}
+              transition={{ duration: 0.6, delay: 0.28, ease }}
             >
               <a
                 href="tel:+923229162746"
@@ -282,7 +282,7 @@ export function Navbar() {
                     initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
                     animate={{ opacity: 1, rotate: 0, scale: 1 }}
                     exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0.3, ease }}
                     className="block"
                   >
                     {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -300,7 +300,7 @@ export function Navbar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.35, ease }}
                 className="fixed inset-0 z-30 bg-black/50 xl:hidden"
                 onClick={closeMobileMenu}
               />
@@ -308,7 +308,7 @@ export function Navbar() {
                 initial={{ opacity: 0, y: -24 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -18 }}
-                transition={{ duration: 0.28, ease }}
+                transition={{ duration: 0.45, ease }}
                 className="fixed left-0 right-0 top-[88px] z-40 max-h-[calc(100vh-88px)] overflow-y-auto bg-white dark:bg-gray-950 xl:hidden"
               >
                 <motion.div
@@ -376,7 +376,7 @@ export function Navbar() {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25 }}
+                          transition={{ duration: 0.4, ease }}
                           className="overflow-hidden"
                         >
                           <div className="mt-3 space-y-3">
@@ -402,7 +402,7 @@ export function Navbar() {
                                       initial={{ height: 0, opacity: 0 }}
                                       animate={{ height: "auto", opacity: 1 }}
                                       exit={{ height: 0, opacity: 0 }}
-                                      transition={{ duration: 0.22 }}
+                                      transition={{ duration: 0.35, ease }}
                                       className="overflow-hidden"
                                     >
                                       <div className="mt-2 space-y-3 px-3 pb-2">

@@ -7,19 +7,19 @@ const expertiseItems = [
     title: "Pest Control Services",
     description:
       "Our pest control services cover a wide range of pests, including termites, rodents, cockroaches, ants, flies, mosquitoes, and more. We use effective treatments to eliminate pests and protect your property.",
-    image: "/rodent2.png",
+    image: "/images/optimized/rodent2.webp",
   },
   {
     title: "Fumigation Services",
     description:
       "Our fumigation solutions bring efficient removal of pests to ensure that your surroundings are free of pests and safe.We use professional-grade fumigants and techniques to target pests in hard-to-reach areas, providing comprehensive protection for your property.",
-    image: "/pest2.png",
+    image: "/images/optimized/pest2.webp",
   },
   {
     title: "Termite Control Services",
     description:
       "Our termite control services include thorough inspections, effective treatments, and preventive measures to protect your property from termite damage. We use industry-approved methods to eliminate termites and prevent future infestations.",
-    image: "/termite.png",
+    image: "/images/optimized/termite.webp",
   },
  
 ];
@@ -29,7 +29,7 @@ export function ExpertiseSection() {
     <section
       className="section-padding relative"
       style={{
-        backgroundImage: "url('/pest2.png')",
+        backgroundImage: "url('/images/optimized/pest2.webp')",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -65,6 +65,8 @@ export function ExpertiseSection() {
                       fill
                       sizes="(max-width: 1280px) 100vw, 33vw"
                       className="object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
                   </div>

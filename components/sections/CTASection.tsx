@@ -110,7 +110,7 @@ export function CTASection() {
   return (
     <section  className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative overflow-hidden"
         style={{
-          backgroundImage: "url('/cta.jpg')",
+          backgroundImage: "url('/images/optimized/cta.webp')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",

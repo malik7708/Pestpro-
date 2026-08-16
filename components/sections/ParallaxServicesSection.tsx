@@ -9,7 +9,7 @@ export function ParallaxServicesSection() {
     <section
       className="relative py-20 lg:py-32 text-white overflow-hidden"
       style={{
-        backgroundImage: "url('/termite.png')",
+        backgroundImage: "url('/images/optimized/termite.webp')",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -27,40 +27,40 @@ export function ParallaxServicesSection() {
       {/* Content */}
       <div className="relative z-10 container-max text-center">
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mx-auto"
         >
           <motion.h2
-            initial={{ opacity: 0, scale: 0.96 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.65, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.0, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold mb-6"
           >
             Professional Pest Control Services
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 22 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.95, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="text-lg sm:text-xl leading-8 mb-8 text-white/90"
           >
             Our expert team provides comprehensive pest management solutions for homes and businesses across Rawalpindi/Islamabad and nearby areas. From termite treatment to fumigation services, we ensure your property is safe and pest-free.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.55, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.9, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
           >
-            <motion.div whileHover={{ y: -4, scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <motion.div whileHover={{ y: -2, scale: 1.005 }} whileTap={{ scale: 0.995 }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 ease-out shadow-lg hover:shadow-xl"
               >
                 Explore Our Services
                 <ArrowRight size={20} />

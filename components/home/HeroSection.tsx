@@ -11,11 +11,11 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
-import heroImage from "../../public/termite1.png";
-import fumigationImage from "../../public/pest3.png";
-import mosquitoImage from "../../public/mosquito-control.png";
-import rodentImage from "../../public/rodent1.jpg";
-import residentialImage from "../../public/residential-fumigation.png";
+import heroImage from "../../public/images/optimized/termite1.webp";
+import fumigationImage from "../../public/images/optimized/pest3.webp";
+import mosquitoImage from "../../public/images/optimized/mosquito-control.webp";
+import rodentImage from "../../public/images/optimized/rodent1.webp";
+import residentialImage from "../../public/images/optimized/residential-fumigation.webp";
 
 const serviceImages: StaticImageData[] = [
   mosquitoImage,
@@ -50,7 +50,7 @@ export function HeroSection() {
       <section
         className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative"
         style={{
-          backgroundImage: "url('/hero2.png')",
+          backgroundImage: "url('/images/optimized/hero2.webp')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -114,18 +114,19 @@ export function HeroSection() {
                           <div className="mt-4 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:items-center sm:gap-3">
                             <motion.a
                               href="tel:+923005515809"
-                              whileHover={{ y: -2, scale: 1.01 }}
-                              whileTap={{ scale: 0.98 }}
-                              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d8f06b] px-5 py-3 text-xs font-semibold text-[#173225] transition-colors hover:bg-[#cae45a] sm:px-7 sm:py-4 sm:text-sm"
+                              whileHover={{ y: -1, scale: 1.005 }}
+                              whileTap={{ scale: 0.99 }}
+                              transition={{ duration: 0.35, ease }}
+                              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d8f06b] px-5 py-3 text-xs font-semibold text-[#173225] transition-all duration-300 ease-out hover:bg-[#cae45a] sm:px-7 sm:py-4 sm:text-sm"
                             >
                               <Phone size={16} className="sm:h-5 sm:w-5" />
                               <span className="hidden sm:inline">Call for free quote</span>
                               <span className="sm:hidden">Call Now</span>
                             </motion.a>
-                            <motion.div whileHover={{ x: 4 }}>
+                            <motion.div whileHover={{ x: 2 }} transition={{ duration: 0.4, ease }}>
                               <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-2 text-xs font-semibold text-white/88 transition-colors hover:text-white sm:text-sm"
+                                className="inline-flex items-center gap-2 text-xs font-semibold text-white/88 transition-all duration-300 ease-out hover:text-white sm:text-sm"
                               >
                                 {activeSlide.cta}
                                 <ArrowRight size={16} className="sm:h-5 sm:w-5" />
@@ -151,6 +152,8 @@ export function HeroSection() {
                             fill
                             sizes="110px"
                             className="object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                           <div className="absolute inset-0 bg-slate-950/28" />
                         </div>
@@ -159,10 +162,10 @@ export function HeroSection() {
 
                     <div className="relative min-h-[350px] overflow-hidden rounded-[24px] sm:min-h-[450px] sm:rounded-[28px] lg:min-h-[600px]">
                       <motion.div
-                        initial={{ opacity: 0, scale: 1.08 }}
+                        initial={{ opacity: 0, scale: 1.02 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.75, ease }}
-                        className="absolute inset-0"
+                        transition={{ duration: 1.3, ease }}
+                        className="absolute inset-0 transition-transform duration-700 ease-out"
                       >
                         <Image
                           src={activeSlide.image}
@@ -184,9 +187,9 @@ export function HeroSection() {
                       </div>
 
                       <motion.div
-                        initial={{ opacity: 0, y: 24 }}
+                        initial={{ opacity: 0, y: 18 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.18, ease }}
+                        transition={{ duration: 0.9, delay: 0.18, ease }}
                         className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 lg:inset-x-6 lg:bottom-6"
                       >
                         <div className="rounded-[20px] border border-white/55 bg-white/92 p-4 shadow-2xl backdrop-blur-md sm:rounded-[24px] sm:p-5">
@@ -215,6 +218,8 @@ export function HeroSection() {
                             fill
                             sizes="110px"
                             className="object-cover"
+                            loading="lazy"
+                            decoding="async"
                           />
                           <div className="absolute inset-0 bg-slate-950/28" />
                         </div>
@@ -287,6 +292,8 @@ export function HeroSection() {
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#10281d]/50 to-transparent" />
                 </div>

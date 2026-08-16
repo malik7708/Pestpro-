@@ -237,7 +237,7 @@ export function ServiceCategoryDetailPage({
                   <div className="mt-8 overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm">
                     <div className="relative h-[260px] w-full">
                       <Image
-                        src="/club-fumigation.png"
+                        src="/images/optimized/club-fumigation.webp"
                         alt="Residential fumigation service support"
                         fill
                         className="object-cover"
@@ -405,7 +405,7 @@ export function ServiceCategoryDetailPage({
 
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {serviceCards.map((item) => {
-                const fallbackImage = item.image && (item.image.startsWith("http") || item.image.startsWith("/")) ? item.image : "/pest2.png";
+                const fallbackImage = item.image && (item.image.startsWith("http") || item.image.startsWith("/")) ? item.image : "/images/optimized/pest2.webp";
 
                 return (
                   <article
@@ -420,6 +420,8 @@ export function ServiceCategoryDetailPage({
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                         unoptimized={fallbackImage.startsWith("http")}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <div className="p-6">

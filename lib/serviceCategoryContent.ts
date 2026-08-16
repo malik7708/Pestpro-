@@ -48,23 +48,23 @@ const COMMONS_BASE = "https://commons.wikimedia.org/wiki/Special:FilePath";
 
 const remoteMedia = {
   mosquito: {
-    image: `/mosquito-control.png`,
+    image: `/images/optimized/mosquito-control.webp`,
     alt: "Close-up mosquito macro photograph",
   },
   cockroach: {
-    image: `/cockroach-control.png`,
+    image: `/images/optimized/cockroach-control.webp`,
     alt: "Close-up photograph of a common cockroach",
   },
   fly: {
-    image: `/files-control.png`,
+    image: `/images/optimized/files-control.webp`,
     alt: "Close-up image of a housefly",
   },
   ant: {
-    image: `/ant-control.png`,
+    image: `/images/optimized/ant-control.webp`,
     alt: "Macro photograph of an ant",
   },
   bedbug: {
-    image: `/bed-bugs-control.png`,
+    image: `/images/optimized/bed-bugs-control.webp`,
     alt: "Close-up image of a bed bug",
   },
   flea: {
@@ -72,120 +72,120 @@ const remoteMedia = {
     alt: "Close-up image showing fleas",
   },
   lizard: {
-    image: `/lizard-control.png`,
+    image: `/images/optimized/lizard.webp`,
     alt: "Close-up photograph of a small green lizard",
   },
   woodBorer: {
-    image: `/termite.png`,
+    image: `/images/optimized/termite.webp`,
     alt: "Wood-boring beetle larva close-up photograph",
   },
   mouse: {
-    image: `/rodent1.jpg`,
+    image: `/images/optimized/rodent1.webp`,
     alt: "Close-up image of a house mouse",
   },
   fumigation: {
     termite: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Termite fumigation service",
     },
     cockroach: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Cockroach fumigation service",
     },
     mosquito: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Mosquito fumigation service",
     },
     dengue: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Dengue fumigation service",
     },
     bedBug: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Bed bug fumigation service",
     },
     flies: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Flies fumigation service",
     },
     ant: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Ant fumigation service",
     },
     woodBorer: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Wood borer fumigation service",
     },
     lizard: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Lizard fumigation service",
     },
     flea: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Flea fumigation service",
     },
     kitchen: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Kitchen fumigation service",
     },
     drain: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Drain system fumigation service",
     },
     hotel: {
-      image: `/pest3.png`,
+      image: `/images/optimized/pest3.webp`,
       alt: "Hotel fumigation service",
     },
     restaurant: {
-      image: `/resturant-fumigation.png`,
+      image: `/images/optimized/resturant-fumigation.webp`,
       alt: "Restaurant fumigation service",
     },
     guestHouse: {
-      image: `/residential-fumigation.png`,
+      image: `/images/optimized/residential-fumigation.webp`,
       alt: "Guest house fumigation service",
     },
     hospital: {
-      image: `/hospital-fumigation.png`,
+      image: `/images/optimized/hospital-fumigation.webp`,
       alt: "Hospital fumigation service",
     },
     bakery: {
-      image: `/resturant-fumigation.png`,
+      image: `/images/optimized/resturant-fumigation.webp`,
       alt: "Bakery fumigation service",
     },
     club: {
-      image: `/club-fumigation.png`,
+      image: `/images/optimized/club-fumigation.webp`,
       alt: "Club fumigation service",
     },
     school: {
-      image: `/school-fumigation1.png`,
+      image: `/images/optimized/school-fumigation1.webp`,
       alt: "School fumigation service",
     },
     bank: {
-      image: `/bank-fumigation.png`,
+      image: `/images/optimized/bank-fumigation.webp`,
       alt: "Bank fumigation service",
     },
     factory: {
-      image: `/factory-fumigation.png`,
+      image: `/images/optimized/factory-fumigation.webp`,
       alt: "Factory fumigation service",
     },
     textile: {
-      image: `/textile.png`,
+      image: `/images/optimized/textile.webp`,
       alt: "Textile  fumigation service",
     },
     packaging: {
-      image: `/factory-fumigatin.png`,
+      image: `/images/optimized/factory-fumigation.webp`,
       alt: "Packaging fumigation service",
     },
     pharmaceutical: {
-      image: `/pharma.png`,
+      image: `/images/optimized/pharma.webp`,
       alt: "Pharmaceutical fumigation service",
     },
     warehouse: {
-      image: `/farm-fumigation.png`,
+      image: `/images/optimized/farm-fumigation.webp`,
       alt: "Warehouse fumigation service",
     },
     container: {
-      image: `/container.png`,
+      image: `/images/optimized/container.webp`,
       alt: "Container fumigation service",
     },
   },
@@ -341,7 +341,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We apply the treatment in targeted zones and guide you on practical prevention steps to strengthen long-term results.",
       },
     ],
-    image: "/termite1.png",
+    image: "/images/optimized/termite1.webp",
     imageAlt: "Professional termite control treatment being applied near a wall and floor edge",
   },
   "termite-control/treatment": {
@@ -417,7 +417,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We provide guidance on maintenance and prevention to help keep your property protected from future termite activity.",
       },
     ],
-    image: "/termite1.png",
+    image: "/images/optimized/termite1.webp",
     imageAlt: "Professional termite treatment and proofing service",
   },
   "pest-control/rodent": {
@@ -486,7 +486,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We share site-specific housekeeping and exclusion guidance to help maintain results after treatment.",
       },
     ],
-    image: "/rodent2.png",
+    image: "/images/optimized/rodent2.webp",
     imageAlt: "Rodent control service setup in Islamabad/Rawalpindi for a commercial kitchen environment",
   },
   "pest-control/insects": {
@@ -555,7 +555,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We explain what to improve in waste handling, moisture control, and routine cleaning to help prevent recurring infestations.",
       },
     ],
-    image: "/pest2.png",
+    image: "/images/optimized/pest2.webp",
     imageAlt: "General insect control service being carried out in an indoor property setting",
   },
   "pest-control/dengue": {
@@ -624,7 +624,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We advise on cleanup and water-management steps that help lower future breeding risk around the property.",
       },
     ],
-    image: "/pest3.png",
+    image: "/images/optimized/pest3.webp",
     imageAlt: "Outdoor mosquito and dengue control service near a residential property",
   },
   "fumigation/residential": {
@@ -693,7 +693,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We explain the next steps for ventilation, cleaning, and household prevention after the service is complete.",
       },
     ],
-    image: "/hero2.png",
+    image: "/images/optimized/hero2.webp",
     imageAlt: "Residential fumigation service being prepared for a home interior",
   },
   "fumigation/commercial": {
@@ -762,7 +762,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We share simple recommendations for waste control, housekeeping, and site management to help sustain better results.",
       },
     ],
-    image: "/community-image.png",
+    image: "/images/optimized/community-image.webp",
     imageAlt: "Commercial fumigation support for a shared indoor business environment",
   },
   "fumigation/industrial": {
@@ -831,7 +831,7 @@ const categoryContent: Record<string, ServiceCategoryContent> = {
           "We provide site-focused prevention advice to help reduce future pest pressure across the facility.",
       },
     ],
-    image: "/pest2.png",
+    image: "/images/optimized/pest2.webp",
     imageAlt: "Industrial fumigation service for a warehouse or factory environment",
   },
 };
@@ -1030,98 +1030,98 @@ function getItemMedia(itemLabel: string, fallbackImage: string, fallbackAlt: str
   // GENERAL PEST CONTROL HANDLERS
   if (label.includes("pre termite")) {
     return {
-      image: "/pre-contruction-termite.png",
+      image: "/images/optimized/pre-contruction-termite.webp",
       imageAlt: "Pre-construction termite treatment area",
     };
   }
 
   if (label.includes("post termite")) {
     return {
-      image: "/post-contruction-termite.png",
+      image: "/images/optimized/post-contruction-termite.webp",
       imageAlt: "Post-construction termite treatment service",
     };
   }
 
   if (label.includes("termite")) {
     return {
-      image: "/termite1.png",
+      image: "/images/optimized/termite1.webp",
       imageAlt: "Termite control service image",
     };
   }
 
   if (label.includes("mouse")) {
     return {
-     image: "/rodent1.jpg",
+     image: "/images/optimized/rodent1.webp",
       imageAlt: "Rodent control service image",
     };
   }
 
   if (label.includes("rodent") || label.includes("rat")) {
     return {
-      image: "/rodent2.png",
+      image: "/images/optimized/rodent2.webp",
       imageAlt: "Rodent control service image",
     };
   }
 
   if (label.includes("mosquito") || label.includes("dengue")) {
     return {
-      image: "/dengue-comtrol.png",
+      image: "/images/optimized/dengue-comtrol.webp",
       imageAlt: "Dengue control service image",
     };
   }
 
   if (label.includes("cockroach")) {
     return {
-      image: "/cockroach-control.png",
+      image: "/images/optimized/cockroach-control.webp",
       imageAlt: "Cockroach control service image",
     };
   }
 
   if (label.includes("flies") || label.includes("fly")) {
     return {
-      image: "/files-control.png",
+      image: "/images/optimized/files-control.webp",
       imageAlt: "Flies control service image",
     };
   }
 
   if (label.includes("ant")) {
     return {
-      image: "/ant-control.png",
+      image: "/images/optimized/ant-control.webp",
       imageAlt: "Ant control service image",
     };
   }
 
   if (label.includes("bed bug")) {
     return {
-      image: "/bed-bugs-control.png",
+      image: "/images/optimized/bed-bugs-control.webp",
       imageAlt: "Bed bug control service image",
     };
   }
 
   if (label.includes("lizard")) {
     return {
-     image: "/lizard.png",
+     image: "/images/optimized/lizard.webp",
       imageAlt: "Lizard control service image",
     };
   }
 
   if (label.includes("wood borer") || label.includes("borer")) {
     return {
-      image: "/termite.png",
+      image: "/images/optimized/termite.webp",
       imageAlt: "Termite control service image",
     };
   }
 
   if (label.includes("kitchen")) {
     return {
-      image: "/pest3.png",
+      image: "/images/optimized/pest3.webp",
       imageAlt: "Residential kitchen service image",
     };
   }
 
   if (label.includes("drain")) {
     return {
-      image: "/pest3.png",
+      image: "/images/optimized/pest3.webp",
       imageAlt: "Drain-system service image",
     };
   }
@@ -1134,14 +1134,14 @@ function getItemMedia(itemLabel: string, fallbackImage: string, fallbackAlt: str
     label.includes("club")
   ) {
     return {
-      image: "/cta.jpg",
+      image: "/images/optimized/cta.webp",
       imageAlt: "Commercial hospitality service environment",
     };
   }
 
   if (label.includes("hospital") || label.includes("schools") || label.includes("banks")) {
     return {
-      image: "/community-image.png",
+      image: "/images/optimized/community-image.webp",
       imageAlt: "Commercial institutional service environment",
     };
   }
@@ -1155,7 +1155,7 @@ function getItemMedia(itemLabel: string, fallbackImage: string, fallbackAlt: str
     label.includes("container")
   ) {
     return {
-      image: "/cta.jpg",
+      image: "/images/optimized/cta.webp",
       imageAlt: "Industrial fumigation service environment",
     };
   }

@@ -22,7 +22,7 @@ export default function ServicesPage() {
       <FadeIn>
       <section
        className="pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-20 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/collage.png)'}}
+        style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/images/optimized/collage.webp)'}}
       >
         <div
           className="absolute inset-0 opacity-15"

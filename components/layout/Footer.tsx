@@ -56,11 +56,13 @@ export function Footer() {
             <div className="mb-4 sm:mb-5">
               <div className="rounded-lg overflow-hidden inline-block">
                 <Image
-                  src="/logo-img.png"
+                  src="/images/optimized/logo-img.webp"
                   alt="Islamabad Pest Control Logo"
                   width={180}
                   height={50}
                   className="h-auto w-auto"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

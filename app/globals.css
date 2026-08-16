@@ -17,6 +17,12 @@
     scroll-behavior: smooth;
   }
 
+  @media (max-width: 768px) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   html {
     background-color: #f7f9f7;
   }
@@ -24,7 +30,7 @@
   body {
     @apply antialiased;
     background-color: #f7f9f7;
-    background-image: url("/termite.png");
+    background-image: url("/images/optimized/termite.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -118,7 +124,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.45) 22%, transparent 46%);
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 22%,
+    transparent 46%
+  );
   transform: translateX(-130%);
   transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
@@ -133,7 +144,9 @@
 }
 
 .media-zoom img {
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
 }
 
 .group:hover .media-zoom img,
@@ -175,6 +188,34 @@
 .slider-dot.active {
   width: 24px;
   background: #2f6b4f;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+
+  .card-base,
+  .card-base::before,
+  .media-zoom img,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  .btn-gold {
+    transition-duration: 200ms !important;
+  }
+
+  .card-base:hover,
+  .card-base:hover::before,
+  .group:hover .media-zoom img,
+  .media-zoom:hover img {
+    transform: none !important;
+  }
+
+  .whatsapp-btn {
+    animation: none;
+  }
 }
 
 .whatsapp-btn {

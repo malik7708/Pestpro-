@@ -14,7 +14,7 @@ export default function ContactPage() {
     <>
       {/* Hero Section */}
       <FadeIn>
-      <section className="pt-24 sm:pt-32 lg:pt-48 pb-12 sm:pb-16 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/hero.png)'}}>
+      <section className="pt-24 sm:pt-32 lg:pt-48 pb-12 sm:pb-16 lg:pb-24 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%), url(/images/optimized/hero.webp)'}}>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/30 to-slate-950/40"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 sm:gap-3 bg-brand-green/20 backdrop-blur-sm border border-brand-green-100 text-white rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 text-[10px] sm:text-sm font-semibold">
@@ -155,7 +155,7 @@ export default function ContactPage() {
       <FadeIn>
       <section  className="py-12 sm:py-16 lg:py-32 relative"
         style={{
-          backgroundImage: "url('/hero2.png')",
+          backgroundImage: "url('/images/optimized/hero2.webp')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
