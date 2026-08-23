@@ -6,7 +6,8 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import { FadeIn, PageTransition } from "@/components/ui/motion";
+import { FadeIn } from "@/components/ui/motion";
+import { PageTransition } from "@/components/ui/PageTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -98,4 +99,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

@@ -6,28 +6,32 @@ interface MotionProps {
   delay?: number;
 }
 
-// Rendering each section immediately avoids client-side hydration and dozens of
-// scroll observers that were causing dropped frames on mobile devices.
-export function FadeIn({ children, className }: MotionProps) {
-  return <div className={className}>{children}</div>;
+function classes(...values: Array<string | undefined>) {
+  return values.filter(Boolean).join(" ");
 }
 
-export function SlideInLeft({ children, className }: MotionProps) {
-  return <div className={className}>{children}</div>;
+function delayedStyle(delay: number) {
+  return delay ? { animationDelay: `${delay}s` } : undefined;
 }
 
-export function SlideInBottom({ children, className }: MotionProps) {
-  return <div className={className}>{children}</div>;
+// CSS-only transforms keep the animation on the compositor: no animation
+// library, scroll observers, or per-frame JavaScript is needed on mobile.
+export function FadeIn({ children, className, delay = 0 }: MotionProps) {
+  return <div className={classes("motion-reveal motion-reveal-right", className)} style={delayedStyle(delay)}>{children}</div>;
+}
+
+export function SlideInLeft({ children, className, delay = 0 }: MotionProps) {
+  return <div className={classes("motion-reveal motion-reveal-left", className)} style={delayedStyle(delay)}>{children}</div>;
+}
+
+export function SlideInBottom({ children, className, delay = 0 }: MotionProps) {
+  return <div className={classes("motion-reveal motion-reveal-up", className)} style={delayedStyle(delay)}>{children}</div>;
 }
 
 export function StaggerGroup({ children, className }: MotionProps) {
-  return <div className={className}>{children}</div>;
+  return <div className={classes("motion-stagger", className)}>{children}</div>;
 }
 
 export function StaggerItem({ children, className }: Omit<MotionProps, "delay">) {
-  return <div className={className}>{children}</div>;
-}
-
-export function PageTransition({ children, className }: Omit<MotionProps, "delay">) {
-  return <div className={className}>{children}</div>;
+  return <div className={classes("motion-stagger-item", className)}>{children}</div>;
 }
