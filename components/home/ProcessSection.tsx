@@ -35,7 +35,6 @@ export function ProcessSection() {
       className="section-padding relative"
       style={{
         backgroundImage: "url('/images/optimized/termite.webp')",
-        backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

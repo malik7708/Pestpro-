@@ -3,6 +3,8 @@
 const nextConfig: NextConfig = {
   allowedDevOrigins: ['192.168.18.79'],
   images: {
+    formats: ["image/webp"],
+    qualities: [70, 75],
     remotePatterns: [
       { protocol: "https", hostname: "commons.wikimedia.org" },
       { protocol: "https", hostname: "images.unsplash.com" },

@@ -9,8 +9,10 @@ const projectRoot = path.resolve(__dirname, "..");
 const publicRoot = path.join(projectRoot, "public");
 const optimizedRoot = path.join(publicRoot, "images", "optimized");
 const allowedExtensions = new Set([".png", ".jpg", ".jpeg"]);
-const maxWidth = 1920;
-const webpQuality = 80;
+// The site never renders these source files wider than 1600px. Lowering the
+// source ceiling and quality keeps CSS background downloads affordable on mobile.
+const maxWidth = 1600;
+const webpQuality = 72;
 
 function walk(dir, results = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -137,6 +139,7 @@ async function optimizeImages() {
     content = content.replace(/<Image\s+([^>]*?)>/g, (match, attrs) => {
       if (
         attrs.includes("priority") ||
+        attrs.includes("preload") ||
         attrs.includes("loading=") ||
         attrs.includes("decoding=")
       )

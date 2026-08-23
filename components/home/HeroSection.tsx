@@ -1,8 +1,5 @@
-"use client";
-
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle2,
@@ -40,8 +37,6 @@ const companyPoints = [
   "Modern techniques with eco-friendly, safe products for your family",
 ];
 
-const ease = [0.22, 1, 0.36, 1] as const;
-
 export function HeroSection() {
   const activeSlide = heroSlide;
 
@@ -51,7 +46,6 @@ export function HeroSection() {
         className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative"
         style={{
           backgroundImage: "url('/images/optimized/hero2.webp')",
-          backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -69,8 +63,7 @@ export function HeroSection() {
                       fill
                       sizes="(max-width: 1024px) 100vw, 45vw"
                       className="object-cover opacity-[0.24]"
-                      loading="eager"
-                      priority
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,49,38,0.56)_0%,rgba(18,49,38,0.7)_55%,rgba(18,49,38,0.82)_100%)]" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(216,240,107,0.1),transparent_34%)]" />
@@ -112,18 +105,15 @@ export function HeroSection() {
 
                       <StaggerItem>
                           <div className="mt-4 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:items-center sm:gap-3">
-                            <motion.a
+                            <a
                               href="tel:+923005515809"
-                              whileHover={{ y: -1, scale: 1.005 }}
-                              whileTap={{ scale: 0.99 }}
-                              transition={{ duration: 0.35, ease }}
                               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d8f06b] px-5 py-3 text-xs font-semibold text-[#173225] transition-all duration-300 ease-out hover:bg-[#cae45a] sm:px-7 sm:py-4 sm:text-sm"
                             >
                               <Phone size={16} className="sm:h-5 sm:w-5" />
                               <span className="hidden sm:inline">Call for free quote</span>
                               <span className="sm:hidden">Call Now</span>
-                            </motion.a>
-                            <motion.div whileHover={{ x: 2 }} transition={{ duration: 0.4, ease }}>
+                            </a>
+                            <div>
                               <Link
                                 href="/contact"
                                 className="inline-flex items-center gap-2 text-xs font-semibold text-white/88 transition-all duration-300 ease-out hover:text-white sm:text-sm"
@@ -131,7 +121,7 @@ export function HeroSection() {
                                 {activeSlide.cta}
                                 <ArrowRight size={16} className="sm:h-5 sm:w-5" />
                               </Link>
-                            </motion.div>
+                            </div>
                           </div>
                         </StaggerItem>
                       </StaggerGroup>
@@ -161,21 +151,15 @@ export function HeroSection() {
                     </div>
 
                     <div className="relative min-h-[350px] overflow-hidden rounded-[24px] sm:min-h-[450px] sm:rounded-[28px] lg:min-h-[600px]">
-                      <motion.div
-                        initial={{ opacity: 0, scale: 1.02 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1.3, ease }}
-                        className="absolute inset-0 transition-transform duration-700 ease-out"
-                      >
-                        <Image
-                          src={activeSlide.image}
+                      <div className="absolute inset-0">
+                        <Image src={activeSlide.image}
                           alt={activeSlide.title}
                           fill
-                          priority
+                          preload
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 85vw, 56vw"
                           className="object-cover"
                         />
-                      </motion.div>
+                      </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-[#081d14]/60 via-[#081d14]/10 to-transparent" />
 
                       <div className="absolute left-3 right-3 top-3 sm:left-4 sm:right-4 sm:top-4 lg:left-6 lg:right-6 lg:top-6">
@@ -186,12 +170,7 @@ export function HeroSection() {
                         </div>
                       </div>
 
-                      <motion.div
-                        initial={{ opacity: 0, y: 18 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.9, delay: 0.18, ease }}
-                        className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 lg:inset-x-6 lg:bottom-6"
-                      >
+                      <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 lg:inset-x-6 lg:bottom-6">
                         <div className="rounded-[20px] border border-white/55 bg-white/92 p-4 shadow-2xl backdrop-blur-md sm:rounded-[24px] sm:p-5">
                           <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-green-100 sm:text-[11px]">
                             Enterprise-ready support
@@ -203,7 +182,7 @@ export function HeroSection() {
                             For homes, offices, warehouses, and managed sites across Rawalpindi/Islamabad and nearby areas.
                           </p>
                         </div>
-                      </motion.div>
+                      </div>
                     </div>
 
                     <div className="hidden gap-4 sm:grid sm:grid-rows-4">

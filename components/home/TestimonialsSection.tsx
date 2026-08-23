@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback } from "react";
 
 const testimonials = [
   {
@@ -82,18 +82,8 @@ function getOrbitPos(index: number, activeIndex: number, scale = 1) {
 
 export function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   const [animating, setAnimating] = useState(false);
   const touchStartX = useRef<number | null>(null);
-
-  // Auto-rotate on ALL screen sizes, pause on hover
-  useEffect(() => {
-    if (paused) return;
-    const interval = setInterval(() => {
-      setActiveIndex((cur) => (cur + 1) % TOTAL);
-    }, 3800);
-    return () => clearInterval(interval);
-  }, [paused]);
 
   const changeIndex = useCallback((next: number) => {
     setAnimating(true);
@@ -116,8 +106,6 @@ export function TestimonialsSection() {
   return (
     <section
       className="relative bg-[#f7f9f7] py-20 lg:py-24 overflow-hidden font-sans"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <div className="absolute top-[-120px] left-[-80px] w-[480px] h-[480px] rounded-full bg-radial-[circle,rgba(47,107,79,0.11)_0%,transparent_70%] blur-[72px] pointer-events-none" />
       <div className="absolute bottom-[-60px] right-[-60px] w-[380px] h-[380px] rounded-full bg-radial-[circle,rgba(47,107,79,0.09)_0%,transparent_70%] blur-[72px] pointer-events-none" />
@@ -172,7 +160,7 @@ export function TestimonialsSection() {
                   aria-label={`View testimonial from ${t.name}`}
                 >
                   <span className="text-xs font-bold text-white tracking-wide relative z-10">{t.initials}</span>
-                  {isActive && <span className="absolute inset-[-8px] rounded-full border-2 border-[#2f6b4f]/30 animate-pulse pointer-events-none" />}
+                  {isActive && <span className="absolute inset-[-8px] rounded-full border-2 border-[#2f6b4f]/30 pointer-events-none" />}
                 </button>
               );
             })}
@@ -188,7 +176,7 @@ export function TestimonialsSection() {
             onTouchEnd={onTouchEnd}
           >
             <div className="bg-white rounded-[26px] p-10 relative overflow-hidden shadow-lg border border-[#2f6b4f]/6">
-              <div className="absolute top-0 left-0 right-0 h-0.75 bg-gradient-to-r from-[#2f6b4f] via-[#3d8660] to-[#2f6b4f] bg-[length:200%_100%] animate-[shimmer_3.5s_linear_infinite]" />
+              <div className="absolute left-0 right-0 top-0 h-0.75 bg-[#2f6b4f]" />
               <div className="flex items-start justify-between gap-4 mb-5">
                 <div className="text-5xl leading-none text-[#2f6b4f]/13 flex-1">&quot;</div>
                 <svg className="w-12 h-12 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Google" role="img">
@@ -273,10 +261,7 @@ export function TestimonialsSection() {
           .bg-white.rounded-[26px] { padding: 1.5rem 1.1rem 1.25rem; }
           .text-lg.italic { font-size: 0.93rem; }
         }
-        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.45; } 50% { transform: scale(1.2); opacity: 0; } }
       `}</style>
     </section>
   );
 }
-

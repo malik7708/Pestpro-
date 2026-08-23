@@ -30,7 +30,6 @@ export function ExpertiseSection() {
       className="section-padding relative"
       style={{
         backgroundImage: "url('/images/optimized/pest2.webp')",
-        backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -93,4 +92,3 @@ export function ExpertiseSection() {
     </section>
   );
 }
-

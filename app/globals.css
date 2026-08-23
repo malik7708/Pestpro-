@@ -30,12 +30,6 @@
   body {
     @apply antialiased;
     background-color: #f7f9f7;
-    background-image: url("/images/optimized/termite.webp");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: lighten;
     color: #22313d;
     font-family: var(--font-sans), Arial, Helvetica, sans-serif;
     min-height: 100vh;
@@ -191,11 +185,6 @@
 }
 
 @media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-    background-position: center center;
-  }
-
   .card-base,
   .card-base::before,
   .media-zoom img,
@@ -263,4 +252,17 @@
 .nav-glass {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .nav-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .float-soft,
+  .pulse-soft,
+  .whatsapp-btn {
+    animation: none;
+  }
 }

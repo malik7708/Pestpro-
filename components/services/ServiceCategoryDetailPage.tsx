@@ -187,6 +187,7 @@ export function ServiceCategoryDetailPage({
                   alt={data.content.imageAlt}
                   width={900}
                   height={680}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="h-full w-full object-cover"
                   priority
                   unoptimized={heroImageIsRemote}

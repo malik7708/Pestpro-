@@ -139,7 +139,7 @@ export default function AboutPage() {
 
       {/* Story */}
       <section
-        className="relative overflow-hidden bg-brand-navy bg-cover bg-center bg-no-repeat bg-scroll pt-16 pb-12 sm:pt-20 sm:pb-14 lg:bg-fixed lg:pt-32 lg:pb-16"
+        className="relative overflow-hidden bg-brand-navy bg-cover bg-center bg-no-repeat bg-scroll pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-32 lg:pb-16"
         style={{
           backgroundImage: "url('/images/optimized/hero2.webp')",
           backgroundColor: "rgba(13, 31, 60, 0.82)",
@@ -397,4 +397,3 @@ export default function AboutPage() {
     </>
   );
 }
-

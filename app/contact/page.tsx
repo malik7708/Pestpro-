@@ -156,7 +156,6 @@ export default function ContactPage() {
       <section  className="py-12 sm:py-16 lg:py-32 relative"
         style={{
           backgroundImage: "url('/images/optimized/hero2.webp')",
-          backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
