@@ -79,9 +79,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={inter.variable}>
         <ThemeProvider>
-          <FadeIn>
+          <div className="relative z-[100]">
             <Navbar />
-          </FadeIn>
+          </div>
           <main>
             <PageTransition>{children}</PageTransition>
           </main>
