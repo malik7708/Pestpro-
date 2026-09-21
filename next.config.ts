@@ -3,6 +3,7 @@
 const nextConfig: NextConfig = {
   allowedDevOrigins: ['192.168.18.79'],
   images: {
+    unoptimized: true,
     formats: ["image/webp"],
     qualities: [70, 75],
     remotePatterns: [
