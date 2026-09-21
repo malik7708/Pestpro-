@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -9,18 +8,17 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { FadeIn } from "@/components/ui/motion";
 import { PageTransition } from "@/components/ui/PageTransition";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://islamabadpestcontrolpk.com"),
   title: {
     default: "Islamabad PestControl | Best Pest Control Services in Islamabad | Termite (Deemak) & Fumigation",
     template: "%s | Islamabad PestControl - Islamabad Pest Control",
   },
   description:
     "Best pest control services including termite treatment(Deemak), rodent control, cockroach removal & bed bug elimination. Licensed, certified & available 24/7. Get a FREE inspection today!",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
 
     'pest control in Islamabad',
@@ -77,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className={inter.variable}>
+      <body className="antialiased">
         <ThemeProvider>
           <div className="relative z-[100]">
             <Navbar />
