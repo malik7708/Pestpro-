@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    apple: "/logo-img.png",
+    apple: "/logo-img.webp",
   },
   keywords: [
 
