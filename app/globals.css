@@ -5,8 +5,14 @@
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;
-    scrollbar-width: none;
   }
+
+  @supports (scrollbar-width: none) {
+    .scrollbar-hide {
+      scrollbar-width: none;
+    }
+  }
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -250,8 +256,8 @@
 }
 
 .nav-glass {
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 /* Smooth entry motion uses only opacity and transform, the properties that
@@ -302,18 +308,36 @@
 }
 
 @keyframes slide-in-right {
-  from { opacity: 0; transform: translate3d(42px, 0, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from {
+    opacity: 0;
+    transform: translate3d(42px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes slide-in-left {
-  from { opacity: 0; transform: translate3d(-42px, 0, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from {
+    opacity: 0;
+    transform: translate3d(-42px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes slide-in-up {
-  from { opacity: 0; transform: translate3d(0, 26px, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 768px), (prefers-reduced-motion: reduce) {

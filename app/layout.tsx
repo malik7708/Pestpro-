@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo-img.png",
+  },
   keywords: [
 
     'pest control in Islamabad',
@@ -46,6 +50,14 @@ export const metadata: Metadata = {
     description: "Licensed pest control experts. Free inspection. 24/7 emergency service.",
   },
   robots: { index: true, follow: true },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+  themeColor: "#2f6b4f",
 };
 
 const localBusinessSchema = {
