@@ -98,9 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <FadeIn>
             <Footer />
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <WhatsAppButton />
-          </FadeIn>
+          <WhatsAppButton />
           <FadeIn delay={0.16}>
             <ScrollToTop />
           </FadeIn>
