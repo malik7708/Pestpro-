@@ -14,7 +14,7 @@ const themeByService: Record<
   {
     hero: string;
     badge: string;
-    card: string;
+    card: string; 
     button: string;
     muted: string;
   }

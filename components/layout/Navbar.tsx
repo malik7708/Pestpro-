@@ -9,6 +9,7 @@ import { mainServices } from "@/lib/servicesConfig";
 const regularLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
+  { href: "/blogs", label: "Blogs" },
   { href: "/faqs", label: "FAQs" },
   { href: "/contact", label: "Contact" },
 ];
