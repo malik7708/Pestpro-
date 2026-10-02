@@ -6,15 +6,15 @@ import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "Pest Control Blog",
+  title: "Pest Control Blog | Islamabad Pest Control Tips & Advice",
   description:
-    "Practical pest control advice, prevention tips, and property care insights from Islamabad Pest Control.",
+    "Read expert pest control advice, termite prevention tips, and fumigation guidance for homes and businesses in Islamabad and Rawalpindi.",
   alternates: { canonical: "/blogs" },
   keywords: [
-    "pest control blog",
-    "pest prevention tips Islamabad",
-    "termite control advice",
-    "fumigation guidance",
+    "pest control blog Islamabad",
+    "termite prevention tips Pakistan",
+    "fumigation guidance Islamabad",
+    "pest prevention advice Rawalpindi",
   ],
 };
 
@@ -50,7 +50,7 @@ export default function BlogsPage() {
           <div className="container-max">
             <div className="max-w-3xl"><div className="section-tag">Latest article</div><h2 className="section-heading">Useful answers for your property</h2><p className="mt-4 text-lg leading-8 text-slate-600">Explore straightforward advice to help you identify risks early and make informed pest control decisions.</p></div>
             <div className="mt-10 grid max-w-5xl overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 shadow-sm md:grid-cols-2">
-              <div className="relative min-h-72 md:min-h-full"><Image src={post.image} alt="Professional applying termite treatment around a wooden door frame" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" /></div>
+              <div className="relative min-h-72 md:min-h-full"><Image src={post.image} alt="Professional termite treatment for a wooden door frame in Islamabad and Rawalpindi" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" /></div>
               <article className="p-7 sm:p-10">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-green">{post.category}</p>
                 <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-900"><Link href={post.href} className="transition hover:text-brand-green">{post.title}</Link></h3>

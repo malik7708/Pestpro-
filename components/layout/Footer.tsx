@@ -58,7 +58,7 @@ export function Footer() {
               <div className="rounded-lg overflow-hidden inline-block">
                 <Image
                   src="/images/optimized/logo-img.webp"
-                  alt="Islamabad Pest Control Logo"
+                  alt="Islamabad Pest Control company logo for pest control and termite treatment services"
                   width={180}
                   height={50}
                   className="h-auto w-auto"

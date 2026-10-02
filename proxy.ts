@@ -4,6 +4,17 @@ import type { NextRequest } from "next/server";
 const PREFERRED_HOST = "islamabadpestcontrolpk.com";
 
 export function proxy(request: NextRequest) {
+  const stalePestImage = request.nextUrl.searchParams.get("url") ?? "";
+  if (
+    request.nextUrl.pathname === "/_next/image" &&
+    /^\/_next\/static\/media\/pest3\.[^/]+\.png$/i.test(stalePestImage)
+  ) {
+    return NextResponse.redirect(
+      new URL("/images/optimized/pest3.webp", request.url),
+      308,
+    );
+  }
+
   const host = request.headers.get("host") ?? "";
   const forwardedProto = request.headers.get("x-forwarded-proto") ?? "https";
 
@@ -30,5 +41,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  matcher: ["/_next/image", "/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

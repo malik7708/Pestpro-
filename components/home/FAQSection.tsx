@@ -100,7 +100,7 @@ export function FAQSection() {
                     <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-white/50 dark:bg-gray-800">
                       <Image
                         src={faq.image}
-                        alt={`Illustration for ${faq.q}`}
+                        alt={`${faq.q} illustration for pest control services in Islamabad and Pakistan`}
                         width={64}
                         height={64}
                         className="w-full h-full object-cover"

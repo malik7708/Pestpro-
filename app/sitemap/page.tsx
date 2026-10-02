@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Sitemap | Islamabad Pest Control",
   description:
     "Browse all major pages and service categories offered by Islamabad Pest Control.",
+  alternates: { canonical: "/sitemap" },
 };
 
 const sitemapSections = [

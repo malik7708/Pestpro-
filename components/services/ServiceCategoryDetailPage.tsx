@@ -239,7 +239,7 @@ export function ServiceCategoryDetailPage({
                     <div className="relative h-[260px] w-full">
                       <Image
                         src="/images/optimized/club-fumigation.webp"
-                        alt="Residential fumigation service support"
+                        alt="Residential fumigation service for homes in Islamabad"
                         fill
                         className="object-cover"
                         sizes="(max-width: 1280px) 100vw, 50vw"

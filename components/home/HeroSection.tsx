@@ -59,7 +59,7 @@ export function HeroSection() {
                   <div className="absolute inset-0">
                     <Image
                       src={activeSlide.image}
-                      alt={activeSlide.title}
+                      alt="Pest control specialist performing fumigation and termite treatment in Islamabad and Rawalpindi"
                       fill
                       sizes="(max-width: 1024px) 100vw, 45vw"
                       className="object-cover opacity-[0.24]"
@@ -138,7 +138,7 @@ export function HeroSection() {
                         >
                           <Image
                             src={image}
-                            alt={`Service ${index + 1}`}
+                            alt=""
                             fill
                             sizes="110px"
                             className="object-cover"
@@ -153,7 +153,7 @@ export function HeroSection() {
                     <div className="relative min-h-[350px] overflow-hidden rounded-[24px] sm:min-h-[450px] sm:rounded-[28px] lg:min-h-[600px]">
                       <div className="absolute inset-0">
                         <Image src={activeSlide.image}
-                          alt={activeSlide.title}
+                          alt="Pest control and termite treatment service for homes and businesses in Islamabad and Rawalpindi"
                           fill
                           preload
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 85vw, 56vw"
@@ -193,7 +193,7 @@ export function HeroSection() {
                         >
                           <Image
                             src={image}
-                            alt={`Service ${index + 1}`}
+                            alt=""
                             fill
                             sizes="110px"
                             className="object-cover"
@@ -267,7 +267,7 @@ export function HeroSection() {
                 <div className="relative h-[320px] sm:h-[400px] lg:h-[460px]">
                   <Image
                     src={heroImage}
-                    alt="Islamabad Pest Control professional on site"
+                    alt="Islamabad Pest Control professional performing termite and pest treatment on site"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"

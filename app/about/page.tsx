@@ -4,9 +4,10 @@ import { CheckCircle, Award, Star, Trophy, Users, MapPin, CheckCircle2, Leaf } f
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Us – Islamabad Pest Control | Trusted Pest Control in Islamabad & Rawalpindi",
+  title: "About Islamabad Pest Control | Trusted Pest Control Company in Islamabad",
   description:
-    "Learn about Islamabad Pest Control's commitment to safe, reliable pest management using advanced techniques and eco-friendly products. Serving Islamabad, Rawalpindi, Taxila, and Murree.",
+    "Learn about Islamabad Pest Control, a trusted pest control company in Islamabad and Rawalpindi offering safe termite treatment, fumigation, and property protection solutions.",
+  alternates: { canonical: "/about" },
 };
 
 
@@ -33,7 +34,7 @@ const certifications = [
   { name: "QualityPro Certification", year: "Industry gold standard" },
   { name: "GreenPro Eco-Friendly Certification", year: "Sustainable practices" },
   { name: "Better Business Bureau A+ Rating", year: "18 consecutive years" },
-  { name: "Illinois Department of Agriculture", year: "Licensed & regulated" },
+  { name: "Pesticide Safety & Regulatory Standards", year: "Licensed & regulated" },
 ];
 
 const policies = [
@@ -125,7 +126,7 @@ export default function AboutPage() {
               <div className="aspect-square rounded-3xl overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                 <Image
                   src="/images/optimized/collage.webp"
-                  alt="About Islamabad PestControl"
+                  alt="Islamabad Pest Control team and professional pest treatment services in Pakistan"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 500px"
@@ -159,8 +160,8 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-sm leading-8 text-white/85 sm:text-base">
                 <p>
-                  Islamabad PestControl was founded in 2005 by Muhummad Abuzar, a certified pesticide applicator with a simple but powerful mission: 
-                  to provide honest, effective, and family-safe pest control services to Illinois homeowners.
+                  Islamabad PestControl was founded in 2005 by Muhummad Abuzar, a certified pesticide applicator with a simple but powerful mission:
+                  to provide honest, effective, and family-safe pest control services to homeowners and businesses across Islamabad and Rawalpindi.
                 </p>
                 <p>
                   Starting with just 3 technicians and a single service van, Muhummad Abuzar built Islamabad PestControl on the principle that 
@@ -254,7 +255,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-32 mb-4 rounded-md overflow-hidden bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                   <Image
                     src={image}
-                    alt={title}
+                    alt={`${title} value for Islamabad Pest Control services`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 320px"

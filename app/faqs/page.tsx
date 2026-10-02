@@ -3,12 +3,20 @@ import { FAQSection } from "@/components/home/FAQSection";
 import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Islamabad PestControl - Islamabad Pest Control",
-  description: "Get answers to common questions about our pest control services, treatments, pricing, and guarantees. Professional pest control experts ready to help.",
-  keywords: "pest control FAQ, pest questions, termite control FAQ, bed bug treatment questions, pest control pricing",
+  title: "Pest Control FAQ | Islamabad Pest Control Answers & Pricing",
+  description:
+    "Get answers to common questions about pest control, termite treatment, fumigation, pricing, and service guarantees in Islamabad and Rawalpindi.",
+  alternates: { canonical: "/faqs" },
+  keywords: [
+    "pest control FAQ Islamabad",
+    "termite control FAQ",
+    "fumigation question answers",
+    "pest control pricing Pakistan",
+  ],
   openGraph: {
-    title: "Frequently Asked Questions | Islamabad PestControl - Islamabad Pest Control",
-    description: "Get answers to common questions about our pest control services, treatments, pricing, and guarantees.",
+    title: "Pest Control FAQ | Islamabad Pest Control Answers & Pricing",
+    description:
+      "Get answers to common questions about pest control, termite treatment, fumigation, pricing, and service guarantees in Islamabad and Rawalpindi.",
     type: "website",
   },
 };
@@ -62,4 +70,3 @@ export default function FAQsPage() {
     </div>
   );
 }
-

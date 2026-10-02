@@ -51,7 +51,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-3">
               <div className="overflow-hidden rounded-lg">
                 <Image src="/images/optimized/logo-img.webp"
-                  alt="PestPro Logo"
+                  alt="Islamabad Pest Control logo for termite control and fumigation services"
                   width={180}
                   height={50}
                   sizes="180px"

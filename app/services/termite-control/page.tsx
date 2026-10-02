@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Termite Control Services | Islamabad PestControl",
   description: "Expert termite treatment, prevention, proofing and professional termite control solutions.",
+  alternates: { canonical: "/services/termite-control" },
 };
 
 export default function TermiteControlPage() {
@@ -104,4 +105,3 @@ export default function TermiteControlPage() {
     </>
   );
 }
-

@@ -6,13 +6,15 @@ import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "All Services",
+  title: "Pest Control Services in Islamabad & Rawalpindi",
   description:
-    "Explore pest control, termite control, and fumigation services for homes and businesses.",
+    "Explore reliable pest control, termite treatment, and fumigation services in Islamabad and Rawalpindi for homes, offices, and commercial properties.",
+  alternates: { canonical: "/services" },
   keywords: [
-    "pest control services",
-    "termite control services",
-    "fumigation services",
+    "pest control services Islamabad",
+    "termite control services Islamabad",
+    "fumigation services Rawalpindi",
+    "deemak treatment Islamabad",
   ],
 };
 
@@ -36,7 +38,7 @@ export default function ServicesPage() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/85">
               <Shield size={14} />
-             Pest Control Services Iclamabad
+             Pest Control Services Islamabad
             </div>
             <h1 className="mt-6 font-display text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl text-green-200">
               Expert pest control for every property need
@@ -158,4 +160,3 @@ export default function ServicesPage() {
     </>
   );
 }
-

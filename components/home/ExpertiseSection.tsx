@@ -60,7 +60,7 @@ export function ExpertiseSection() {
                   <div className="media-zoom relative h-56">
                     <Image
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} service for homes and businesses in Islamabad and Rawalpindi`}
                       fill
                       sizes="(max-width: 1280px) 100vw, 33vw"
                       className="object-cover"

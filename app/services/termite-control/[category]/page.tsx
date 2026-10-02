@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "termite proofing",
       "Islamabad termite control",
     ],
+    alternates: { canonical: `/services/termite-control/${category}` },
   };
 }
 

@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "insect control",
       "Islamabad pest control",
     ],
+    alternates: { canonical: `/services/pest-control/${category}` },
   };
 }
 

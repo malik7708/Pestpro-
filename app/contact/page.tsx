@@ -7,6 +7,7 @@ import { FadeIn } from "@/components/ui/motion";
 export const metadata: Metadata = {
   title: "Contact Islamabad PestControl – Expert Pest Control Services",
   description: "Get in touch with Islamabad PestControl for professional pest control solutions. Call +92-306-923-5099 or submit your inquiry online. 24/7 emergency support available.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -202,4 +203,3 @@ export default function ContactPage() {
     </>
   );
 }
-

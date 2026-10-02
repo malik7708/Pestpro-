@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { MetadataRoute } from "next";
+import { mainServices } from "@/lib/servicesConfig";
+import { getStaticCategoryParams } from "@/lib/serviceCategoryContent";
 
 const baseUrl = "https://islamabadpestcontrolpk.com";
 const appDir = path.join(process.cwd(), "app");
@@ -39,7 +41,14 @@ function getPriority(url: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const allRoutes = Array.from(new Set(collectStaticRoutes(appDir))).sort();
+  const generatedServiceRoutes = mainServices.flatMap((service) =>
+    getStaticCategoryParams(service.id).map(
+      ({ category }) => `${service.href}/${category}`,
+    ),
+  );
+  const allRoutes = Array.from(
+    new Set([...collectStaticRoutes(appDir), ...generatedServiceRoutes]),
+  ).sort();
 
   return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
