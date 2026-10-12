@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -7,6 +8,13 @@ import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { FadeIn } from "@/components/ui/motion";
 import { PageTransition } from "@/components/ui/PageTransition";
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600"],
+  variable: "--font-raleway",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://islamabadpestcontrolpk.com"),
@@ -88,7 +96,7 @@ const localBusinessSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={raleway.variable} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

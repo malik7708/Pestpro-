@@ -22,8 +22,19 @@ const config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-sans)", "Arial", "Helvetica", "sans-serif"],
-        body: ["var(--font-sans)", "Arial", "Helvetica", "sans-serif"],
+        display: ["var(--font-raleway)", "Arial", "Helvetica", "sans-serif"],
+        body: ["var(--font-raleway)", "Arial", "Helvetica", "sans-serif"],
+      },
+      fontWeight: {
+        thin: "100",
+        extralight: "200",
+        light: "300",
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "600",
+        extrabold: "600",
+        black: "600",
       },
       boxShadow: {
         "brand-sm": "0 8px 20px rgba(47, 107, 79, 0.10)",

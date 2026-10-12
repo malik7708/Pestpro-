@@ -36,7 +36,8 @@
     @apply antialiased;
     background-color: #f7f9f7;
     color: #22313d;
-    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    font-family: var(--font-raleway), Arial, Helvetica, sans-serif;
+    font-weight: 400;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -56,8 +57,34 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    font-family: var(--font-raleway), Arial, Helvetica, sans-serif;
     letter-spacing: -0.02em;
+  }
+
+  h1,
+  h2 {
+    font-weight: 600;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  small,
+  figcaption {
+    font-weight: 300;
+  }
+
+  strong,
+  b {
+    font-weight: 600;
   }
 }
 
@@ -115,7 +142,7 @@
   }
 
   .font-display {
-    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    font-family: var(--font-raleway), Arial, Helvetica, sans-serif;
   }
 }
 
