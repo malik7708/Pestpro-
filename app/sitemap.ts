@@ -5,10 +5,20 @@ import { mainServices } from "@/lib/servicesConfig";
 import { getStaticCategoryParams } from "@/lib/serviceCategoryContent";
 
 const baseUrl = "https://islamabadpestcontrolpk.com";
-const appDir = path.join(process.cwd(), "app");
+const appDir = path.resolve(process.cwd(), "app");
+
+function isWithinAppDir(candidate: string) {
+  const relative = path.relative(appDir, candidate);
+  return relative === "" || (!relative.startsWith("..") && !path.isAbsolute(relative));
+}
 
 function collectStaticRoutes(dir: string, routePrefix = ""): string[] {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const resolvedDir = path.resolve(dir);
+  if (!isWithinAppDir(resolvedDir)) {
+    return [];
+  }
+
+  const entries = fs.readdirSync(resolvedDir, { withFileTypes: true });
   const routes: string[] = [];
   const hasPage = entries.some((entry) =>
     entry.isFile() && (entry.name === "page.ts" || entry.name === "page.tsx")
@@ -28,7 +38,12 @@ function collectStaticRoutes(dir: string, routePrefix = ""): string[] {
     }
 
     const childRoute = routePrefix === "" ? `/${entry.name}` : `${routePrefix}/${entry.name}`;
-    routes.push(...collectStaticRoutes(path.join(dir, entry.name), childRoute));
+    const childDir = path.join(resolvedDir, entry.name);
+    if (!isWithinAppDir(childDir)) {
+      continue;
+    }
+
+    routes.push(...collectStaticRoutes(childDir, childRoute));
   }
 
   return routes;
