@@ -1,4 +1,4 @@
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -8,13 +8,13 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { FadeIn, StaggerGroup, StaggerItem } from "@/components/ui/motion";
-import heroImage from "../../public/images/optimized/termite1.webp";
-import fumigationImage from "../../public/images/optimized/pest3.webp";
-import mosquitoImage from "../../public/images/optimized/mosquito-control.webp";
-import rodentImage from "../../public/images/optimized/rodent1.webp";
-import residentialImage from "../../public/images/optimized/residential-fumigation.webp";
+const heroImage = "/images/optimized/termite1.webp";
+const fumigationImage = "/images/optimized/pest3.webp";
+const mosquitoImage = "/images/optimized/mosquito-control.webp";
+const rodentImage = "/images/optimized/rodent1.webp";
+const residentialImage = "/images/optimized/residential-fumigation.webp";
 
-const serviceImages: StaticImageData[] = [
+const serviceImages: string[] = [
   mosquitoImage,
   rodentImage,
   fumigationImage,
@@ -298,4 +298,3 @@ export function HeroSection() {
     </>
   );
 }
-
