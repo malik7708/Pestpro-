@@ -174,7 +174,7 @@ export const mainServiceCards = [
     title: "Termite Control Services",
     description: "Specialized termite control solutions to protect your property from structural damage.",
     icon: "🐜",
-    href: "/services/pest-control/termite",
+    href: "/services/termite-control",
   },
   {
     id: "rodent-control",
@@ -190,6 +190,6 @@ export const mainServiceCards = [
     title: "Insect Control Services",
     description: "Comprehensive insect control solutions to protect your property from various pest infestations.",
     icon: "🦋",
-    href: "/services/pest-control/insect",
+    href: "/services/pest-control/insects",
   }
 ];

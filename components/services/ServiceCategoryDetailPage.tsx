@@ -113,8 +113,8 @@ export function ServiceCategoryDetailPage({
     provider: {
       "@type": "LocalBusiness",
       name: "Islamabad Pest Control",
-      telephone: "+92 322 9162746",
-      url: "https://icpestcontrol.com",
+      telephone: "+92 300 5515809",
+      url: "https://islamabadpestcontrolpk.com",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -164,9 +164,9 @@ export function ServiceCategoryDetailPage({
                   {contactCta}
                   <ArrowRight size={18} />
                 </Link>
-                <a href="tel:+923229162746" className="btn-outline justify-center border-white/35 text-white hover:bg-white hover:text-slate-900">
+                <a href="tel:++92 300 5515809" className="btn-outline justify-center border-white/35 text-white hover:bg-white hover:text-slate-900">
                   <Phone size={18} />
-                  Call +92 322 9162746
+                  Call +92 300 5515809
                 </a>
               </div>
 
