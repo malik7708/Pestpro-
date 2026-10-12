@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { getPrismaClient } from "@/lib/prisma";
 import nodemailer from "nodemailer";
 
 // Email configuration
@@ -60,6 +60,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Save to database
+    const prisma = getPrismaClient();
     const contactMessage = await prisma.contactMessage.create({
       data: {
         name: name.trim(),
